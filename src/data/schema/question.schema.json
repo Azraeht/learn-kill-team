@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "question.schema.json",
+  "title": "Question",
+  "type": "object",
+  "required": ["id", "category", "type", "prompt", "correctIndex", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*-[0-9]{3}$",
+      "description": "Stable unique id, format '<category-prefix>-###', e.g. core-001"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["core-rules", "terrain-missions", "angels-of-death"]
+    },
+    "subtopic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "type": "string",
+      "enum": ["multiple-choice", "true-false"]
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "choices": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 2,
+      "maxItems": 6
+    },
+    "correctIndex": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "verified"]
+    },
+    "sourceRef": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "type": { "const": "multiple-choice" } },
+        "required": ["type"]
+      },
+      "then": {
+        "required": ["choices"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "true-false" } },
+        "required": ["type"]
+      },
+      "then": {
+        "not": { "required": ["choices"] },
+        "properties": {
+          "correctIndex": { "enum": [0, 1] }
+        }
+      }
+    }
+  ]
+}

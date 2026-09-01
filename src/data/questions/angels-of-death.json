@@ -1,0 +1,70 @@
+[
+  {
+    "id": "aod-001",
+    "category": "angels-of-death",
+    "subtopic": "keywords",
+    "type": "multiple-choice",
+    "prompt": "Which keyword is most associated with the Angels of Death kill team's operatives?",
+    "choices": ["ADEPTUS ASTARTES", "AELDARI", "ORK", "T'AU EMPIRE"],
+    "correctIndex": 0,
+    "explanation": "Angels of Death operatives are Adeptus Astartes (Space Marines). Verify exact keyword wording against the current faction rules.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Angels of Death faction rules",
+    "tags": ["keywords"]
+  },
+  {
+    "id": "aod-002",
+    "category": "angels-of-death",
+    "subtopic": "datasheets",
+    "type": "true-false",
+    "prompt": "All Angels of Death operatives share an identical statline.",
+    "correctIndex": 1,
+    "explanation": "Operatives typically have distinct statlines/roles (e.g. Intercessor, Heavy Intercessor, specialists). Verify against the current faction datasheets.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Angels of Death faction rules",
+    "tags": ["datasheets"]
+  },
+  {
+    "id": "aod-003",
+    "category": "angels-of-death",
+    "subtopic": "roster",
+    "type": "multiple-choice",
+    "prompt": "What role does a specialist operative typically fill in an Angels of Death kill team roster?",
+    "choices": [
+      "A generic operative with no special rules",
+      "An operative with a unique loadout/rule not shared by generic team members",
+      "The team leader only",
+      "A terrain feature"
+    ],
+    "correctIndex": 1,
+    "explanation": "Specialists generally bring unique equipment or rules distinct from baseline operatives. Verify against the current faction rules.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Angels of Death faction rules",
+    "tags": ["roster"]
+  },
+  {
+    "id": "aod-004",
+    "category": "angels-of-death",
+    "subtopic": "faction-rules",
+    "type": "true-false",
+    "prompt": "Faction rules (Kill Team-specific traits) can modify a base Space Marine operative's standard actions or stats.",
+    "correctIndex": 0,
+    "explanation": "Faction-specific rules commonly modify or add to base actions/stats. Verify exact effects against the current faction rules.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Angels of Death faction rules",
+    "tags": ["faction-rules"]
+  },
+  {
+    "id": "aod-005",
+    "category": "angels-of-death",
+    "subtopic": "equipment",
+    "type": "multiple-choice",
+    "prompt": "Which of these is most likely to be a signature weapon option available to Angels of Death operatives?",
+    "choices": ["Bolt rifle", "Shuriken catapult", "Kroot rifle", "Shokk attack gun"],
+    "correctIndex": 0,
+    "explanation": "Bolt weapons are iconic Space Marine armament. Verify exact weapon options against the current faction rules/datasheets.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Angels of Death faction rules",
+    "tags": ["equipment"]
+  }
+]

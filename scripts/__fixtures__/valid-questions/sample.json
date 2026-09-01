@@ -1,0 +1,10 @@
+[
+  {
+    "id": "core-999",
+    "category": "core-rules",
+    "type": "true-false",
+    "prompt": "This is a valid fixture question.",
+    "correctIndex": 0,
+    "status": "draft"
+  }
+]

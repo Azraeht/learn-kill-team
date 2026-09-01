@@ -1,0 +1,75 @@
+[
+  {
+    "id": "core-001",
+    "category": "core-rules",
+    "subtopic": "activation",
+    "type": "multiple-choice",
+    "prompt": "How many Action Points (AP) does a standard operative have per activation, before any rule modifies it?",
+    "choices": ["1 AP", "2 AP", "3 AP", "4 AP"],
+    "correctIndex": 1,
+    "explanation": "Base APL is 2 for most operatives unless a datasheet or rule says otherwise. Verify against the current rulebook.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Kill Team core rules",
+    "tags": ["apl", "activation"]
+  },
+  {
+    "id": "core-002",
+    "category": "core-rules",
+    "subtopic": "actions",
+    "type": "true-false",
+    "prompt": "An operative can perform the same action twice in a single activation if it has enough AP remaining.",
+    "correctIndex": 0,
+    "explanation": "Many actions can be repeated in one activation as long as AP allows, though some specific actions restrict this. Verify exceptions against the current rulebook.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Kill Team core rules",
+    "tags": ["actions"]
+  },
+  {
+    "id": "core-003",
+    "category": "core-rules",
+    "subtopic": "injured",
+    "type": "multiple-choice",
+    "prompt": "What generally happens to an operative when it becomes Injured?",
+    "choices": [
+      "Nothing changes",
+      "It is removed from play immediately",
+      "Its APL and/or other stats are reduced",
+      "It gains bonus AP"
+    ],
+    "correctIndex": 2,
+    "explanation": "Injured operatives typically suffer reduced APL or other stat penalties. Verify exact wording against the current rulebook.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Kill Team core rules",
+    "tags": ["injured"]
+  },
+  {
+    "id": "core-004",
+    "category": "core-rules",
+    "subtopic": "engagement-range",
+    "type": "multiple-choice",
+    "prompt": "Which best describes 'engagement range' in Kill Team?",
+    "choices": [
+      "The maximum range of any ranged weapon",
+      "A short horizontal distance around an operative used to determine fighting/control",
+      "The deployment zone size",
+      "The distance a Vantage terrain trait allows sight over"
+    ],
+    "correctIndex": 1,
+    "explanation": "Engagement range is a short fixed horizontal distance around an operative, relevant to fighting and terrain control. Verify the exact distance against the current rulebook.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Kill Team core rules",
+    "tags": ["engagement-range"]
+  },
+  {
+    "id": "core-005",
+    "category": "core-rules",
+    "subtopic": "cover",
+    "type": "true-false",
+    "prompt": "Concealment and Cover affect a shooting attack in exactly the same way.",
+    "correctIndex": 1,
+    "explanation": "Concealment and Cover are typically distinct mechanics with different effects on a shooting attack. Verify the precise rules against the current rulebook.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Kill Team core rules",
+    "tags": ["cover", "concealment"]
+  }
+]
