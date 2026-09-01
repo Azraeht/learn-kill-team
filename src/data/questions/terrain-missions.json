@@ -1,0 +1,75 @@
+[
+  {
+    "id": "terr-001",
+    "category": "terrain-missions",
+    "subtopic": "terrain-traits",
+    "type": "multiple-choice",
+    "prompt": "Which terrain trait typically blocks line of sight entirely?",
+    "choices": ["Light Cover", "Heavy Cover", "Insignificant", "Obscuring"],
+    "correctIndex": 3,
+    "explanation": "Obscuring terrain generally blocks line of sight entirely, unlike Light/Heavy Cover which affect the shooting attack rather than sight itself. Verify against the current rulebook.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Kill Team terrain rules",
+    "tags": ["terrain-traits"]
+  },
+  {
+    "id": "terr-002",
+    "category": "terrain-missions",
+    "subtopic": "vantage",
+    "type": "true-false",
+    "prompt": "Vantage terrain lets operatives on it see and be seen over intervening terrain, within its specific rules.",
+    "correctIndex": 0,
+    "explanation": "Vantage points generally grant improved sightlines over lower terrain. Verify exact wording against the current rulebook.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Kill Team terrain rules",
+    "tags": ["vantage"]
+  },
+  {
+    "id": "terr-003",
+    "category": "terrain-missions",
+    "subtopic": "kill-zones",
+    "type": "multiple-choice",
+    "prompt": "What is a 'kill zone' in the context of a Kill Team mission pack?",
+    "choices": [
+      "A specific terrain layout/battlefield setup tied to a mission pack",
+      "The area where injured operatives must retreat",
+      "A zone where shooting is not allowed",
+      "The deployment zone only"
+    ],
+    "correctIndex": 0,
+    "explanation": "A kill zone is generally a defined battlefield/terrain setup associated with a mission pack. Verify against the current rulebook/mission pack.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Kill Team mission rules",
+    "tags": ["kill-zones"]
+  },
+  {
+    "id": "terr-004",
+    "category": "terrain-missions",
+    "subtopic": "terrain-traits",
+    "type": "multiple-choice",
+    "prompt": "Which best describes an 'Insignificant' terrain feature's effect on the game?",
+    "choices": [
+      "It blocks all movement",
+      "It is too small/thin to meaningfully affect cover or movement",
+      "It grants Heavy Cover to anyone near it",
+      "It counts as a Vantage point"
+    ],
+    "correctIndex": 1,
+    "explanation": "Insignificant terrain is generally treated as too minor to interact with most terrain rules. Verify against the current rulebook.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Kill Team terrain rules",
+    "tags": ["terrain-traits"]
+  },
+  {
+    "id": "terr-005",
+    "category": "terrain-missions",
+    "subtopic": "objectives",
+    "type": "true-false",
+    "prompt": "Mission objectives in Kill Team are always identical across every mission pack.",
+    "correctIndex": 1,
+    "explanation": "Objectives vary by mission pack and specific mission being played. Verify against the current mission pack in use.",
+    "status": "draft",
+    "sourceRef": "TODO: verify against official Kill Team mission rules",
+    "tags": ["objectives"]
+  }
+]

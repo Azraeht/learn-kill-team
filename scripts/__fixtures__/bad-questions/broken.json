@@ -1,0 +1,36 @@
+[
+  {
+    "id": "core-999",
+    "category": "core-rules",
+    "type": "multiple-choice",
+    "prompt": "Missing choices field, should fail schema.",
+    "correctIndex": 0,
+    "status": "draft"
+  },
+  {
+    "id": "core-999",
+    "category": "core-rules",
+    "type": "true-false",
+    "prompt": "Duplicate id of the entry above.",
+    "correctIndex": 0,
+    "status": "draft"
+  },
+  {
+    "id": "core-998",
+    "category": "core-rules",
+    "type": "multiple-choice",
+    "prompt": "correctIndex out of bounds for choices.",
+    "choices": ["A", "B"],
+    "correctIndex": 5,
+    "status": "draft"
+  },
+  {
+    "id": "core-997",
+    "category": "core-rules",
+    "type": "multiple-choice",
+    "prompt": "Invalid status value.",
+    "choices": ["A", "B"],
+    "correctIndex": 0,
+    "status": "final"
+  }
+]
