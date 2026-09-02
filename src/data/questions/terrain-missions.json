@@ -71,5 +71,93 @@
     "status": "draft",
     "sourceRef": "TODO : vérifier avec les règles officielles de mission de Kill Team",
     "tags": ["objectives"]
+  },
+  {
+    "id": "terr-006",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "Selon l'errata de l'équipement universel, quel type de terrain sont les échelles ?",
+    "choices": ["Terrain Insignifiant et Exposé", "Terrain Lourd et Protecteur", "Terrain Obscurcissant", "Terrain Accessible uniquement"],
+    "correctIndex": 0,
+    "explanation": "Les échelles sont du terrain Insignifiant et Exposé.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Journal de Bord (commentaires des règles, juin 2026)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-007",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "true-false",
+    "prompt": "Un agent peut traverser une échelle comme si elle n'était pas là, sans s'y arrêter, ou l'escalader.",
+    "correctIndex": 0,
+    "explanation": "Un agent peut traverser des échelles comme si elles n'étaient pas là (mais sans s'y arrêter), ou les escalader.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Journal de Bord (commentaires des règles, juin 2026)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-008",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "D'après l'errata, quel type de terrain sont les barricades légères (à l'exception des pieds) ?",
+    "choices": ["Terrain Léger", "Terrain Lourd", "Terrain Obscurcissant", "Terrain Insignifiant"],
+    "correctIndex": 0,
+    "explanation": "Les barricades légères sont du terrain Léger, sauf les pieds, qui sont Insignifiants et Exposés.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Journal de Bord (commentaires des règles, juin 2026)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-009",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "true-false",
+    "prompt": "Les pieds d'une barricade légère ou portable sont considérés comme Insignifiants et Exposés.",
+    "correctIndex": 0,
+    "explanation": "Les barricades légères et portables sont du terrain Léger/Protecteur/Portable, sauf le pied, qui est Insignifiant et Exposé.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Journal de Bord (commentaires des règles, juin 2026)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-010",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "Avant la bataille, à quelle distance minimale d'un autre élément de terrain d'équipement doit-on placer un marqueur de Mines ?",
+    "choices": ["Plus de 2\"", "Plus de 1\"", "Plus de 3\"", "Il n'y a pas de distance minimale"],
+    "correctIndex": 0,
+    "explanation": "Vous pouvez placer un marqueur de Mines entièrement sur votre territoire et à plus de 2\" de tout marqueur, point d'accès et terrain Accessible.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Journal de Bord (commentaires des règles, juin 2026)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-011",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "D'après l'errata sur les grenades fumigènes, que devient la règle Perforante 2 d'une arme tirant sur un agent entièrement dans une zone de fumée (si les deux agents ne sont pas à 2\" l'un de l'autre) ?",
+    "choices": ["Elle devient Perforante 1", "Elle est totalement annulée", "Elle devient Perforante 3", "Rien ne change"],
+    "correctIndex": 0,
+    "explanation": "Les armes avec la règle Perforante 2 ou Perforante Critiques 2 ont respectivement la règle Perforante 1 ou Perforante Critique 1 à la place, sauf si les deux agents sont à 2\" l'un de l'autre.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Journal de Bord (commentaires des règles, juin 2026)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-012",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "true-false",
+    "prompt": "Un nouvel équipement universel appelé « Charge de Brèche » a été ajouté par cette mise à jour des règles.",
+    "correctIndex": 0,
+    "explanation": "Équipement universel « Charge de Brèche » ajouté.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Journal de Bord (commentaires des règles, juin 2026)",
+    "tags": ["equipement-universel"]
   }
 ]

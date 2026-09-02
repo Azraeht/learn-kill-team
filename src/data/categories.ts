@@ -2,6 +2,7 @@ import type { Category, Question } from "../core/types.ts";
 import coreRulesQuestions from "./questions/core-rules.json";
 import terrainMissionsQuestions from "./questions/terrain-missions.json";
 import angelsOfDeathQuestions from "./questions/angels-of-death.json";
+import aquilonTempestusQuestions from "./questions/aquilon-tempestus.json";
 
 export const categories: Category[] = [
   {
@@ -22,12 +23,19 @@ export const categories: Category[] = [
     description: "Règles et mots-clés de la kill team Space Marines.",
     color: "#c9463f",
   },
+  {
+    id: "aquilon-tempestus",
+    label: "Aquilon du Tempestus",
+    description: "Règle de faction, équipement, subterfuges et opératifs de la kill team.",
+    color: "#e0a020",
+  },
 ];
 
 const questionsByCategory: Record<string, Question[]> = {
   "core-rules": coreRulesQuestions as Question[],
   "terrain-missions": terrainMissionsQuestions as Question[],
   "angels-of-death": angelsOfDeathQuestions as Question[],
+  "aquilon-tempestus": aquilonTempestusQuestions as Question[],
 };
 
 export const allQuestions: Question[] = Object.values(questionsByCategory).flat();

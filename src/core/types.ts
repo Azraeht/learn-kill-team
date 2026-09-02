@@ -1,4 +1,4 @@
-export type CategoryId = "core-rules" | "terrain-missions" | "angels-of-death";
+export type CategoryId = "core-rules" | "terrain-missions" | "angels-of-death" | "aquilon-tempestus";
 
 export type QuestionType = "multiple-choice" | "true-false";
 
