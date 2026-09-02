@@ -6,20 +6,20 @@ import angelsOfDeathQuestions from "./questions/angels-of-death.json";
 export const categories: Category[] = [
   {
     id: "core-rules",
-    label: "Core Rules",
-    description: "Activations, APL, actions, engagement range, cover, injured state.",
+    label: "Règles de Base",
+    description: "Activations, LPA, actions, portée de contrôle, couvert, dégâts.",
     color: "#5b8def",
   },
   {
     id: "terrain-missions",
-    label: "Terrain & Missions",
-    description: "Kill zones, terrain traits, and mission objectives.",
+    label: "Terrain et Missions",
+    description: "Kill zones, traits de terrain et objectifs de mission.",
     color: "#2fb380",
   },
   {
     id: "angels-of-death",
     label: "Angels of Death",
-    description: "Space Marines kill team rules and keywords.",
+    description: "Règles et mots-clés de la kill team Space Marines.",
     color: "#c9463f",
   },
 ];

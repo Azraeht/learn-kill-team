@@ -4,12 +4,12 @@
     "category": "angels-of-death",
     "subtopic": "keywords",
     "type": "multiple-choice",
-    "prompt": "Which keyword is most associated with the Angels of Death kill team's operatives?",
+    "prompt": "Quel mot-clé est le plus associé aux opératifs de la kill team Angels of Death ?",
     "choices": ["ADEPTUS ASTARTES", "AELDARI", "ORK", "T'AU EMPIRE"],
     "correctIndex": 0,
-    "explanation": "Angels of Death operatives are Adeptus Astartes (Space Marines). Verify exact keyword wording against the current faction rules.",
+    "explanation": "Les opératifs Angels of Death sont des Adeptus Astartes (Space Marines). À vérifier avec le libellé exact des règles de faction actuelles.",
     "status": "draft",
-    "sourceRef": "TODO: verify against official Angels of Death faction rules",
+    "sourceRef": "TODO : vérifier avec les règles officielles de la faction Angels of Death",
     "tags": ["keywords"]
   },
   {
@@ -17,11 +17,11 @@
     "category": "angels-of-death",
     "subtopic": "datasheets",
     "type": "true-false",
-    "prompt": "All Angels of Death operatives share an identical statline.",
+    "prompt": "Tous les opératifs Angels of Death partagent un profil de caractéristiques identique.",
     "correctIndex": 1,
-    "explanation": "Operatives typically have distinct statlines/roles (e.g. Intercessor, Heavy Intercessor, specialists). Verify against the current faction datasheets.",
+    "explanation": "Les opératifs ont généralement des profils/rôles distincts (par ex. Intercessor, Heavy Intercessor, spécialistes). À vérifier avec les fiches techniques de faction actuelles.",
     "status": "draft",
-    "sourceRef": "TODO: verify against official Angels of Death faction rules",
+    "sourceRef": "TODO : vérifier avec les règles officielles de la faction Angels of Death",
     "tags": ["datasheets"]
   },
   {
@@ -29,17 +29,17 @@
     "category": "angels-of-death",
     "subtopic": "roster",
     "type": "multiple-choice",
-    "prompt": "What role does a specialist operative typically fill in an Angels of Death kill team roster?",
+    "prompt": "Quel rôle remplit généralement un opératif spécialiste dans une liste de kill team Angels of Death ?",
     "choices": [
-      "A generic operative with no special rules",
-      "An operative with a unique loadout/rule not shared by generic team members",
-      "The team leader only",
-      "A terrain feature"
+      "Un opératif générique sans règle spéciale",
+      "Un opératif avec un équipement/une règle unique non partagé par les membres génériques de l'équipe",
+      "Le chef d'équipe uniquement",
+      "Un élément de terrain"
     ],
     "correctIndex": 1,
-    "explanation": "Specialists generally bring unique equipment or rules distinct from baseline operatives. Verify against the current faction rules.",
+    "explanation": "Les spécialistes apportent généralement un équipement ou des règles uniques, distincts des opératifs de base. À vérifier avec les règles de faction actuelles.",
     "status": "draft",
-    "sourceRef": "TODO: verify against official Angels of Death faction rules",
+    "sourceRef": "TODO : vérifier avec les règles officielles de la faction Angels of Death",
     "tags": ["roster"]
   },
   {
@@ -47,11 +47,11 @@
     "category": "angels-of-death",
     "subtopic": "faction-rules",
     "type": "true-false",
-    "prompt": "Faction rules (Kill Team-specific traits) can modify a base Space Marine operative's standard actions or stats.",
+    "prompt": "Les règles de faction (traits spécifiques à la kill team) peuvent modifier les actions ou caractéristiques standards d'un opératif Space Marine de base.",
     "correctIndex": 0,
-    "explanation": "Faction-specific rules commonly modify or add to base actions/stats. Verify exact effects against the current faction rules.",
+    "explanation": "Les règles spécifiques à une faction modifient ou complètent généralement les actions/caractéristiques de base. À vérifier avec les effets exacts des règles de faction actuelles.",
     "status": "draft",
-    "sourceRef": "TODO: verify against official Angels of Death faction rules",
+    "sourceRef": "TODO : vérifier avec les règles officielles de la faction Angels of Death",
     "tags": ["faction-rules"]
   },
   {
@@ -59,12 +59,12 @@
     "category": "angels-of-death",
     "subtopic": "equipment",
     "type": "multiple-choice",
-    "prompt": "Which of these is most likely to be a signature weapon option available to Angels of Death operatives?",
+    "prompt": "Parmi ces options, laquelle est le plus probablement une arme emblématique disponible pour les opératifs Angels of Death ?",
     "choices": ["Bolt rifle", "Shuriken catapult", "Kroot rifle", "Shokk attack gun"],
     "correctIndex": 0,
-    "explanation": "Bolt weapons are iconic Space Marine armament. Verify exact weapon options against the current faction rules/datasheets.",
+    "explanation": "Les armes bolt sont un armement emblématique des Space Marines. À vérifier avec les options d'armes exactes des règles/fiches techniques de faction actuelles.",
     "status": "draft",
-    "sourceRef": "TODO: verify against official Angels of Death faction rules",
+    "sourceRef": "TODO : vérifier avec les règles officielles de la faction Angels of Death",
     "tags": ["equipment"]
   }
 ]

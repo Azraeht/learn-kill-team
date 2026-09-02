@@ -14,7 +14,8 @@ export default defineConfig({
       manifest: {
         name: "Kill Team Trainer",
         short_name: "KT Trainer",
-        description: "A gamified, offline-friendly quiz app for learning Warhammer 40,000 Kill Team rules.",
+        description: "Une application de quiz gamifiée et utilisable hors ligne pour apprendre les règles de Warhammer 40,000 Kill Team.",
+        lang: "fr",
         start_url: base,
         scope: base,
         display: "standalone",

@@ -35,7 +35,7 @@ function poolFor(categoryId: string): Question[] {
 }
 
 function categoryLabel(categoryId: string): string {
-  if (categoryId === "all") return "All Categories";
+  if (categoryId === "all") return "Toutes les catégories";
   return categories.find((c) => c.id === categoryId)?.label ?? categoryId;
 }
 
@@ -64,7 +64,7 @@ function finishSession(): void {
 }
 
 function choiceLabels(question: Question): string[] {
-  return question.type === "true-false" ? ["True", "False"] : (question.choices ?? []);
+  return question.type === "true-false" ? ["Vrai", "Faux"] : (question.choices ?? []);
 }
 
 export function renderQuizSession(root: HTMLElement, categoryId: string): void {
@@ -76,8 +76,8 @@ export function renderQuizSession(root: HTMLElement, categoryId: string): void {
   if (!active.current) {
     root.innerHTML = `
       <div class="empty-state">
-        <p>No questions available in this category yet.</p>
-        <button class="btn" data-home>Back home</button>
+        <p>Aucune question disponible dans cette catégorie pour le moment.</p>
+        <button class="btn" data-home>Retour à l'accueil</button>
       </div>
     `;
     root.querySelector("[data-home]")?.addEventListener("click", () => navigate("home"));
@@ -88,7 +88,7 @@ export function renderQuizSession(root: HTMLElement, categoryId: string): void {
   const batchSize = store.getState().settings.batchSize;
   const labels = choiceLabels(current);
   const draftBadge =
-    current.status === "draft" ? '<span class="badge badge--draft">Draft — unverified</span>' : "";
+    current.status === "draft" ? '<span class="badge badge--draft">Brouillon — non vérifié</span>' : "";
 
   const choiceButtons = labels
     .map((label, index) => {
@@ -104,17 +104,17 @@ export function renderQuizSession(root: HTMLElement, categoryId: string): void {
   const explanation = answered
     ? `
       <div class="explanation">
-        <div class="explanation__feedback">${selectedIndex === current.correctIndex ? "Correct!" : "Not quite."}</div>
+        <div class="explanation__feedback">${selectedIndex === current.correctIndex ? "Correct !" : "Pas tout à fait."}</div>
         ${current.explanation ? `<div>${current.explanation}</div>` : ""}
         ${draftBadge}
-        <button class="btn btn--primary btn--block" data-next>Next</button>
+        <button class="btn btn--primary btn--block" data-next>Suivant</button>
       </div>
     `
     : "";
 
   root.innerHTML = `
     <div class="hud">
-      <span>Score: ${session.score}</span>
+      <span>Score : ${session.score}</span>
       <span>${session.answeredCount}/${batchSize}</span>
       <span class="hud__streak">${session.streak > 0 ? `${session.streak}🔥` : ""}</span>
     </div>

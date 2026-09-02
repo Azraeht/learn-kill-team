@@ -4,12 +4,12 @@
     "category": "terrain-missions",
     "subtopic": "terrain-traits",
     "type": "multiple-choice",
-    "prompt": "Which terrain trait typically blocks line of sight entirely?",
-    "choices": ["Light Cover", "Heavy Cover", "Insignificant", "Obscuring"],
+    "prompt": "Quel trait de terrain bloque généralement complètement la ligne de vue ?",
+    "choices": ["Couvert Léger", "Couvert Lourd", "Insignifiant", "Obscurcissant"],
     "correctIndex": 3,
-    "explanation": "Obscuring terrain generally blocks line of sight entirely, unlike Light/Heavy Cover which affect the shooting attack rather than sight itself. Verify against the current rulebook.",
+    "explanation": "Le terrain Obscurcissant bloque généralement la ligne de vue, contrairement au Couvert Léger/Lourd qui affecte l'attaque de tir plutôt que la visibilité elle-même. À vérifier avec le livre de règles actuel.",
     "status": "draft",
-    "sourceRef": "TODO: verify against official Kill Team terrain rules",
+    "sourceRef": "TODO : vérifier avec les règles officielles de terrain de Kill Team",
     "tags": ["terrain-traits"]
   },
   {
@@ -17,11 +17,11 @@
     "category": "terrain-missions",
     "subtopic": "vantage",
     "type": "true-false",
-    "prompt": "Vantage terrain lets operatives on it see and be seen over intervening terrain, within its specific rules.",
+    "prompt": "Un terrain Point de Vue permet aux opératifs qui s'y trouvent de voir et d'être vus par-dessus le terrain intermédiaire, selon ses règles spécifiques.",
     "correctIndex": 0,
-    "explanation": "Vantage points generally grant improved sightlines over lower terrain. Verify exact wording against the current rulebook.",
+    "explanation": "Les points de vue accordent généralement de meilleures lignes de vue par-dessus un terrain plus bas. À vérifier avec le libellé exact du livre de règles actuel.",
     "status": "draft",
-    "sourceRef": "TODO: verify against official Kill Team terrain rules",
+    "sourceRef": "TODO : vérifier avec les règles officielles de terrain de Kill Team",
     "tags": ["vantage"]
   },
   {
@@ -29,17 +29,17 @@
     "category": "terrain-missions",
     "subtopic": "kill-zones",
     "type": "multiple-choice",
-    "prompt": "What is a 'kill zone' in the context of a Kill Team mission pack?",
+    "prompt": "Qu'est-ce qu'une « kill zone » dans le contexte d'un pack de mission Kill Team ?",
     "choices": [
-      "A specific terrain layout/battlefield setup tied to a mission pack",
-      "The area where injured operatives must retreat",
-      "A zone where shooting is not allowed",
-      "The deployment zone only"
+      "Une disposition de terrain/champ de bataille spécifique associée à un pack de mission",
+      "La zone où les opératifs blessés doivent se replier",
+      "Une zone où il est interdit de tirer",
+      "La zone d'insertion uniquement"
     ],
     "correctIndex": 0,
-    "explanation": "A kill zone is generally a defined battlefield/terrain setup associated with a mission pack. Verify against the current rulebook/mission pack.",
+    "explanation": "Une kill zone est généralement une configuration de champ de bataille/terrain définie, associée à un pack de mission. À vérifier avec le livre de règles/pack de mission actuel.",
     "status": "draft",
-    "sourceRef": "TODO: verify against official Kill Team mission rules",
+    "sourceRef": "TODO : vérifier avec les règles officielles de mission de Kill Team",
     "tags": ["kill-zones"]
   },
   {
@@ -47,17 +47,17 @@
     "category": "terrain-missions",
     "subtopic": "terrain-traits",
     "type": "multiple-choice",
-    "prompt": "Which best describes an 'Insignificant' terrain feature's effect on the game?",
+    "prompt": "Quelle proposition décrit le mieux l'effet d'un élément de terrain « Insignifiant » sur la partie ?",
     "choices": [
-      "It blocks all movement",
-      "It is too small/thin to meaningfully affect cover or movement",
-      "It grants Heavy Cover to anyone near it",
-      "It counts as a Vantage point"
+      "Il bloque tout mouvement",
+      "Il est trop petit/fin pour affecter significativement le couvert ou le mouvement",
+      "Il accorde un Couvert Lourd à tout agent proche",
+      "Il compte comme un Point de Vue"
     ],
     "correctIndex": 1,
-    "explanation": "Insignificant terrain is generally treated as too minor to interact with most terrain rules. Verify against the current rulebook.",
+    "explanation": "Un terrain Insignifiant est généralement traité comme trop mineur pour interagir avec la plupart des règles de terrain. À vérifier avec le livre de règles actuel.",
     "status": "draft",
-    "sourceRef": "TODO: verify against official Kill Team terrain rules",
+    "sourceRef": "TODO : vérifier avec les règles officielles de terrain de Kill Team",
     "tags": ["terrain-traits"]
   },
   {
@@ -65,11 +65,11 @@
     "category": "terrain-missions",
     "subtopic": "objectives",
     "type": "true-false",
-    "prompt": "Mission objectives in Kill Team are always identical across every mission pack.",
+    "prompt": "Les objectifs de mission dans Kill Team sont toujours identiques d'un pack de mission à l'autre.",
     "correctIndex": 1,
-    "explanation": "Objectives vary by mission pack and specific mission being played. Verify against the current mission pack in use.",
+    "explanation": "Les objectifs varient selon le pack de mission et la mission spécifique jouée. À vérifier avec le pack de mission actuellement utilisé.",
     "status": "draft",
-    "sourceRef": "TODO: verify against official Kill Team mission rules",
+    "sourceRef": "TODO : vérifier avec les règles officielles de mission de Kill Team",
     "tags": ["objectives"]
   }
 ]
