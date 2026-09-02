@@ -14,7 +14,7 @@ export function renderHome(root: HTMLElement): void {
     .map((category) => {
       const questions = getQuestionsForCategory(category.id);
       const stats = computeCategoryStats(category.id, questions, getProgress, now);
-      const draftNote = stats.draftCount > 0 ? `<span class="badge badge--draft">${stats.draftCount}/${stats.total} draft</span>` : "";
+      const draftNote = stats.draftCount > 0 ? `<span class="badge badge--draft">${stats.draftCount}/${stats.total} brouillon</span>` : "";
 
       return `
         <button class="category-card" data-category="${category.id}">
@@ -25,9 +25,9 @@ export function renderHome(root: HTMLElement): void {
           <p class="category-card__desc">${category.description}</p>
           <div class="progress-bar"><div class="progress-bar__fill" style="width:${stats.masteryPercent}%; background:${category.color}"></div></div>
           <div class="category-card__meta">
-            <span>${stats.masteryPercent}% mastered</span>
-            <span>${stats.dueCount} due</span>
-            <span>${stats.accuracyPercent === null ? "no attempts yet" : `${stats.accuracyPercent}% accuracy`}</span>
+            <span>${stats.masteryPercent}% maîtrisé</span>
+            <span>${stats.dueCount} à réviser</span>
+            <span>${stats.accuracyPercent === null ? "aucune tentative" : `${stats.accuracyPercent}% de réussite`}</span>
           </div>
         </button>
       `;
@@ -35,20 +35,20 @@ export function renderHome(root: HTMLElement): void {
     .join("");
 
   root.innerHTML = `
-    <h2 class="screen-title">Study</h2>
+    <h2 class="screen-title">Réviser</h2>
     <div class="stat-grid">
       <div class="stat-tile">
         <div class="stat-tile__value">${totalDue}</div>
-        <div class="stat-tile__label">Due today</div>
+        <div class="stat-tile__label">À réviser aujourd'hui</div>
       </div>
       <div class="stat-tile">
         <div class="stat-tile__value">${allQuestions.length}</div>
-        <div class="stat-tile__label">Total questions</div>
+        <div class="stat-tile__label">Questions au total</div>
       </div>
     </div>
-    <button class="btn btn--primary btn--block" data-start-all>Study all categories</button>
+    <button class="btn btn--primary btn--block" data-start-all>Réviser toutes les catégories</button>
     <div class="category-list">${cards}</div>
-    <button class="btn btn--block" data-progress>View progress</button>
+    <button class="btn btn--block" data-progress>Voir la progression</button>
   `;
 
   root.querySelectorAll<HTMLButtonElement>("[data-category]").forEach((btn) => {

@@ -16,13 +16,13 @@ export function renderProgress(root: HTMLElement): void {
         <div class="category-card">
           <div class="category-card__top">
             <span class="category-card__label">${category.label}</span>
-            <span class="badge badge--muted">${stats.masteredCount}/${stats.total} mastered</span>
+            <span class="badge badge--muted">${stats.masteredCount}/${stats.total} maîtrisées</span>
           </div>
           <div class="progress-bar"><div class="progress-bar__fill" style="width:${stats.masteryPercent}%; background:${category.color}"></div></div>
           <div class="category-card__meta">
-            <span>${stats.masteryPercent}% mastery</span>
-            <span>${stats.accuracyPercent === null ? "no attempts yet" : `${stats.accuracyPercent}% accuracy`}</span>
-            <span>${stats.dueCount} due</span>
+            <span>${stats.masteryPercent}% de maîtrise</span>
+            <span>${stats.accuracyPercent === null ? "aucune tentative" : `${stats.accuracyPercent}% de réussite`}</span>
+            <span>${stats.dueCount} à réviser</span>
           </div>
         </div>
       `;
@@ -30,9 +30,9 @@ export function renderProgress(root: HTMLElement): void {
     .join("");
 
   root.innerHTML = `
-    <h2 class="screen-title">Progress</h2>
+    <h2 class="screen-title">Progression</h2>
     <div class="category-list">${rows}</div>
-    <button class="btn btn--block" data-home>Back home</button>
+    <button class="btn btn--block" data-home>Retour à l'accueil</button>
   `;
 
   root.querySelector("[data-home]")?.addEventListener("click", () => navigate("home"));
