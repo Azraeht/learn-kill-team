@@ -13,7 +13,7 @@
     },
     "category": {
       "type": "string",
-      "enum": ["core-rules", "terrain-missions", "angels-of-death"]
+      "enum": ["core-rules", "terrain-missions", "angels-of-death", "aquilon-tempestus"]
     },
     "subtopic": {
       "type": "string",
