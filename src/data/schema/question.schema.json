@@ -13,7 +13,17 @@
     },
     "category": {
       "type": "string",
-      "enum": ["core-rules", "terrain-missions", "angels-of-death", "aquilon-tempestus"]
+      "enum": [
+        "core-rules",
+        "terrain-missions",
+        "aquilon-tempestus",
+        "frelons-vespides",
+        "yaegirs-hernkogs",
+        "exo-armures-stealth",
+        "cibleurs",
+        "cercle-canoptek",
+        "deathwatch"
+      ]
     },
     "subtopic": {
       "type": "string",
