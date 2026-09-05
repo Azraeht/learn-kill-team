@@ -1,4 +1,13 @@
-export type CategoryId = "core-rules" | "terrain-missions" | "aquilon-tempestus";
+export type CategoryId =
+  | "core-rules"
+  | "terrain-missions"
+  | "aquilon-tempestus"
+  | "frelons-vespides"
+  | "yaegirs-hernkogs"
+  | "exo-armures-stealth"
+  | "cibleurs"
+  | "cercle-canoptek"
+  | "deathwatch";
 
 export type QuestionType = "multiple-choice" | "true-false";
 
