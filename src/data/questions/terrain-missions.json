@@ -159,5 +159,218 @@
     "status": "verified",
     "sourceRef": "Kill Team – Équipement Universel, Journal de Bord (commentaires des règles, juin 2026)",
     "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-013",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "Quel bonus offre la règle Protecteur d'une Barricade Portable à un agent qui en bénéficie comme couvert ?",
+    "choices": ["Amélioration de 1 de la Sauvegarde (jusqu'à 2+ maximum)", "Un dé de défense supplémentaire", "Immunité totale aux tirs", "Amélioration de la caractéristique de Touche"],
+    "correctIndex": 0,
+    "explanation": "Tant qu'un agent est à couvert grâce à cet élément de terrain, améliorez de 1 sa caractéristique de Sauvegarde (jusqu'à un maximum de 2+).",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Barricade Portable)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-014",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "true-false",
+    "prompt": "Une Barricade Portable ne fournit du couvert que si le bouclier est interposé et qu'un agent est à son contact.",
+    "correctIndex": 0,
+    "explanation": "Portable : cet élément de terrain ne fournit de couvert que tant qu'un agent est à son contact et si le bouclier est interposé (ignorez ses pieds).",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Barricade Portable)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-015",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "L'action Déplacer une Barricade (1PA) fonctionne comme un Repositionnement, mais avec quelle restriction ?",
+    "choices": [
+      "L'agent soustrait 2\" à sa caractéristique de Mouvement et ne peut pas escalader, se laisser tomber ou sauter",
+      "L'agent ne peut plus tirer ce tournant",
+      "L'agent perd 1 PV",
+      "Aucune restriction particulière"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'agent actif soustrait 2\" à sa caractéristique de Mouvement et ne peut pas escalader, se laisser tomber, sauter ou utiliser une règle de kill team qui le retire de la killzone pour l'y replacer.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Barricade Portable)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-016",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "Une zone de fumée créée par une Grenade Fumigène a quel rayon ?",
+    "choices": ["1\"", "2\"", "3\"", "6\""],
+    "correctIndex": 0,
+    "explanation": "Le marqueur crée une zone de fumée autour de lui de 1\" et de hauteur illimitée (mais pas sous lui).",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Grenades Non Létales)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-017",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "true-false",
+    "prompt": "Un agent entièrement dans une zone de fumée est masqué aux agents à plus de 2\" de lui.",
+    "correctIndex": 0,
+    "explanation": "Tant qu'un agent est entièrement dans une zone de fumée, il est masqué aux agents à plus de 2\" de lui et vice versa.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Grenades Non Létales)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-018",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "Combien de temps un marqueur de Grenade Fumigène reste-t-il en jeu au maximum ?",
+    "choices": [
+      "Jusqu'à la fin du tournant, ou après un nombre d'activations égal à un jet de D3 (le premier des deux)",
+      "Toute la bataille",
+      "Une seule activation",
+      "Jusqu'à ce qu'un agent le détruise"
+    ],
+    "correctIndex": 0,
+    "explanation": "À l'étape de Préparation de la prochaine phase de Stratégie, jetez un D3. Retirez ce marqueur après avoir fini autant d'activations que le résultat du D3, ou à la fin du tournant (selon ce qui survient en premier).",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Grenades Non Létales)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-019",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "Que permet l'action Rechargement (0PA) liée à un Cache de Munitions ?",
+    "choices": [
+      "Relancer un dé d'attaque en tirant avec une arme de la carte technique, jusqu'au prochain tournant",
+      "Regagner des PV perdus",
+      "Regagner 1PC",
+      "Ignorer la règle Limitée d'une arme"
+    ],
+    "correctIndex": 0,
+    "explanation": "Jusqu'au début du prochain tournant, lorsque cet agent tire avec une arme de sa carte technique, vous pouvez relancer un de vos dés d'attaque.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Cache de Munitions)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-020",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "true-false",
+    "prompt": "Les Barbelés sont du terrain de type Exposé et Obstruant.",
+    "correctIndex": 0,
+    "explanation": "Les barbelés sont du terrain de type Exposé et Obstruant.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Barbelés)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-021",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "Que fait l'Appareil de Communications pour les règles de SOUTIEN d'un agent ami qui le contrôle ?",
+    "choices": [
+      "Il ajoute 3\" à la distance requise pour cibler un agent ami",
+      "Il double la portée de toutes les armes",
+      "Il permet de voir à travers les murs",
+      "Il donne 1PC supplémentaire"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ajoutez 3\" au critère de distance de ses règles de SOUTIEN qui se réfère aux agents amis (par exemple, « choisir un agent ami à 6\" » donnerait à la place 9\").",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Appareil de Communications)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-022",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "Que se passe-t-il la première fois qu'un marqueur de Mines est à portée de contrôle d'un agent ?",
+    "choices": [
+      "Le marqueur est retiré et inflige D3+3 dégâts à l'agent",
+      "L'agent est immédiatement neutralisé",
+      "Rien, les mines ne s'activent qu'au contact",
+      "L'agent est estropié automatiquement"
+    ],
+    "correctIndex": 0,
+    "explanation": "La première fois que ce marqueur est à portée de contrôle d'un agent, retirez ce marqueur et infligez D3+3 dégâts à l'agent.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Mines)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-023",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "true-false",
+    "prompt": "Une fois par action, une échelle peut réduire la distance verticale d'escalade à 1\", si elle reste à portée de contrôle de l'agent pendant toute son escalade.",
+    "correctIndex": 0,
+    "explanation": "Une fois par action, lorsqu'un agent escalade l'élément de terrain contre lequel est placée l'échelle, traitez la distance verticale comme étant de 1\" si l'échelle reste dans la portée de contrôle de cet agent pendant toute son escalade.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Échelles)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-024",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "Quel est le profil de la Grenade Krak de l'équipement universel Grenades Explosives ?",
+    "choices": [
+      "A4, Touche 4+, Dégâts 4/5, Portée 6\", Perforante 1, Saturation",
+      "A4, Touche 3+, Dégâts 2/4, Portée 8\", Déflagration 2\"",
+      "A2, Touche 4+, Dégâts 6/8, Lourde",
+      "A4, Touche 4+, Dégâts 2/4, Portée 6\", Déflagration 2\", Saturation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Grenade krak : A4, Touche 4+, Dégâts 4/5, Portée 6\", Perforante 1, Saturation. (La dernière option est en fait le profil de la Grenade frag.)",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Grenades Explosives)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-025",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "Que permet l'équipement Charge de Brèche, une fois par bataille ?",
+    "choices": [
+      "Effectuer l'action Brèche pour 1PA de moins (jusqu'à un minimum de 1PA)",
+      "Créer une brèche permanente dans n'importe quel mur",
+      "Regagner 2PC",
+      "Tirer à travers les murs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Une fois par bataille, quand un agent ami effectue l'action Brèche, cet agent peut l'effectuer pour 1 PA de moins (jusqu'à un minimum de 1 PA).",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Charge de Brèche)",
+    "tags": ["equipement-universel"]
+  },
+  {
+    "id": "terr-026",
+    "category": "terrain-missions",
+    "subtopic": "equipement-universel",
+    "type": "multiple-choice",
+    "prompt": "Lors d'un test d'Étourdissement causé par une Grenade Étourdissante, quel résultat de D6 inflige -1 à la caractéristique de LPA de la cible ?",
+    "choices": ["3+", "4+", "5+", "6 uniquement"],
+    "correctIndex": 0,
+    "explanation": "Jetez un D6 : si le résultat est de 3+, soustrayez 1 à la caractéristique de LPA de l'agent concerné jusqu'à la fin de sa prochaine activation.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Équipement Universel, Cartes d'Équipement (Grenades Non Létales)",
+    "tags": ["equipement-universel"]
   }
 ]
