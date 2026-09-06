@@ -1,10 +1,20 @@
 import { dayKey } from "./activity.ts";
+import {
+  adjustPlayerCp,
+  adjustPlayerVp,
+  adjustTurningPoint,
+  applyTurningPointAdvance,
+  createInitialMatchTracker,
+  setInitiativeHolder,
+  setPlayerName,
+} from "./matchTracker.ts";
 import { createInitialCardProgress, nextCardProgress } from "./srs.ts";
 import type {
   Attempt,
   CardProgress,
   CategoryId,
   DayActivity,
+  MatchTrackerState,
   PersistedState,
   ScenarioProgress,
   SequenceProgress,
@@ -25,6 +35,7 @@ function createDefaultState(): PersistedState {
     sequenceProgress: {},
     scenarioProgress: {},
     dailyActivity: {},
+    matchTracker: createInitialMatchTracker(),
   };
 }
 
@@ -42,6 +53,7 @@ function normalizeState(parsed: Partial<PersistedState>): PersistedState {
     sequenceProgress: parsed.sequenceProgress ?? {},
     scenarioProgress: parsed.scenarioProgress ?? {},
     dailyActivity: parsed.dailyActivity ?? {},
+    matchTracker: parsed.matchTracker ?? createInitialMatchTracker(),
   };
 }
 
@@ -221,6 +233,42 @@ class Store {
     this.commit({ ...this.state, settings: { ...this.state.settings, batchSize } });
   }
 
+  getMatchTracker(): MatchTrackerState {
+    return this.state.matchTracker;
+  }
+
+  private commitMatchTracker(next: MatchTrackerState): void {
+    this.commit({ ...this.state, matchTracker: next });
+  }
+
+  advanceTurningPoint(): void {
+    this.commitMatchTracker(applyTurningPointAdvance(this.state.matchTracker));
+  }
+
+  adjustTurningPoint(delta: number): void {
+    this.commitMatchTracker(adjustTurningPoint(this.state.matchTracker, delta));
+  }
+
+  adjustPlayerCp(index: 0 | 1, delta: number): void {
+    this.commitMatchTracker(adjustPlayerCp(this.state.matchTracker, index, delta));
+  }
+
+  adjustPlayerVp(index: 0 | 1, delta: number): void {
+    this.commitMatchTracker(adjustPlayerVp(this.state.matchTracker, index, delta));
+  }
+
+  setPlayerName(index: 0 | 1, name: string): void {
+    this.commitMatchTracker(setPlayerName(this.state.matchTracker, index, name));
+  }
+
+  setInitiativeHolder(index: 0 | 1 | null): void {
+    this.commitMatchTracker(setInitiativeHolder(this.state.matchTracker, index));
+  }
+
+  resetMatchTracker(): void {
+    this.commitMatchTracker(createInitialMatchTracker());
+  }
+
   /** Serialised progress for the export-to-file button on the settings screen. */
   exportState(): string {
     return JSON.stringify(this.state, null, 2);
@@ -240,8 +288,13 @@ class Store {
     return true;
   }
 
+  /**
+   * Resets learning progress only. The match tracker is a separate concept — an
+   * in-progress tabletop game's score — and resetting your quiz history shouldn't
+   * also wipe VP/CP you're tracking live at the table; use resetMatchTracker() for that.
+   */
   resetProgress(): void {
-    this.commit(createDefaultState());
+    this.commit({ ...createDefaultState(), matchTracker: this.state.matchTracker });
   }
 }
 

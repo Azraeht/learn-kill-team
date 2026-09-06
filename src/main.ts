@@ -12,6 +12,7 @@ import { renderScenarios } from "./screens/scenarios.ts";
 import { renderScenarioPlay } from "./screens/scenarioPlay.ts";
 import { renderReference } from "./screens/reference.ts";
 import { renderSettings } from "./screens/settings.ts";
+import { renderMatchTracker } from "./screens/matchTracker.ts";
 import { registerServiceWorker } from "./registerServiceWorker.ts";
 
 registerServiceWorker();
@@ -60,6 +61,9 @@ function render(route: Route): void {
       break;
     case "settings":
       renderSettings(main!);
+      break;
+    case "tracker":
+      renderMatchTracker(main!);
       break;
     case "home":
     default:
