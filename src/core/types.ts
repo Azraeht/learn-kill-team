@@ -55,9 +55,27 @@ export interface AppSettings {
   batchSize: number;
 }
 
+export interface Sequence {
+  id: string;
+  category: CategoryId;
+  title: string;
+  description?: string;
+  steps: string[];
+  status: QuestionStatus;
+  sourceRef?: string;
+}
+
+export interface SequenceProgress {
+  timesAttempted: number;
+  timesFullyCorrect: number;
+  bestCorrectCount: number;
+  lastAttemptAt: number | null;
+}
+
 export interface PersistedState {
   version: 1;
   progress: Record<string, CardProgress>;
   sessionLog: Attempt[];
   settings: AppSettings;
+  sequenceProgress: Record<string, SequenceProgress>;
 }

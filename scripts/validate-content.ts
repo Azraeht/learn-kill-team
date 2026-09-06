@@ -5,7 +5,9 @@ import Ajv from "ajv";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const questionsDir = path.join(__dirname, "..", "src", "data", "questions");
-const schemaPath = path.join(__dirname, "..", "src", "data", "schema", "question.schema.json");
+const sequencesDir = path.join(__dirname, "..", "src", "data", "sequences");
+const questionSchemaPath = path.join(__dirname, "..", "src", "data", "schema", "question.schema.json");
+const sequenceSchemaPath = path.join(__dirname, "..", "src", "data", "schema", "sequence.schema.json");
 
 interface RawQuestion {
   id: string;
@@ -17,12 +19,24 @@ interface RawQuestion {
   sourceRef?: string;
 }
 
+interface RawSequence {
+  id: string;
+  category: string;
+  steps: string[];
+  status: string;
+  sourceRef?: string;
+}
+
 export interface ValidationResult {
   errors: string[];
   warnings: string[];
 }
 
-export function validateContent(dir: string = questionsDir): ValidationResult {
+function validateEntries<T extends { id: string; status: string; sourceRef?: string }>(
+  dir: string,
+  schemaPath: string,
+  checkEntry: (label: string, entry: T, errors: string[]) => void,
+): ValidationResult {
   const schema = JSON.parse(readFileSync(schemaPath, "utf-8"));
   const ajv = new Ajv({ allErrors: true });
   const validate = ajv.compile(schema);
@@ -35,41 +49,35 @@ export function validateContent(dir: string = questionsDir): ValidationResult {
 
   for (const file of files) {
     const filePath = path.join(dir, file);
-    const content = JSON.parse(readFileSync(filePath, "utf-8")) as RawQuestion[];
+    const content = JSON.parse(readFileSync(filePath, "utf-8")) as T[];
 
     if (!Array.isArray(content)) {
-      errors.push(`${file}: expected a JSON array of questions`);
+      errors.push(`${file}: expected a JSON array`);
       continue;
     }
 
-    for (const [index, question] of content.entries()) {
-      const label = `${file}[${index}]${question?.id ? ` (${question.id})` : ""}`;
+    for (const [index, entry] of content.entries()) {
+      const label = `${file}[${index}]${entry?.id ? ` (${entry.id})` : ""}`;
 
-      if (question?.id) {
-        const prevFile = seenIds.get(question.id);
+      if (entry?.id) {
+        const prevFile = seenIds.get(entry.id);
         if (prevFile) {
-          errors.push(`${label}: duplicate id "${question.id}" also found in ${prevFile}`);
+          errors.push(`${label}: duplicate id "${entry.id}" also found in ${prevFile}`);
         } else {
-          seenIds.set(question.id, file);
+          seenIds.set(entry.id, file);
         }
       }
 
-      if (!validate(question)) {
+      if (!validate(entry)) {
         for (const err of validate.errors ?? []) {
           errors.push(`${label}: ${err.instancePath || "/"} ${err.message}`);
         }
         continue;
       }
 
-      if (question.type === "multiple-choice" && question.choices) {
-        if (question.correctIndex < 0 || question.correctIndex >= question.choices.length) {
-          errors.push(
-            `${label}: correctIndex ${question.correctIndex} is out of bounds for ${question.choices.length} choices`,
-          );
-        }
-      }
+      checkEntry(label, entry, errors);
 
-      if (question.status === "verified" && !question.sourceRef?.trim()) {
+      if (entry.status === "verified" && !entry.sourceRef?.trim()) {
         warnings.push(`${label}: status is "verified" but sourceRef is empty`);
       }
     }
@@ -78,8 +86,33 @@ export function validateContent(dir: string = questionsDir): ValidationResult {
   return { errors, warnings };
 }
 
+export function validateContent(dir: string = questionsDir): ValidationResult {
+  return validateEntries<RawQuestion>(dir, questionSchemaPath, (label, question, errors) => {
+    if (question.type === "multiple-choice" && question.choices) {
+      if (question.correctIndex < 0 || question.correctIndex >= question.choices.length) {
+        errors.push(
+          `${label}: correctIndex ${question.correctIndex} is out of bounds for ${question.choices.length} choices`,
+        );
+      }
+    }
+  });
+}
+
+export function validateSequences(dir: string = sequencesDir): ValidationResult {
+  return validateEntries<RawSequence>(dir, sequenceSchemaPath, (label, sequence, errors) => {
+    const uniqueSteps = new Set(sequence.steps);
+    if (uniqueSteps.size !== sequence.steps.length) {
+      errors.push(`${label}: steps must be unique within a sequence`);
+    }
+  });
+}
+
 function main() {
-  const { errors, warnings } = validateContent();
+  const questionResult = validateContent();
+  const sequenceResult = validateSequences();
+
+  const errors = [...questionResult.errors, ...sequenceResult.errors];
+  const warnings = [...questionResult.warnings, ...sequenceResult.warnings];
 
   for (const warning of warnings) {
     console.warn(`WARNING: ${warning}`);

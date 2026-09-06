@@ -1,0 +1,30 @@
+[
+  {
+    "id": "seq-998",
+    "category": "core-rules",
+    "title": "Trop peu d'étapes",
+    "steps": ["Une seule étape"],
+    "status": "draft"
+  },
+  {
+    "id": "seq-998",
+    "category": "core-rules",
+    "title": "Id dupliqué",
+    "steps": ["Étape un", "Étape deux", "Étape trois"],
+    "status": "draft"
+  },
+  {
+    "id": "seq-997",
+    "category": "core-rules",
+    "title": "Étapes répétées",
+    "steps": ["Étape un", "Étape un", "Étape deux"],
+    "status": "draft"
+  },
+  {
+    "id": "seq-996",
+    "category": "not-a-real-category",
+    "title": "Catégorie invalide",
+    "steps": ["Étape un", "Étape deux", "Étape trois"],
+    "status": "draft"
+  }
+]

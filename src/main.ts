@@ -6,6 +6,8 @@ import { renderHome } from "./screens/home.ts";
 import { renderQuizSession } from "./screens/quizSession.ts";
 import { renderResults } from "./screens/results.ts";
 import { renderProgress } from "./screens/progress.ts";
+import { renderSequences } from "./screens/sequences.ts";
+import { renderSequenceGame } from "./screens/sequenceGame.ts";
 
 const app = document.getElementById("app");
 if (!app) throw new Error("Missing #app root element");
@@ -32,6 +34,12 @@ function render(route: Route): void {
       break;
     case "progress":
       renderProgress(main!);
+      break;
+    case "sequences":
+      renderSequences(main!);
+      break;
+    case "sequence":
+      renderSequenceGame(main!, route.sequenceId);
       break;
     case "home":
     default:

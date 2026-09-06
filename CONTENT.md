@@ -1,17 +1,30 @@
-# Adding and editing questions
+# Adding and editing content
+
+There are two kinds of content: **questions** (quiz cards) and **sequences**
+(the "remettre dans l'ordre" game mode for learning game flow/phases).
+
+## Questions
 
 Questions live in `src/data/questions/`, one JSON file per category:
 
 - `core-rules.json`
 - `terrain-missions.json`
-- `angels-of-death.json`
+- `aquilon-tempestus.json`
+- `frelons-vespides.json`
+- `yaegirs-hernkogs.json`
+- `exo-armures-stealth.json`
+- `cibleurs.json`
+- `cercle-canoptek.json`
+- `deathwatch.json`
 
 Each file is a flat JSON array of question objects. To add a new kill team
 (faction) later: add a new file here, add one entry to the `categories`
-array in `src/data/categories.ts`, and register it in
-`questionsByCategory` in that same file.
+array in `src/data/categories.ts`, register it in `questionsByCategory` in
+that same file, and add the category id to `CategoryId` in
+`src/core/types.ts` and to the `category` enum in
+`src/data/schema/question.schema.json`.
 
-## Field reference
+### Field reference
 
 ```jsonc
 {
@@ -36,7 +49,7 @@ array in `src/data/categories.ts`, and register it in
   the official rules, and fill in `sourceRef` (page/section) when you do —
   the app shows a `DRAFT — unverified` badge on anything still `"draft"`.
 
-## Template to copy-paste
+### Template to copy-paste
 
 ```json
 {
@@ -52,21 +65,54 @@ array in `src/data/categories.ts`, and register it in
 }
 ```
 
+## Sequences (game-flow ordering game)
+
+Sequences live in `src/data/sequences/`, one JSON file per category (today
+just `core-rules.json`). Each sequence is a named, ordered list of steps —
+the app shuffles them and the player taps them back into the correct order.
+Good candidates: a phase's step-by-step breakdown, an action's resolution
+sequence, anything that's a **procedure** rather than an isolated fact.
+
+```jsonc
+{
+  "id": "seq-006",                     // required, unique across ALL sequence files, format "<prefix>-###"
+  "category": "core-rules",            // required, must match a category id
+  "title": "Séquence de Tir",          // required, shown as the card/screen title
+  "description": "Optional subtitle.", // optional
+  "steps": [                            // required, 3-8 items, IN THEIR CORRECT ORDER
+    "First step...",
+    "Second step...",
+    "Third step..."
+  ],
+  "status": "verified",
+  "sourceRef": "Core Rules, 'Tirer'"
+}
+```
+
+- The order the `steps` array is written in **is** the correct answer — the
+  app shuffles a copy for play.
+- Steps within one sequence must be unique text (so the checker can compare
+  by string equality); this is enforced by `validate-content`.
+- To add a new sequence category: add a file here, add it to the `sequences`
+  array in `src/data/sequences.ts`.
+
 ## Validating your edits
 
-After editing any file in `src/data/questions/`, run:
+After editing any file in `src/data/questions/` or `src/data/sequences/`, run:
 
 ```bash
 npm run validate-content
 ```
 
-This checks each question against `src/data/schema/question.schema.json`
-and additionally checks (in `scripts/validate-content.ts`):
+This checks every question against `src/data/schema/question.schema.json`
+and every sequence against `src/data/schema/sequence.schema.json`, and
+additionally checks (in `scripts/validate-content.ts`):
 
-- every `id` is unique across all category files,
+- every `id` is unique across all files of its kind,
 - `correctIndex` is within bounds of `choices` for multiple-choice questions,
-- a `"verified"` question has a non-empty `sourceRef` (warning, not a hard
+- steps are unique within a sequence,
+- a `"verified"` entry has a non-empty `sourceRef` (warning, not a hard
   failure).
 
-This same check runs in CI on every push, so a malformed question fails the
+This same check runs in CI on every push, so malformed content fails the
 build before it ever reaches the deployed site.

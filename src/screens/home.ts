@@ -47,6 +47,7 @@ export function renderHome(root: HTMLElement): void {
       </div>
     </div>
     <button class="btn btn--primary btn--block" data-start-all>Réviser toutes les catégories</button>
+    <button class="btn btn--block" data-sequences>Séquences de jeu (remettre dans l'ordre)</button>
     <div class="category-list">${cards}</div>
     <button class="btn btn--block" data-progress>Voir la progression</button>
   `;
@@ -55,5 +56,6 @@ export function renderHome(root: HTMLElement): void {
     btn.addEventListener("click", () => navigate(`quiz/${btn.dataset.category}`));
   });
   root.querySelector("[data-start-all]")?.addEventListener("click", () => navigate("quiz/all"));
+  root.querySelector("[data-sequences]")?.addEventListener("click", () => navigate("sequences"));
   root.querySelector("[data-progress]")?.addEventListener("click", () => navigate("progress"));
 }
