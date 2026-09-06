@@ -4,6 +4,7 @@ import { applyAnswer, createSessionState, pickNextQuestion } from "../core/sessi
 import type { SessionState } from "../core/sessionEngine.ts";
 import type { Question } from "../core/types.ts";
 import { navigate } from "../router.ts";
+import { escapeHtml } from "../ui/html.ts";
 
 export interface QuizSessionSummary {
   categoryLabel: string;
@@ -97,7 +98,7 @@ export function renderQuizSession(root: HTMLElement, categoryId: string): void {
         if (index === current.correctIndex) cls += " choice-btn--correct";
         else if (index === selectedIndex) cls += " choice-btn--incorrect";
       }
-      return `<button class="${cls}" data-choice="${index}" ${answered ? "disabled" : ""}>${label}</button>`;
+      return `<button class="${cls}" data-choice="${index}" ${answered ? "disabled" : ""}>${escapeHtml(label)}</button>`;
     })
     .join("");
 
@@ -105,7 +106,7 @@ export function renderQuizSession(root: HTMLElement, categoryId: string): void {
     ? `
       <div class="explanation">
         <div class="explanation__feedback">${selectedIndex === current.correctIndex ? "Correct !" : "Pas tout à fait."}</div>
-        ${current.explanation ? `<div>${current.explanation}</div>` : ""}
+        ${current.explanation ? `<div>${escapeHtml(current.explanation)}</div>` : ""}
         ${draftBadge}
         <button class="btn btn--primary btn--block" data-next>Suivant</button>
       </div>
@@ -120,10 +121,10 @@ export function renderQuizSession(root: HTMLElement, categoryId: string): void {
     </div>
     <div class="question-card">
       <div class="question-card__top">
-        <span class="badge badge--muted">${categoryLabel(active.categoryId)}</span>
+        <span class="badge badge--muted">${escapeHtml(categoryLabel(active.categoryId))}</span>
         ${!answered ? draftBadge : ""}
       </div>
-      <p class="question-card__prompt">${current.prompt}</p>
+      <p class="question-card__prompt">${escapeHtml(current.prompt)}</p>
       <div class="choice-list">${choiceButtons}</div>
       ${explanation}
     </div>

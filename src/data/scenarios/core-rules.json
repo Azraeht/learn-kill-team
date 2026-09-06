@@ -1,0 +1,274 @@
+[
+  {
+    "id": "scn-001",
+    "category": "core-rules",
+    "title": "Débusquer une cible dissimulée",
+    "situation": "Ton agent a un ordre d'Engagement et il lui reste des PA. Un agent ennemi avec un ordre de Dissimulation se tient derrière une ruine : il est visible depuis ton agent, mais le terrain lui procure du couvert.",
+    "steps": [
+      {
+        "prompt": "Tel quel, cet ennemi dissimulé est-il une cible éligible pour ton action Tirer ?",
+        "choices": [
+          "Oui, il est visible, cela suffit",
+          "Non : dissimulé, il doit être visible ET ne pas être à couvert",
+          "Oui, mais seulement à moins de 6\""
+        ],
+        "correctIndex": 1,
+        "explanation": "Si la cible désigne un agent avec un ordre de Dissimulation, c'est une cible éligible seulement si elle est visible de l'agent et n'est pas à couvert. Ici le couvert la protège."
+      },
+      {
+        "prompt": "Tu te repositionnes donc pour l'attraper hors de son couvert. Ton agent finit son mouvement à portée de contrôle de cet ennemi, puis tu veux Tirer. Est-ce autorisé ?",
+        "choices": [
+          "Oui, rien ne l'empêche",
+          "Non : on ne peut pas Tirer tant qu'on est à portée de contrôle d'un ennemi",
+          "Oui, mais avec un dé d'attaque en moins"
+        ],
+        "correctIndex": 1,
+        "explanation": "Un agent ne peut pas faire l'action Tirer tant qu'il a un ordre de Dissimulation, ni tant qu'il est à portée de contrôle d'un agent ennemi. Il faudra Combattre, ou rester à distance."
+      },
+      {
+        "prompt": "Tu rejoues le tour autrement : ton agent tire finalement à 6\", sur l'ennemi désormais hors de couvert. Combien de dés de défense l'ennemi jette-t-il ?",
+        "choices": [
+          "Autant que la caractéristique d'Attaques de ton arme",
+          "Trois D6, quelle que soit l'arme utilisée",
+          "Un D6 par point de Sauvegarde"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le défenseur jette toujours trois D6 de défense, quelle que soit l'arme de l'attaquant."
+      }
+    ],
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Cible Éligible », « Tirer »"
+  },
+  {
+    "id": "scn-002",
+    "category": "core-rules",
+    "title": "Le prix de la Dissimulation",
+    "situation": "Ton agent commence son activation avec un ordre de Dissimulation. Un ennemi se trouve à portée de charge, et tu hésites sur ce que cet ordre t'autorise réellement.",
+    "steps": [
+      {
+        "prompt": "Peux-tu effectuer l'action Charge avec cet agent ?",
+        "choices": [
+          "Oui, la Charge est toujours permise",
+          "Non : un agent en Dissimulation ne peut ni Tirer ni Charger",
+          "Oui, mais sans les 2\" supplémentaires"
+        ],
+        "correctIndex": 1,
+        "explanation": "Un agent avec un ordre de Dissimulation ne peut pas faire d'action Tirer ni Charger."
+      },
+      {
+        "prompt": "Son arme porte la règle Silencieuse. Peut-il effectuer l'action Tirer sans changer d'ordre ?",
+        "choices": [
+          "Oui : Silencieuse autorise Tirer même en Dissimulation",
+          "Non, aucune arme ne contourne la Dissimulation",
+          "Oui, mais il passe aussitôt en Engagement"
+        ],
+        "correctIndex": 0,
+        "explanation": "Silencieuse : un agent peut effectuer l'action Tirer avec cette arme même s'il a un ordre de Dissimulation."
+      },
+      {
+        "prompt": "Il lui reste assez de PA et sa LPA le permet. Peut-il effectuer deux fois l'action Repositionnement dans la même activation ?",
+        "choices": [
+          "Oui, tant qu'il a les PA et la LPA",
+          "Non : sauf mention contraire, pas deux fois la même action par activation",
+          "Oui, mais la seconde est limitée à 3\""
+        ],
+        "correctIndex": 1,
+        "explanation": "Sauf mention contraire, un agent ne peut pas effectuer la même action plus d'une fois pendant son activation — les PA disponibles n'y changent rien."
+      }
+    ],
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Ordre de Dissimulation », « Règles des Armes », « Phase d'Affrontement »"
+  },
+  {
+    "id": "scn-003",
+    "category": "core-rules",
+    "title": "Enchaîner les mouvements",
+    "situation": "Ton agent est engagé et tu veux le sortir du contact, puis le replacer utilement. Tu comptes tes PA et l'ordre de tes actions.",
+    "steps": [
+      {
+        "prompt": "Combien coûte l'action Battre en Retraite ?",
+        "choices": ["1PA", "2PA", "3PA"],
+        "correctIndex": 1,
+        "explanation": "Battre en Retraite coûte 2PA, là où Repositionnement, Sprinter, Charge, Tirer et Combattre coûtent 1PA."
+      },
+      {
+        "prompt": "Après avoir Battu en Retraite, peut-il encore effectuer Repositionnement dans la même activation ?",
+        "choices": [
+          "Oui, si les PA suffisent",
+          "Non : Repositionnement est interdit dans une activation où il a Battu en Retraite",
+          "Oui, mais limité à 2\""
+        ],
+        "correctIndex": 1,
+        "explanation": "Repositionnement est interdit lors d'une activation où l'agent a fait Battre en Retraite."
+      },
+      {
+        "prompt": "Sur un autre agent, tu fais d'abord Repositionnement, puis tu veux Charger. Est-ce possible ?",
+        "choices": [
+          "Oui, Charge suit très bien un Repositionnement",
+          "Non : Charge est interdite après Repositionnement, Sprinter ou Battre en Retraite",
+          "Oui, mais sans les 2\" supplémentaires"
+        ],
+        "correctIndex": 1,
+        "explanation": "Charge est interdite lors d'une activation où l'agent a déjà fait Repositionnement, Sprinter ou Battre en Retraite."
+      }
+    ],
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Actions », « Repositionnement », « Charge »"
+  },
+  {
+    "id": "scn-004",
+    "category": "core-rules",
+    "title": "Résoudre une séquence de tir",
+    "situation": "Ton agent tire sur un ennemi posté derrière un muret qui lui offre du couvert. Après avoir jeté tes dés d'attaque, tu conserves une réussite critique et une réussite normale.",
+    "steps": [
+      {
+        "prompt": "La cible étant à couvert, quel avantage le défenseur obtient-il sur ses dés de défense ?",
+        "choices": [
+          "Il relance tous ses échecs",
+          "Il conserve un dé de défense comme réussite normale sans le jeter",
+          "Il ajoute un quatrième dé de défense"
+        ],
+        "correctIndex": 1,
+        "explanation": "Si la cible est à couvert, le défenseur peut conserver un dé de défense comme une réussite normale sans le jeter."
+      },
+      {
+        "prompt": "Le défenseur finit avec deux réussites normales. Peut-il annuler ta réussite critique avec ?",
+        "choices": [
+          "Non, seule une critique bloque une critique",
+          "Oui : deux réussites normales bloquent une réussite critique",
+          "Oui, une seule normale suffit"
+        ],
+        "correctIndex": 1,
+        "explanation": "Deux réussites de défense normales peuvent bloquer une réussite d'attaque critique."
+      },
+      {
+        "prompt": "Tu rejoues l'échange avec une arme portant la règle Brutale. Ces deux réussites normales bloquent-elles toujours ?",
+        "choices": [
+          "Oui, Brutale ne change rien à la défense",
+          "Non : contre Brutale, l'adversaire ne peut bloquer qu'avec des réussites critiques",
+          "Oui, mais il en faut trois"
+        ],
+        "correctIndex": 1,
+        "explanation": "Brutale : votre adversaire ne peut bloquer qu'avec des réussites critiques. Ses réussites normales deviennent inutiles pour bloquer."
+      }
+    ],
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Tirer », « Règles des Armes »"
+  },
+  {
+    "id": "scn-005",
+    "category": "core-rules",
+    "title": "Saisir une contre-attaque",
+    "situation": "Ton adversaire vient d'activer un de ses agents. Il te reste un agent ami indisponible, et tu veux réagir avec lui.",
+    "steps": [
+      {
+        "prompt": "Ton agent indisponible a un ordre de Dissimulation. Peut-il contre-attaquer ?",
+        "choices": [
+          "Oui, l'ordre est sans importance pour contre-attaquer",
+          "Non : contre-attaquer exige un ordre d'Engagement",
+          "Oui, mais uniquement pour Tirer"
+        ],
+        "correctIndex": 1,
+        "explanation": "Seul un agent ami indisponible avec un ordre d'Engagement peut contre-attaquer."
+      },
+      {
+        "prompt": "Tu utilises un autre agent, celui-là en Engagement. Que peut-il faire en contre-attaquant, et à quel coût ?",
+        "choices": [
+          "Une action à 1PA, gratuitement",
+          "Autant d'actions que sa LPA, en payant les PA",
+          "Une activation complète, décalée"
+        ],
+        "correctIndex": 0,
+        "explanation": "Un agent qui contre-attaque peut effectuer une action à 1PA gratuitement — ce n'est pas une activation complète."
+      },
+      {
+        "prompt": "Il choisit une action de mouvement. Jusqu'où peut-il se déplacer ?",
+        "choices": [
+          "Sa caractéristique de Mouvement complète",
+          "Pas plus de 2\"",
+          "Pas plus de 3\", comme un Sprint"
+        ],
+        "correctIndex": 1,
+        "explanation": "L'agent qui contre-attaque ne peut pas se déplacer de plus de 2\" ce faisant. Et chaque agent ne contre-attaque qu'une fois par tournant."
+      }
+    ],
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Contre-Attaquer »"
+  },
+  {
+    "id": "scn-006",
+    "category": "core-rules",
+    "title": "Un agent qui encaisse",
+    "situation": "Ton agent a débuté la bataille avec 12 points de vie. Après un échange de tirs, il ne lui en reste plus que 5.",
+    "steps": [
+      {
+        "prompt": "Est-il considéré comme Estropié ?",
+        "choices": [
+          "Oui : il a moins de la moitié de ses PV de départ",
+          "Non, il faut descendre à un quart des PV",
+          "Non, seul un effet de règle peut rendre Estropié"
+        ],
+        "correctIndex": 0,
+        "explanation": "Les agents qui ont moins de la moitié de leurs points de vie de départ sont estropiés. 5 PV sur 12, c'est sous la barre des 6."
+      },
+      {
+        "prompt": "Quels effets subit-il désormais ?",
+        "choices": [
+          "Il perd 1PA à chaque activation",
+          "−2\" de Mouvement et Touche de ses armes dégradée de 1",
+          "Il ne peut plus contre-attaquer"
+        ],
+        "correctIndex": 1,
+        "explanation": "Soustrayez 2\" à la caractéristique de Mouvement de l'agent estropié et dégradez de 1 la caractéristique de Touche de ses armes."
+      },
+      {
+        "prompt": "Le tir suivant lui inflige 5 dégâts, le mettant à 0 PV. Que devient-il ?",
+        "choices": [
+          "Il reste en jeu, hors d'état d'agir",
+          "Il est neutralisé et retiré du jeu",
+          "Il est retiré à la fin du tournant"
+        ],
+        "correctIndex": 1,
+        "explanation": "Les agents avec 0 point de vie ou moins sont neutralisés et retirés du jeu."
+      }
+    ],
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Dégâts »"
+  },
+  {
+    "id": "scn-007",
+    "category": "core-rules",
+    "title": "Gérer ses Points de Commandement",
+    "situation": "La bataille commence. Tu veux planifier tes dépenses de PC sur les premiers tournants.",
+    "steps": [
+      {
+        "prompt": "Avec combien de PC chaque joueur commence-t-il la bataille ?",
+        "choices": ["0PC", "1PC", "2PC", "3PC"],
+        "correctIndex": 2,
+        "explanation": "Chaque joueur commence la bataille avec 2PC à dépenser en subterfuge."
+      },
+      {
+        "prompt": "Deuxième phase de Stratégie : tu as l'initiative. Combien de PC gagnes-tu, et ton adversaire ?",
+        "choices": [
+          "1PC pour toi, 2PC pour lui",
+          "2PC pour toi, 1PC pour lui",
+          "1PC chacun"
+        ],
+        "correctIndex": 0,
+        "explanation": "À chaque phase de Stratégie suivant la première, le joueur qui a l'initiative gagne 1PC, tandis que l'autre en gagne 2 — un contrepoids à l'avantage de l'initiative."
+      },
+      {
+        "prompt": "Tu as déjà utilisé Relance de Commandement ce tournant et tu voudrais y revenir. Est-ce possible ?",
+        "choices": [
+          "Non, chaque subterfuge est limité à une fois par tournant, sans exception",
+          "Oui : Relance de Commandement fait exception et peut resservir contre 1PC",
+          "Oui, mais seulement si tu as l'initiative"
+        ],
+        "correctIndex": 1,
+        "explanation": "Chaque subterfuge coûte 1PC et ne peut servir qu'une fois par tournant — sauf la Relance de Commandement, réutilisable en repayant 1PC à chaque fois."
+      }
+    ],
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Phase de Stratégie », « Phase d'Affrontement », « Relance de Commandement »"
+  }
+]

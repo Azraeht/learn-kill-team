@@ -8,6 +8,10 @@ import { renderResults } from "./screens/results.ts";
 import { renderProgress } from "./screens/progress.ts";
 import { renderSequences } from "./screens/sequences.ts";
 import { renderSequenceGame } from "./screens/sequenceGame.ts";
+import { renderScenarios } from "./screens/scenarios.ts";
+import { renderScenarioPlay } from "./screens/scenarioPlay.ts";
+import { renderReference } from "./screens/reference.ts";
+import { renderSettings } from "./screens/settings.ts";
 import { AQUILA_SVG } from "./ui/icons.ts";
 
 const app = document.getElementById("app");
@@ -43,11 +47,28 @@ function render(route: Route): void {
     case "sequence":
       renderSequenceGame(main!, route.sequenceId);
       break;
+    case "scenarios":
+      renderScenarios(main!);
+      break;
+    case "scenario":
+      renderScenarioPlay(main!, route.scenarioId);
+      break;
+    case "reference":
+      renderReference(main!);
+      break;
+    case "settings":
+      renderSettings(main!);
+      break;
     case "home":
     default:
       renderHome(main!);
       break;
   }
+
+  // Screens replace the whole view, so send focus back to the top for screen
+  // readers and reset the scroll position the way a page navigation would.
+  main!.scrollTo?.(0, 0);
+  window.scrollTo(0, 0);
 }
 
 onRouteChange(render);

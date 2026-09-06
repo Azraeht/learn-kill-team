@@ -1,0 +1,40 @@
+[
+  {
+    "id": "fixture-001",
+    "category": "core-rules",
+    "title": "Out-of-bounds correctIndex",
+    "situation": "correctIndex points past the end of the choices array.",
+    "steps": [
+      {
+        "prompt": "Which one?",
+        "choices": ["A", "B"],
+        "correctIndex": 5,
+        "explanation": "There is no choice at index 5."
+      },
+      {
+        "prompt": "Duplicate choices?",
+        "choices": ["Same", "Same"],
+        "correctIndex": 0,
+        "explanation": "The two choices are indistinguishable."
+      }
+    ],
+    "status": "verified",
+    "sourceRef": "Fixture"
+  },
+  {
+    "id": "fixture-001",
+    "category": "not-a-real-category",
+    "title": "Duplicate id and invalid category",
+    "situation": "Reuses the id above and names a category that does not exist.",
+    "steps": [
+      {
+        "prompt": "Only one step is allowed here?",
+        "choices": ["A", "B"],
+        "correctIndex": 0,
+        "explanation": "A scenario needs at least two steps."
+      }
+    ],
+    "status": "verified",
+    "sourceRef": "Fixture"
+  }
+]

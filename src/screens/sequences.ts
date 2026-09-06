@@ -1,6 +1,7 @@
 import { sequences } from "../data/sequences.ts";
 import { store } from "../core/store.ts";
 import { navigate } from "../router.ts";
+import { escapeHtml } from "../ui/html.ts";
 
 export function renderSequences(root: HTMLElement): void {
   const cards = sequences
@@ -12,12 +13,12 @@ export function renderSequences(root: HTMLElement): void {
           : `${progress.bestCorrectCount}/${sequence.steps.length} meilleur score · ${progress.timesFullyCorrect} réussite(s) complète(s)`;
 
       return `
-        <button class="sequence-card" data-sequence="${sequence.id}">
+        <button class="sequence-card" data-sequence="${escapeHtml(sequence.id)}">
           <div class="sequence-card__top">
-            <span class="sequence-card__title">${sequence.title}</span>
+            <span class="sequence-card__title">${escapeHtml(sequence.title)}</span>
           </div>
-          ${sequence.description ? `<p class="sequence-card__desc">${sequence.description}</p>` : ""}
-          <p class="category-card__meta">${meta}</p>
+          ${sequence.description ? `<p class="sequence-card__desc">${escapeHtml(sequence.description)}</p>` : ""}
+          <p class="category-card__meta">${escapeHtml(meta)}</p>
         </button>
       `;
     })

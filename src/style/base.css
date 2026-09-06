@@ -176,3 +176,17 @@ a {
 .btn--block {
   width: 100%;
 }
+
+.btn--danger {
+  border-color: var(--blood-bright);
+  color: #f3d9d6;
+  background: linear-gradient(180deg, var(--blood-bright), var(--blood));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
