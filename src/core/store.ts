@@ -1,9 +1,20 @@
+import { dayKey } from "./activity.ts";
 import { createInitialCardProgress, nextCardProgress } from "./srs.ts";
-import type { Attempt, CardProgress, CategoryId, PersistedState, SequenceProgress } from "./types.ts";
+import type {
+  Attempt,
+  CardProgress,
+  CategoryId,
+  DayActivity,
+  PersistedState,
+  ScenarioProgress,
+  SequenceProgress,
+} from "./types.ts";
 
 const STORAGE_KEY = "kt-learn:v1";
 const MAX_SESSION_LOG = 500;
 const DEFAULT_BATCH_SIZE = 15;
+
+export const BATCH_SIZE_OPTIONS = [5, 10, 15, 20, 30] as const;
 
 function createDefaultState(): PersistedState {
   return {
@@ -12,6 +23,25 @@ function createDefaultState(): PersistedState {
     sessionLog: [],
     settings: { batchSize: DEFAULT_BATCH_SIZE },
     sequenceProgress: {},
+    scenarioProgress: {},
+    dailyActivity: {},
+  };
+}
+
+/**
+ * Fills in any fields missing from a previously persisted state. New fields are
+ * added with defaults rather than bumping `version`, so existing users keep their
+ * progress when the app gains a feature.
+ */
+function normalizeState(parsed: Partial<PersistedState>): PersistedState {
+  return {
+    version: 1,
+    progress: parsed.progress ?? {},
+    sessionLog: parsed.sessionLog ?? [],
+    settings: { batchSize: parsed.settings?.batchSize ?? DEFAULT_BATCH_SIZE },
+    sequenceProgress: parsed.sequenceProgress ?? {},
+    scenarioProgress: parsed.scenarioProgress ?? {},
+    dailyActivity: parsed.dailyActivity ?? {},
   };
 }
 
@@ -21,13 +51,7 @@ function loadState(): PersistedState {
     if (!raw) return createDefaultState();
     const parsed = JSON.parse(raw) as PersistedState;
     if (parsed.version !== 1) return createDefaultState();
-    return {
-      version: 1,
-      progress: parsed.progress ?? {},
-      sessionLog: parsed.sessionLog ?? [],
-      settings: { batchSize: parsed.settings?.batchSize ?? DEFAULT_BATCH_SIZE },
-      sequenceProgress: parsed.sequenceProgress ?? {},
-    };
+    return normalizeState(parsed);
   } catch {
     return createDefaultState();
   }
@@ -37,12 +61,28 @@ function createInitialSequenceProgress(): SequenceProgress {
   return { timesAttempted: 0, timesFullyCorrect: 0, bestCorrectCount: 0, lastAttemptAt: null };
 }
 
+function createInitialScenarioProgress(): ScenarioProgress {
+  return { timesAttempted: 0, timesPerfect: 0, bestCorrectSteps: 0, lastAttemptAt: null };
+}
+
 function persist(state: PersistedState): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   } catch {
     // localStorage unavailable (private browsing, quota exceeded, etc.) — state stays in-memory only.
   }
+}
+
+/**
+ * Recognises an object as a state export we can restore. Deliberately shallow: the
+ * per-field normalisation in normalizeState() handles anything missing or malformed
+ * beyond this point, so a partially-corrupt file degrades instead of being rejected.
+ */
+export function isImportableState(value: unknown): value is Partial<PersistedState> {
+  if (typeof value !== "object" || value === null) return false;
+  const candidate = value as Partial<PersistedState>;
+  if (candidate.version !== 1) return false;
+  return typeof candidate.progress === "object" && candidate.progress !== null;
 }
 
 type Listener = () => void;
@@ -68,6 +108,33 @@ class Store {
     for (const listener of this.listeners) listener();
   }
 
+  private commit(next: PersistedState): void {
+    this.state = next;
+    persist(this.state);
+    this.notify();
+  }
+
+  /**
+   * Records study activity against today's local date. Every mode (quiz, sequence,
+   * scenario) funnels through here so the streak reflects all practice, not just quizzes.
+   */
+  private withDailyActivity(
+    state: PersistedState,
+    answered: number,
+    correct: number,
+    now: number,
+  ): PersistedState {
+    const key = dayKey(now);
+    const existing: DayActivity = state.dailyActivity[key] ?? { answered: 0, correct: 0 };
+    return {
+      ...state,
+      dailyActivity: {
+        ...state.dailyActivity,
+        [key]: { answered: existing.answered + answered, correct: existing.correct + correct },
+      },
+    };
+  }
+
   getCardProgress(questionId: string, now: number): CardProgress {
     return this.state.progress[questionId] ?? createInitialCardProgress(now);
   }
@@ -79,21 +146,31 @@ class Store {
     const attempt: Attempt = { questionId, categoryId, correct, at: now };
     const sessionLog = [...this.state.sessionLog, attempt].slice(-MAX_SESSION_LOG);
 
-    this.state = {
-      ...this.state,
-      progress: { ...this.state.progress, [questionId]: updated },
-      sessionLog,
-    };
-
-    persist(this.state);
-    this.notify();
+    this.commit(
+      this.withDailyActivity(
+        {
+          ...this.state,
+          progress: { ...this.state.progress, [questionId]: updated },
+          sessionLog,
+        },
+        1,
+        correct ? 1 : 0,
+        now,
+      ),
+    );
   }
 
   getSequenceProgress(sequenceId: string): SequenceProgress {
     return this.state.sequenceProgress[sequenceId] ?? createInitialSequenceProgress();
   }
 
-  recordSequenceAttempt(sequenceId: string, correctCount: number, fullyCorrect: boolean, now: number): void {
+  recordSequenceAttempt(
+    sequenceId: string,
+    correctCount: number,
+    fullyCorrect: boolean,
+    now: number,
+    totalSteps = correctCount,
+  ): void {
     const current = this.getSequenceProgress(sequenceId);
     const updated: SequenceProgress = {
       timesAttempted: current.timesAttempted + 1,
@@ -102,19 +179,69 @@ class Store {
       lastAttemptAt: now,
     };
 
-    this.state = {
-      ...this.state,
-      sequenceProgress: { ...this.state.sequenceProgress, [sequenceId]: updated },
+    this.commit(
+      this.withDailyActivity(
+        { ...this.state, sequenceProgress: { ...this.state.sequenceProgress, [sequenceId]: updated } },
+        totalSteps,
+        correctCount,
+        now,
+      ),
+    );
+  }
+
+  getScenarioProgress(scenarioId: string): ScenarioProgress {
+    return this.state.scenarioProgress[scenarioId] ?? createInitialScenarioProgress();
+  }
+
+  recordScenarioAttempt(
+    scenarioId: string,
+    correctSteps: number,
+    totalSteps: number,
+    now: number,
+  ): void {
+    const current = this.getScenarioProgress(scenarioId);
+    const updated: ScenarioProgress = {
+      timesAttempted: current.timesAttempted + 1,
+      timesPerfect: current.timesPerfect + (correctSteps === totalSteps ? 1 : 0),
+      bestCorrectSteps: Math.max(current.bestCorrectSteps, correctSteps),
+      lastAttemptAt: now,
     };
 
-    persist(this.state);
-    this.notify();
+    this.commit(
+      this.withDailyActivity(
+        { ...this.state, scenarioProgress: { ...this.state.scenarioProgress, [scenarioId]: updated } },
+        totalSteps,
+        correctSteps,
+        now,
+      ),
+    );
+  }
+
+  setBatchSize(batchSize: number): void {
+    this.commit({ ...this.state, settings: { ...this.state.settings, batchSize } });
+  }
+
+  /** Serialised progress for the export-to-file button on the settings screen. */
+  exportState(): string {
+    return JSON.stringify(this.state, null, 2);
+  }
+
+  /** Replaces all progress with an imported export. Returns false if it isn't one. */
+  importState(raw: string): boolean {
+    let parsed: unknown;
+    try {
+      parsed = JSON.parse(raw);
+    } catch {
+      return false;
+    }
+    if (!isImportableState(parsed)) return false;
+
+    this.commit(normalizeState(parsed));
+    return true;
   }
 
   resetProgress(): void {
-    this.state = createDefaultState();
-    persist(this.state);
-    this.notify();
+    this.commit(createDefaultState());
   }
 }
 

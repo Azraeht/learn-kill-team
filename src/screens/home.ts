@@ -1,14 +1,17 @@
 import { categories, getQuestionsForCategory, allQuestions } from "../data/categories.ts";
 import { store } from "../core/store.ts";
 import { computeCategoryStats } from "../core/stats.ts";
+import { currentStreak } from "../core/activity.ts";
 import { isDue } from "../core/srs.ts";
 import { navigate } from "../router.ts";
+import { escapeHtml } from "../ui/html.ts";
 
 export function renderHome(root: HTMLElement): void {
   const now = Date.now();
   const getProgress = (id: string) => store.getCardProgress(id, now);
 
   const totalDue = allQuestions.filter((q) => isDue(getProgress(q.id), now)).length;
+  const streak = currentStreak(store.getState().dailyActivity, now);
 
   const cards = categories
     .map((category) => {
@@ -17,12 +20,12 @@ export function renderHome(root: HTMLElement): void {
       const draftNote = stats.draftCount > 0 ? `<span class="badge badge--draft">${stats.draftCount}/${stats.total} brouillon</span>` : "";
 
       return `
-        <button class="category-card" data-category="${category.id}">
+        <button class="category-card" data-category="${escapeHtml(category.id)}">
           <div class="category-card__top">
-            <span class="category-card__label">${category.label}</span>
+            <span class="category-card__label">${escapeHtml(category.label)}</span>
             ${draftNote}
           </div>
-          <p class="category-card__desc">${category.description}</p>
+          <p class="category-card__desc">${escapeHtml(category.description)}</p>
           <div class="progress-bar"><div class="progress-bar__fill" style="width:${stats.masteryPercent}%; background:${category.color}"></div></div>
           <div class="category-card__meta">
             <span>${stats.masteryPercent}% maîtrisé</span>
@@ -42,20 +45,28 @@ export function renderHome(root: HTMLElement): void {
         <div class="stat-tile__label">À réviser aujourd'hui</div>
       </div>
       <div class="stat-tile">
-        <div class="stat-tile__value">${allQuestions.length}</div>
-        <div class="stat-tile__label">Questions au total</div>
+        <div class="stat-tile__value">${streak > 0 ? `${streak}🔥` : "0"}</div>
+        <div class="stat-tile__label">Jour${streak > 1 ? "s" : ""} d'affilée</div>
       </div>
     </div>
     <button class="btn btn--primary btn--block" data-start-all>Réviser toutes les catégories</button>
-    <button class="btn btn--block" data-sequences>Séquences de jeu (remettre dans l'ordre)</button>
+    <div class="mode-grid">
+      <button class="btn" data-scenarios>Cas pratiques</button>
+      <button class="btn" data-sequences>Séquences de jeu</button>
+      <button class="btn" data-reference>Antisèche</button>
+      <button class="btn" data-progress>Progression</button>
+    </div>
     <div class="category-list">${cards}</div>
-    <button class="btn btn--block" data-progress>Voir la progression</button>
+    <button class="btn btn--block" data-settings>Réglages</button>
   `;
 
   root.querySelectorAll<HTMLButtonElement>("[data-category]").forEach((btn) => {
     btn.addEventListener("click", () => navigate(`quiz/${btn.dataset.category}`));
   });
   root.querySelector("[data-start-all]")?.addEventListener("click", () => navigate("quiz/all"));
+  root.querySelector("[data-scenarios]")?.addEventListener("click", () => navigate("scenarios"));
   root.querySelector("[data-sequences]")?.addEventListener("click", () => navigate("sequences"));
+  root.querySelector("[data-reference]")?.addEventListener("click", () => navigate("reference"));
   root.querySelector("[data-progress]")?.addEventListener("click", () => navigate("progress"));
+  root.querySelector("[data-settings]")?.addEventListener("click", () => navigate("settings"));
 }

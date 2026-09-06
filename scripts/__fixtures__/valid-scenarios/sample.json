@@ -1,0 +1,24 @@
+[
+  {
+    "id": "fixture-001",
+    "category": "core-rules",
+    "title": "Fixture scenario",
+    "situation": "A well-formed scenario used to prove the validator accepts valid input.",
+    "steps": [
+      {
+        "prompt": "First decision?",
+        "choices": ["Wrong", "Right"],
+        "correctIndex": 1,
+        "explanation": "Because the second choice is the right one."
+      },
+      {
+        "prompt": "Second decision?",
+        "choices": ["Right", "Wrong"],
+        "correctIndex": 0,
+        "explanation": "Because the first choice is the right one."
+      }
+    ],
+    "status": "verified",
+    "sourceRef": "Fixture"
+  }
+]

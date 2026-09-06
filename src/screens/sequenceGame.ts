@@ -3,6 +3,7 @@ import { store } from "../core/store.ts";
 import { checkSequenceOrder, shuffle } from "../core/sequenceGame.ts";
 import type { Sequence } from "../core/types.ts";
 import { navigate } from "../router.ts";
+import { escapeHtml } from "../ui/html.ts";
 
 interface GameState {
   sequence: Sequence;
@@ -47,7 +48,7 @@ export function renderSequenceGame(root: HTMLElement, sequenceId: string): void 
 
   const poolHtml = pool
     .map(
-      (step) => `<button class="sequence-step-btn" data-pool-step="${escapeAttr(step)}">${step}</button>`,
+      (step) => `<button class="sequence-step-btn" data-pool-step="${escapeHtml(step)}">${escapeHtml(step)}</button>`,
     )
     .join("");
 
@@ -60,7 +61,7 @@ export function renderSequenceGame(root: HTMLElement, sequenceId: string): void 
       return `
         <button class="${cls}" data-answer-index="${index}" ${submitted ? "disabled" : ""}>
           <span class="sequence-step-btn__index">${index + 1}</span>
-          <span>${step}</span>
+          <span>${escapeHtml(step)}</span>
         </button>
       `;
     })
@@ -84,8 +85,8 @@ export function renderSequenceGame(root: HTMLElement, sequenceId: string): void 
       : "";
 
   root.innerHTML = `
-    <h2 class="screen-title">${sequence.title}</h2>
-    ${sequence.description ? `<p class="text-muted">${sequence.description}</p>` : ""}
+    <h2 class="screen-title">${escapeHtml(sequence.title)}</h2>
+    ${sequence.description ? `<p class="text-muted">${escapeHtml(sequence.description)}</p>` : ""}
     <div class="sequence-zone">
       <span class="sequence-zone__label">Votre ordre</span>
       <div class="sequence-slot-list">${answerHtml}${slotPlaceholders}</div>
@@ -122,10 +123,6 @@ export function renderSequenceGame(root: HTMLElement, sequenceId: string): void 
   root.querySelector("[data-back]")?.addEventListener("click", () => navigate("sequences"));
 }
 
-function escapeAttr(value: string): string {
-  return value.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
-}
-
 function handlePick(root: HTMLElement, sequenceId: string, step: string): void {
   if (!active) return;
   const poolIndex = active.pool.indexOf(step);
@@ -155,7 +152,13 @@ function handleValidate(root: HTMLElement, sequenceId: string): void {
   active.submitted = true;
   active.result = result;
 
-  store.recordSequenceAttempt(active.sequence.id, result.correctCount, result.fullyCorrect, Date.now());
+  store.recordSequenceAttempt(
+    active.sequence.id,
+    result.correctCount,
+    result.fullyCorrect,
+    Date.now(),
+    result.total,
+  );
 
   renderSequenceGame(root, sequenceId);
 }

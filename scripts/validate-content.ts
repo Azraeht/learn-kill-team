@@ -6,8 +6,10 @@ import Ajv from "ajv";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const questionsDir = path.join(__dirname, "..", "src", "data", "questions");
 const sequencesDir = path.join(__dirname, "..", "src", "data", "sequences");
+const scenariosDir = path.join(__dirname, "..", "src", "data", "scenarios");
 const questionSchemaPath = path.join(__dirname, "..", "src", "data", "schema", "question.schema.json");
 const sequenceSchemaPath = path.join(__dirname, "..", "src", "data", "schema", "sequence.schema.json");
+const scenarioSchemaPath = path.join(__dirname, "..", "src", "data", "schema", "scenario.schema.json");
 
 interface RawQuestion {
   id: string;
@@ -23,6 +25,14 @@ interface RawSequence {
   id: string;
   category: string;
   steps: string[];
+  status: string;
+  sourceRef?: string;
+}
+
+interface RawScenario {
+  id: string;
+  category: string;
+  steps: { prompt: string; choices: string[]; correctIndex: number }[];
   status: string;
   sourceRef?: string;
 }
@@ -107,12 +117,32 @@ export function validateSequences(dir: string = sequencesDir): ValidationResult 
   });
 }
 
+export function validateScenarios(dir: string = scenariosDir): ValidationResult {
+  return validateEntries<RawScenario>(dir, scenarioSchemaPath, (label, scenario, errors) => {
+    for (const [index, step] of scenario.steps.entries()) {
+      if (step.correctIndex < 0 || step.correctIndex >= step.choices.length) {
+        errors.push(
+          `${label}: step ${index} correctIndex ${step.correctIndex} is out of bounds for ${step.choices.length} choices`,
+        );
+      }
+      if (new Set(step.choices).size !== step.choices.length) {
+        errors.push(`${label}: step ${index} has duplicate choices`);
+      }
+    }
+  });
+}
+
 function main() {
   const questionResult = validateContent();
   const sequenceResult = validateSequences();
+  const scenarioResult = validateScenarios();
 
-  const errors = [...questionResult.errors, ...sequenceResult.errors];
-  const warnings = [...questionResult.warnings, ...sequenceResult.warnings];
+  const errors = [...questionResult.errors, ...sequenceResult.errors, ...scenarioResult.errors];
+  const warnings = [
+    ...questionResult.warnings,
+    ...sequenceResult.warnings,
+    ...scenarioResult.warnings,
+  ];
 
   for (const warning of warnings) {
     console.warn(`WARNING: ${warning}`);

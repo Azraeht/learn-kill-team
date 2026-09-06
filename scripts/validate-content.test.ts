@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { validateContent, validateSequences } from "./validate-content.ts";
+import { validateContent, validateScenarios, validateSequences } from "./validate-content.ts";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -43,6 +43,28 @@ describe("validateSequences", () => {
     expect(errors.some((e) => e.includes("duplicate id"))).toBe(true);
     expect(errors.some((e) => e.includes("steps must be unique"))).toBe(true);
     expect(errors.some((e) => e.includes("must NOT have fewer than 3 items"))).toBe(true);
+    expect(errors.some((e) => e.includes("must be equal to one of the allowed values"))).toBe(true);
+  });
+});
+
+describe("validateScenarios", () => {
+  it("passes for the real scenario bank", () => {
+    const { errors } = validateScenarios();
+    expect(errors).toEqual([]);
+  });
+
+  it("passes for a well-formed fixture", () => {
+    const { errors } = validateScenarios(path.join(__dirname, "__fixtures__", "valid-scenarios"));
+    expect(errors).toEqual([]);
+  });
+
+  it("catches out-of-bounds correctIndex, duplicate choices, duplicate ids, too few steps, and invalid category", () => {
+    const { errors } = validateScenarios(path.join(__dirname, "__fixtures__", "bad-scenarios"));
+
+    expect(errors.some((e) => e.includes("correctIndex 5 is out of bounds"))).toBe(true);
+    expect(errors.some((e) => e.includes("duplicate choices"))).toBe(true);
+    expect(errors.some((e) => e.includes("duplicate id"))).toBe(true);
+    expect(errors.some((e) => e.includes("must NOT have fewer than 2 items"))).toBe(true);
     expect(errors.some((e) => e.includes("must be equal to one of the allowed values"))).toBe(true);
   });
 });

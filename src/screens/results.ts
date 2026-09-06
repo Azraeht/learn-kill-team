@@ -1,5 +1,6 @@
 import { getLastSummary } from "./quizSession.ts";
 import { navigate } from "../router.ts";
+import { escapeHtml } from "../ui/html.ts";
 
 export function renderResults(root: HTMLElement): void {
   const summary = getLastSummary();
@@ -21,7 +22,7 @@ export function renderResults(root: HTMLElement): void {
   root.innerHTML = `
     <h2 class="screen-title">Session terminée</h2>
     <div class="results-summary">
-      <span class="badge badge--muted">${summary.categoryLabel}</span>
+      <span class="badge badge--muted">${escapeHtml(summary.categoryLabel)}</span>
       <div class="results-summary__score">${summary.score} pts</div>
       <p class="text-muted">${summary.correctCount}/${summary.answeredCount} bonnes réponses (${accuracy}%) &middot; meilleure série ${summary.bestStreak}🔥</p>
     </div>

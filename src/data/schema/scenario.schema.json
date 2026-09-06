@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "scenario.schema.json",
+  "title": "Scenario",
+  "type": "object",
+  "required": ["id", "category", "title", "situation", "steps", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*-[0-9]{3}$",
+      "description": "Stable unique id, format '<prefix>-###', e.g. scn-001"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "core-rules",
+        "terrain-missions",
+        "aquilon-tempestus",
+        "frelons-vespides",
+        "yaegirs-hernkogs",
+        "exo-armures-stealth",
+        "cibleurs",
+        "cercle-canoptek",
+        "deathwatch"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "situation": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The tabletop situation, shown before the first decision."
+    },
+    "steps": {
+      "type": "array",
+      "description": "Decision points, resolved in order.",
+      "minItems": 2,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["prompt", "choices", "correctIndex", "explanation"],
+        "additionalProperties": false,
+        "properties": {
+          "prompt": { "type": "string", "minLength": 1 },
+          "choices": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "minItems": 2,
+            "maxItems": 4
+          },
+          "correctIndex": { "type": "integer", "minimum": 0 },
+          "explanation": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "verified"]
+    },
+    "sourceRef": {
+      "type": "string"
+    }
+  }
+}

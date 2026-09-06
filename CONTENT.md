@@ -1,7 +1,9 @@
 # Adding and editing content
 
-There are two kinds of content: **questions** (quiz cards) and **sequences**
-(the "remettre dans l'ordre" game mode for learning game flow/phases).
+There are three kinds of content: **questions** (quiz cards, also the source
+of the Antisèche reference screen), **sequences** (the "remettre dans l'ordre"
+game mode for learning game flow/phases), and **scenarios** (multi-step
+tabletop situations for the "Cas pratiques" mode).
 
 ## Questions
 
@@ -96,21 +98,61 @@ sequence, anything that's a **procedure** rather than an isolated fact.
 - To add a new sequence category: add a file here, add it to the `sequences`
   array in `src/data/sequences.ts`.
 
+## Scenarios (the "Cas pratiques" mode)
+
+Scenarios live in `src/data/scenarios/`, one JSON file per category (today
+just `core-rules.json`). A scenario sets up one tabletop situation, then asks
+a chain of decisions about it — each answered in turn, with an explanation
+before the next. Where a question tests one isolated fact, a scenario tests
+how several rules interact (orders, control range, cover and AP costs at the
+same time), which is where Kill Team actually trips people up.
+
+```jsonc
+{
+  "id": "scn-008",                     // required, unique across ALL scenario files, format "<prefix>-###"
+  "category": "core-rules",            // required, must match a category id
+  "title": "Débusquer une cible dissimulée", // required, shown as the card/screen title
+  "situation": "Ton agent a un ordre d'Engagement...", // required, shown above every step
+  "steps": [                            // required, 2-6 decisions, resolved in this order
+    {
+      "prompt": "Cet ennemi est-il une cible éligible ?", // required
+      "choices": ["Oui...", "Non..."],                    // required, 2-4 distinct options
+      "correctIndex": 1,                                  // required, index into choices
+      "explanation": "Pourquoi, avec la règle en clair."  // required
+    }
+  ],
+  "status": "verified",
+  "sourceRef": "Kill Team – Règles Abrégées (2024), « Cible Éligible »"
+}
+```
+
+- `situation` stays on screen for every step, so write it as standing context
+  and keep each step's `prompt` to the decision itself.
+- `explanation` is required on every step (unlike on questions): the teaching
+  happens between decisions, not at the end.
+- Choices within one step must be distinct; this is enforced by
+  `validate-content`.
+- To add a new scenario category: add a file here, add it to the `scenarios`
+  array in `src/data/scenarios.ts`.
+
 ## Validating your edits
 
-After editing any file in `src/data/questions/` or `src/data/sequences/`, run:
+After editing any file in `src/data/questions/`, `src/data/sequences/` or
+`src/data/scenarios/`, run:
 
 ```bash
 npm run validate-content
 ```
 
-This checks every question against `src/data/schema/question.schema.json`
-and every sequence against `src/data/schema/sequence.schema.json`, and
+This checks every entry against its schema in `src/data/schema/`
+(`question.schema.json`, `sequence.schema.json`, `scenario.schema.json`), and
 additionally checks (in `scripts/validate-content.ts`):
 
 - every `id` is unique across all files of its kind,
-- `correctIndex` is within bounds of `choices` for multiple-choice questions,
-- steps are unique within a sequence,
+- `correctIndex` is within bounds of `choices`, for both multiple-choice
+  questions and every scenario step,
+- steps are unique within a sequence, and choices are distinct within a
+  scenario step,
 - a `"verified"` entry has a non-empty `sourceRef` (warning, not a hard
   failure).
 
