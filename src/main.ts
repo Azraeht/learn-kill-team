@@ -13,7 +13,6 @@ import { renderScenarioPlay } from "./screens/scenarioPlay.ts";
 import { renderReference } from "./screens/reference.ts";
 import { renderSettings } from "./screens/settings.ts";
 import { registerServiceWorker } from "./registerServiceWorker.ts";
-import { AQUILA_SVG } from "./ui/icons.ts";
 
 registerServiceWorker();
 
@@ -22,8 +21,8 @@ if (!app) throw new Error("Missing #app root element");
 
 app.innerHTML = `
   <header class="app-header" data-title-home style="cursor:pointer">
-    <span class="app-header__aquila">${AQUILA_SVG}</span>
-    <h1>Kill Team Trainer</h1>
+    <span class="app-header__prompt" aria-hidden="true">&gt;</span>
+    <h1>KILL TEAM TRAINER<span class="app-header__cursor" aria-hidden="true"></span></h1>
   </header>
   <main class="app-main" id="main"></main>
 `;

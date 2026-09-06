@@ -64,7 +64,7 @@ export function renderScenarioPlay(root: HTMLElement, scenarioId: string): void 
   const explanation = answered
     ? `
       <div class="explanation">
-        <div class="explanation__feedback">${selectedIndex === step.correctIndex ? "Correct !" : "Pas tout à fait."}</div>
+        <div class="explanation__feedback explanation__feedback--${selectedIndex === step.correctIndex ? "ok" : "miss"}">${selectedIndex === step.correctIndex ? "Correct !" : "Pas tout à fait."}</div>
         <div>${escapeHtml(step.explanation)}</div>
         <button class="btn btn--primary btn--block" data-next>${isLastStep ? "Voir le bilan" : "Décision suivante"}</button>
       </div>

@@ -11,35 +11,42 @@
   justify-content: center;
   gap: var(--space-2);
   border-bottom: 1px solid var(--border-bright);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 25%, transparent);
   position: sticky;
   top: 0;
-  background: linear-gradient(180deg, #17110a, var(--bg) 90%);
+  background: var(--bg);
   z-index: 10;
 }
 
-.app-header__aquila {
-  width: 28px;
-  height: 22px;
-  color: var(--gold);
-  flex-shrink: 0;
-  filter: drop-shadow(0 0 3px rgba(201, 162, 39, 0.35));
-}
-
-.app-header__aquila svg {
-  width: 100%;
-  height: 100%;
-  fill: currentColor;
+.app-header__prompt {
+  color: var(--text-muted);
+  font-weight: 700;
 }
 
 .app-header h1 {
   font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold-bright);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+  color: var(--accent-bright);
+  text-shadow: 0 0 6px color-mix(in srgb, var(--accent) 60%, transparent);
   white-space: nowrap;
+}
+
+.app-header__cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  margin-left: 3px;
+  background: var(--accent);
+  vertical-align: -0.15em;
+  animation: cursor-blink 1s steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .app-main {
@@ -57,9 +64,9 @@
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  color: var(--gold-bright);
+  color: var(--accent-bright);
   text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 6px color-mix(in srgb, var(--accent) 50%, transparent);
   position: relative;
   padding-bottom: var(--space-2);
 }
@@ -70,8 +77,8 @@
   left: 0;
   bottom: 0;
   width: 64px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold), transparent);
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
 }
 
 .category-list {
@@ -80,39 +87,62 @@
   gap: var(--space-3);
 }
 
+/* Panels get HUD-style corner brackets via ::before (top-left) / ::after (bottom-right). */
+.category-card,
+.sequence-card,
+.question-card,
+.reference-entry,
+.settings-section,
+.scenario-situation,
+.hud {
+  position: relative;
+}
+
+.category-card::before,
+.sequence-card::before,
+.question-card::before,
+.reference-entry::before,
+.settings-section::before,
+.scenario-situation::before,
+.hud::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--border-bright);
+  border-left: 2px solid var(--border-bright);
+  pointer-events: none;
+}
+
+.category-card::after,
+.sequence-card::after,
+.question-card::after,
+.reference-entry::after,
+.settings-section::after,
+.scenario-situation::after,
+.hud::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid var(--border-bright);
+  border-right: 2px solid var(--border-bright);
+  pointer-events: none;
+}
+
 .category-card {
   display: block;
   width: 100%;
   text-align: left;
-  position: relative;
-  background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.03), transparent 40%),
-    var(--bg-elevated);
+  border-radius: 0;
+  background: var(--bg-elevated);
   border: 1px solid var(--border);
-  clip-path: polygon(
-    var(--chamfer) 0,
-    100% 0,
-    100% calc(100% - var(--chamfer)),
-    calc(100% - var(--chamfer)) 100%,
-    0 100%,
-    0 var(--chamfer)
-  );
   padding: var(--space-3);
   cursor: pointer;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3);
-}
-
-.category-card::before,
-.sequence-card::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--border-bright);
-  box-shadow: -6px 0 0 var(--border-bright);
 }
 
 .category-card__top {
@@ -125,7 +155,7 @@
 }
 
 .category-card__label {
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
   font-weight: 700;
   font-size: 1.02rem;
   letter-spacing: 0.02em;
@@ -140,13 +170,13 @@
 
 .progress-bar {
   height: 10px;
-  clip-path: polygon(4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%, 0 4px);
+  border-radius: 0;
   background: repeating-linear-gradient(
     90deg,
     var(--bg-elevated-2) 0px,
     var(--bg-elevated-2) 6px,
-    #150f07 6px,
-    #150f07 7px
+    #03150b 6px,
+    #03150b 7px
   );
   border: 1px solid var(--border);
   overflow: hidden;
@@ -154,7 +184,8 @@
 
 .progress-bar__fill {
   height: 100%;
-  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+  background: var(--accent);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--accent) 70%, transparent);
 }
 
 .category-card__meta {
@@ -175,23 +206,17 @@
 .stat-tile {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  clip-path: polygon(
-    var(--chamfer-sm) 0,
-    100% 0,
-    100% calc(100% - var(--chamfer-sm)),
-    calc(100% - var(--chamfer-sm)) 100%,
-    0 100%,
-    0 var(--chamfer-sm)
-  );
+  border-radius: 0;
   padding: var(--space-3);
   text-align: center;
 }
 
 .stat-tile__value {
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
   font-size: 1.7rem;
   font-weight: 800;
-  color: var(--gold-bright);
+  color: var(--accent-bright);
+  text-shadow: 0 0 6px color-mix(in srgb, var(--accent) 55%, transparent);
 }
 
 .stat-tile__label {
@@ -225,7 +250,7 @@
 }
 
 .filter-chip {
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -233,23 +258,16 @@
   padding: 7px 12px;
   min-height: 34px;
   cursor: pointer;
+  border-radius: 0;
   color: var(--text-muted);
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  clip-path: polygon(
-    var(--chamfer-sm) 0,
-    100% 0,
-    100% calc(100% - var(--chamfer-sm)),
-    calc(100% - var(--chamfer-sm)) 100%,
-    0 100%,
-    0 var(--chamfer-sm)
-  );
 }
 
 .filter-chip--active {
-  color: #241a05;
-  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
-  border-color: #7a5f1c;
+  color: #01120a;
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .search-input {
@@ -258,17 +276,10 @@
   min-height: 48px;
   font: inherit;
   font-size: 1rem;
+  border-radius: 0;
   color: var(--text);
   background: var(--bg-elevated-2);
   border: 1px solid var(--border-bright);
-  clip-path: polygon(
-    var(--chamfer-sm) 0,
-    100% 0,
-    100% calc(100% - var(--chamfer-sm)),
-    calc(100% - var(--chamfer-sm)) 100%,
-    0 100%,
-    0 var(--chamfer-sm)
-  );
 }
 
 .search-input::placeholder {
@@ -276,7 +287,7 @@
 }
 
 .search-input:focus {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--accent);
   outline-offset: -2px;
 }
 
@@ -286,7 +297,6 @@
   gap: var(--space-2);
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-top: 2px solid var(--gold);
   padding: var(--space-3);
 }
 
@@ -295,12 +305,12 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--gold-bright);
+  color: var(--accent-bright);
 }
 
 .settings-notice {
   font-size: 0.85rem;
-  color: var(--accent-2);
+  color: var(--ok);
   margin: 0;
 }
 
@@ -325,17 +335,17 @@
 }
 
 .heatmap__cell--1 {
-  background: color-mix(in srgb, var(--gold) 30%, var(--bg-elevated-2));
+  background: color-mix(in srgb, var(--accent) 30%, var(--bg-elevated-2));
 }
 
 .heatmap__cell--2 {
-  background: color-mix(in srgb, var(--gold) 55%, var(--bg-elevated-2));
+  background: color-mix(in srgb, var(--accent) 55%, var(--bg-elevated-2));
 }
 
 .heatmap__cell--3 {
-  background: color-mix(in srgb, var(--gold) 80%, var(--bg-elevated-2));
+  background: color-mix(in srgb, var(--accent) 80%, var(--bg-elevated-2));
 }
 
 .heatmap__cell--4 {
-  background: var(--gold-bright);
+  background: var(--accent-bright);
 }

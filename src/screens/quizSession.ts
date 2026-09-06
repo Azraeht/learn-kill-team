@@ -105,7 +105,7 @@ export function renderQuizSession(root: HTMLElement, categoryId: string): void {
   const explanation = answered
     ? `
       <div class="explanation">
-        <div class="explanation__feedback">${selectedIndex === current.correctIndex ? "Correct !" : "Pas tout à fait."}</div>
+        <div class="explanation__feedback explanation__feedback--${selectedIndex === current.correctIndex ? "ok" : "miss"}">${selectedIndex === current.correctIndex ? "Correct !" : "Pas tout à fait."}</div>
         ${current.explanation ? `<div>${escapeHtml(current.explanation)}</div>` : ""}
         ${draftBadge}
         <button class="btn btn--primary btn--block" data-next>Suivant</button>

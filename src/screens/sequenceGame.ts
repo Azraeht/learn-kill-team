@@ -78,7 +78,7 @@ export function renderSequenceGame(root: HTMLElement, sequenceId: string): void 
     submitted && result
       ? `
         <div class="explanation">
-          <div class="explanation__feedback">${result.fullyCorrect ? "Ordre parfait !" : `${result.correctCount}/${result.total} étapes bien placées.`}</div>
+          <div class="explanation__feedback explanation__feedback--${result.fullyCorrect ? "ok" : "partial"}">${result.fullyCorrect ? "Ordre parfait !" : `${result.correctCount}/${result.total} étapes bien placées.`}</div>
           <button class="btn btn--primary btn--block" data-retry>Réessayer</button>
         </div>
       `
