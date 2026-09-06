@@ -17,6 +17,9 @@ ajouter ou corriger du contenu.
 - **Réviser** — le QCM classique, piloté par la répétition espacée. Chaque
   question a une « boîte » Leitner (0–5) et un facteur de facilité : une bonne
   réponse l'éloigne, une mauvaise la ramène. Voir `src/core/srs.ts`.
+- **Points faibles** — une session qui ne cible que les questions déjà ratées
+  au moins une fois, toutes catégories confondues, triées par taux de
+  réussite croissant. Voir `src/core/weakPoints.ts`.
 - **Cas pratiques** — une situation de table, puis une chaîne de décisions à
   prendre, avec l'explication de la règle entre chaque. C'est le mode qui
   travaille la combinaison des règles (ordres, portée de contrôle, couvert,

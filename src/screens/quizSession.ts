@@ -2,9 +2,12 @@ import { allQuestions, categories, getQuestionsForCategory } from "../data/categ
 import { store } from "../core/store.ts";
 import { applyAnswer, createSessionState, pickNextQuestion } from "../core/sessionEngine.ts";
 import type { SessionState } from "../core/sessionEngine.ts";
+import { getWeakQuestions } from "../core/weakPoints.ts";
 import type { Question } from "../core/types.ts";
 import { navigate } from "../router.ts";
 import { escapeHtml } from "../ui/html.ts";
+
+const WEAK_CATEGORY_ID = "weak";
 
 export interface QuizSessionSummary {
   categoryLabel: string;
@@ -32,11 +35,16 @@ export function getLastSummary(): QuizSessionSummary | null {
 }
 
 function poolFor(categoryId: string): Question[] {
+  if (categoryId === WEAK_CATEGORY_ID) {
+    const now = Date.now();
+    return getWeakQuestions(allQuestions, (id) => store.getCardProgress(id, now));
+  }
   return categoryId === "all" ? allQuestions : getQuestionsForCategory(categoryId);
 }
 
 function categoryLabel(categoryId: string): string {
   if (categoryId === "all") return "Toutes les catégories";
+  if (categoryId === WEAK_CATEGORY_ID) return "Points faibles";
   return categories.find((c) => c.id === categoryId)?.label ?? categoryId;
 }
 
@@ -75,9 +83,13 @@ export function renderQuizSession(root: HTMLElement, categoryId: string): void {
   if (!active) return;
 
   if (!active.current) {
+    const message =
+      categoryId === WEAK_CATEGORY_ID
+        ? "Aucun point faible pour l'instant — continuez à réviser pour en dégager, ou bien joué si vous n'avez encore raté aucune question !"
+        : "Aucune question disponible dans cette catégorie pour le moment.";
     root.innerHTML = `
       <div class="empty-state">
-        <p>Aucune question disponible dans cette catégorie pour le moment.</p>
+        <p>${escapeHtml(message)}</p>
         <button class="btn" data-home>Retour à l'accueil</button>
       </div>
     `;
