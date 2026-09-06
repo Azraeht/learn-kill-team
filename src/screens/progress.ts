@@ -60,7 +60,7 @@ export function renderProgress(root: HTMLElement): void {
             <span class="category-card__label">${escapeHtml(category.label)}</span>
             <span class="badge badge--muted">${stats.masteredCount}/${stats.total} maîtrisées</span>
           </div>
-          <div class="progress-bar"><div class="progress-bar__fill" style="width:${stats.masteryPercent}%; background:${category.color}"></div></div>
+          <div class="progress-bar"><div class="progress-bar__fill" style="width:${stats.masteryPercent}%"></div></div>
           <div class="category-card__meta">
             <span>${stats.masteryPercent}% de maîtrise</span>
             <span>${stats.accuracyPercent === null ? "aucune tentative" : `${stats.accuracyPercent}% de réussite`}</span>

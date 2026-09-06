@@ -26,7 +26,7 @@ export function renderHome(root: HTMLElement): void {
             ${draftNote}
           </div>
           <p class="category-card__desc">${escapeHtml(category.description)}</p>
-          <div class="progress-bar"><div class="progress-bar__fill" style="width:${stats.masteryPercent}%; background:${category.color}"></div></div>
+          <div class="progress-bar"><div class="progress-bar__fill" style="width:${stats.masteryPercent}%"></div></div>
           <div class="category-card__meta">
             <span>${stats.masteryPercent}% maîtrisé</span>
             <span>${stats.dueCount} à réviser</span>
