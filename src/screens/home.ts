@@ -3,6 +3,7 @@ import { store } from "../core/store.ts";
 import { computeCategoryStats } from "../core/stats.ts";
 import { currentStreak } from "../core/activity.ts";
 import { isDue } from "../core/srs.ts";
+import { getWeakQuestions } from "../core/weakPoints.ts";
 import { navigate } from "../router.ts";
 import { escapeHtml } from "../ui/html.ts";
 
@@ -12,6 +13,7 @@ export function renderHome(root: HTMLElement): void {
 
   const totalDue = allQuestions.filter((q) => isDue(getProgress(q.id), now)).length;
   const streak = currentStreak(store.getState().dailyActivity, now);
+  const weakCount = getWeakQuestions(allQuestions, getProgress).length;
 
   const cards = categories
     .map((category) => {
@@ -51,6 +53,7 @@ export function renderHome(root: HTMLElement): void {
     </div>
     <button class="btn btn--primary btn--block" data-start-all>Réviser toutes les catégories</button>
     <div class="mode-grid">
+      <button class="btn" data-weak>Points faibles${weakCount > 0 ? ` (${weakCount})` : ""}</button>
       <button class="btn" data-scenarios>Cas pratiques</button>
       <button class="btn" data-sequences>Séquences de jeu</button>
       <button class="btn" data-reference>Antisèche</button>
@@ -64,6 +67,7 @@ export function renderHome(root: HTMLElement): void {
     btn.addEventListener("click", () => navigate(`quiz/${btn.dataset.category}`));
   });
   root.querySelector("[data-start-all]")?.addEventListener("click", () => navigate("quiz/all"));
+  root.querySelector("[data-weak]")?.addEventListener("click", () => navigate("quiz/weak"));
   root.querySelector("[data-scenarios]")?.addEventListener("click", () => navigate("scenarios"));
   root.querySelector("[data-sequences]")?.addEventListener("click", () => navigate("sequences"));
   root.querySelector("[data-reference]")?.addEventListener("click", () => navigate("reference"));
