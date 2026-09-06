@@ -8,13 +8,15 @@ import { renderResults } from "./screens/results.ts";
 import { renderProgress } from "./screens/progress.ts";
 import { renderSequences } from "./screens/sequences.ts";
 import { renderSequenceGame } from "./screens/sequenceGame.ts";
+import { AQUILA_SVG } from "./ui/icons.ts";
 
 const app = document.getElementById("app");
 if (!app) throw new Error("Missing #app root element");
 
 app.innerHTML = `
-  <header class="app-header">
-    <h1 data-title-home style="cursor:pointer">Kill Team Trainer</h1>
+  <header class="app-header" data-title-home style="cursor:pointer">
+    <span class="app-header__aquila">${AQUILA_SVG}</span>
+    <h1>Kill Team Trainer</h1>
   </header>
   <main class="app-main" id="main"></main>
 `;

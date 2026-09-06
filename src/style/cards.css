@@ -4,9 +4,11 @@
   justify-content: space-between;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-top: 2px solid var(--gold);
   padding: var(--space-2) var(--space-3);
+  font-family: var(--font-display);
   font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .hud__streak {
@@ -14,13 +16,36 @@
 }
 
 .question-card {
-  background: var(--bg-elevated);
+  position: relative;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.03), transparent 35%),
+    var(--bg-elevated);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  clip-path: polygon(
+    var(--chamfer) 0,
+    100% 0,
+    100% calc(100% - var(--chamfer)),
+    calc(100% - var(--chamfer)) 100%,
+    0 100%,
+    0 var(--chamfer)
+  );
   padding: var(--space-4);
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.question-card::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--border-bright);
+  box-shadow: -6px 0 0 var(--border-bright);
 }
 
 .question-card__top {
@@ -45,7 +70,14 @@
 .choice-btn {
   text-align: left;
   padding: var(--space-3);
-  border-radius: var(--radius-sm);
+  clip-path: polygon(
+    var(--chamfer-sm) 0,
+    100% 0,
+    100% calc(100% - var(--chamfer-sm)),
+    calc(100% - var(--chamfer-sm)) 100%,
+    0 100%,
+    0 var(--chamfer-sm)
+  );
   border: 1px solid var(--border);
   background: var(--bg-elevated-2);
   min-height: 52px;
@@ -58,18 +90,19 @@
 }
 
 .choice-btn--correct {
-  background: color-mix(in srgb, var(--accent-2) 25%, var(--bg-elevated-2));
+  background: color-mix(in srgb, var(--accent-2) 30%, var(--bg-elevated-2));
   border-color: var(--accent-2);
 }
 
 .choice-btn--incorrect {
-  background: color-mix(in srgb, var(--danger) 25%, var(--bg-elevated-2));
+  background: color-mix(in srgb, var(--danger) 30%, var(--bg-elevated-2));
   border-color: var(--danger);
 }
 
 .explanation {
-  background: var(--bg-elevated-2);
-  border-radius: var(--radius-sm);
+  background: linear-gradient(160deg, #241c10, #1a1409);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
   padding: var(--space-3);
   font-size: 0.9rem;
   color: var(--text-muted);
@@ -79,8 +112,12 @@
 }
 
 .explanation__feedback {
+  font-family: var(--font-display);
   font-weight: 700;
-  color: var(--text);
+  color: var(--gold-bright);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.9rem;
 }
 
 .results-summary {
@@ -92,19 +129,33 @@
 }
 
 .results-summary__score {
-  font-size: 2.4rem;
+  font-family: var(--font-display);
+  font-size: 2.6rem;
   font-weight: 800;
+  color: var(--gold-bright);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
 }
 
 .sequence-card {
   display: block;
   width: 100%;
   text-align: left;
-  background: var(--bg-elevated);
+  position: relative;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.03), transparent 40%),
+    var(--bg-elevated);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  clip-path: polygon(
+    var(--chamfer) 0,
+    100% 0,
+    100% calc(100% - var(--chamfer)),
+    calc(100% - var(--chamfer)) 100%,
+    0 100%,
+    0 var(--chamfer)
+  );
   padding: var(--space-3);
   cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 .sequence-card__top {
@@ -115,8 +166,10 @@
 }
 
 .sequence-card__title {
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.05rem;
+  color: var(--text);
 }
 
 .sequence-card__desc {
@@ -131,11 +184,12 @@
 }
 
 .sequence-zone__label {
-  font-size: 0.8rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
   font-weight: 700;
-  color: var(--text-muted);
+  color: var(--gold);
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
 }
 
 .sequence-slot-list {
@@ -147,7 +201,6 @@
 
 .sequence-slot {
   min-height: 52px;
-  border-radius: var(--radius-sm);
   border: 1px dashed var(--border);
   background: var(--bg-elevated-2);
 }
@@ -155,7 +208,6 @@
 .sequence-step-btn {
   text-align: left;
   padding: var(--space-3);
-  border-radius: var(--radius-sm);
   border: 1px solid var(--border);
   background: var(--bg-elevated-2);
   min-height: 52px;
@@ -171,9 +223,10 @@
   flex-shrink: 0;
   width: 22px;
   height: 22px;
-  border-radius: 999px;
-  background: var(--accent);
-  color: #0c1220;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #241a05;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.75rem;
   display: flex;
@@ -182,11 +235,11 @@
 }
 
 .sequence-step-btn--correct {
-  background: color-mix(in srgb, var(--accent-2) 25%, var(--bg-elevated-2));
+  background: color-mix(in srgb, var(--accent-2) 30%, var(--bg-elevated-2));
   border-color: var(--accent-2);
 }
 
 .sequence-step-btn--incorrect {
-  background: color-mix(in srgb, var(--danger) 25%, var(--bg-elevated-2));
+  background: color-mix(in srgb, var(--danger) 30%, var(--bg-elevated-2));
   border-color: var(--danger);
 }
