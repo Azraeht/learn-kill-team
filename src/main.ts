@@ -12,7 +12,10 @@ import { renderScenarios } from "./screens/scenarios.ts";
 import { renderScenarioPlay } from "./screens/scenarioPlay.ts";
 import { renderReference } from "./screens/reference.ts";
 import { renderSettings } from "./screens/settings.ts";
+import { registerServiceWorker } from "./registerServiceWorker.ts";
 import { AQUILA_SVG } from "./ui/icons.ts";
+
+registerServiceWorker();
 
 const app = document.getElementById("app");
 if (!app) throw new Error("Missing #app root element");
