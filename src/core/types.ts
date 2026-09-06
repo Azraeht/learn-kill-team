@@ -104,6 +104,24 @@ export interface DayActivity {
   correct: number;
 }
 
+/** One side's running totals in the live match tracker (not learning progress). */
+export interface MatchTrackerPlayer {
+  name: string;
+  /** Command points (PC). */
+  cp: number;
+  /** Victory points (VP) — kept as "vp" rather than "pv" to avoid colliding
+   *  with "PV" (points de vie / health), already used elsewhere in the app's
+   *  own content for a completely different stat. */
+  vp: number;
+}
+
+export interface MatchTrackerState {
+  turningPoint: number;
+  /** Index into `players` of whoever currently holds initiative, or null before it's been decided. */
+  initiativeHolder: 0 | 1 | null;
+  players: [MatchTrackerPlayer, MatchTrackerPlayer];
+}
+
 export interface PersistedState {
   version: 1;
   progress: Record<string, CardProgress>;
@@ -112,4 +130,5 @@ export interface PersistedState {
   sequenceProgress: Record<string, SequenceProgress>;
   scenarioProgress: Record<string, ScenarioProgress>;
   dailyActivity: Record<string, DayActivity>;
+  matchTracker: MatchTrackerState;
 }

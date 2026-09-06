@@ -60,6 +60,7 @@ export function renderHome(root: HTMLElement): void {
       <button class="btn" data-progress>Progression</button>
     </div>
     <div class="category-list">${cards}</div>
+    <button class="btn btn--block" data-tracker>Compteur de Partie</button>
     <button class="btn btn--block" data-settings>Réglages</button>
   `;
 
@@ -72,5 +73,6 @@ export function renderHome(root: HTMLElement): void {
   root.querySelector("[data-sequences]")?.addEventListener("click", () => navigate("sequences"));
   root.querySelector("[data-reference]")?.addEventListener("click", () => navigate("reference"));
   root.querySelector("[data-progress]")?.addEventListener("click", () => navigate("progress"));
+  root.querySelector("[data-tracker]")?.addEventListener("click", () => navigate("tracker"));
   root.querySelector("[data-settings]")?.addEventListener("click", () => navigate("settings"));
 }

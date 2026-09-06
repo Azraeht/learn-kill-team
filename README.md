@@ -31,6 +31,11 @@ ajouter ou corriger du contenu.
   par catégorie. Conçue pour être ouverte *pendant* une partie.
 - **Progression** — maîtrise et réussite par catégorie, série de jours
   consécutifs et carte d'assiduité sur 12 semaines.
+- **Compteur de Partie** — un outil indépendant de l'apprentissage, pour
+  suivre les points de commandement (PC) et de victoire (VP) des deux
+  joueurs pendant une bataille réelle. Le bouton « Tournant suivant »
+  applique automatiquement le gain de PC de la phase de Stratégie (1PC au
+  joueur à l'initiative, 2PC à l'autre). Voir `src/core/matchTracker.ts`.
 - **Réglages** — longueur des sessions, export/import de la progression,
   réinitialisation.
 
