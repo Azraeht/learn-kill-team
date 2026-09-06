@@ -1,0 +1,75 @@
+[
+  {
+    "id": "seq-001",
+    "category": "core-rules",
+    "title": "Mise en Place",
+    "description": "Le déroulement du déploiement, avant que la bataille ne commence.",
+    "steps": [
+      "Placez la killzone et tirez au hasard pour déterminer qui a l'initiative pour le déploiement.",
+      "Le dernier joueur choisit son bord d'insertion (ou le joueur à l'initiative, si vous ne jouez pas de mission).",
+      "En commençant par le joueur à l'initiative, les joueurs placent tour à tour un tiers de leur kill team.",
+      "Chaque agent placé reçoit un ordre de Dissimulation."
+    ],
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Mise en Place »"
+  },
+  {
+    "id": "seq-002",
+    "category": "core-rules",
+    "title": "Phase de Stratégie",
+    "description": "Ce qui se passe au début de chaque tournant, avant la phase d'Affrontement.",
+    "steps": [
+      "Chaque joueur jette 1D6 : le plus haut résultat décide qui a l'initiative.",
+      "Les joueurs gagnent des Points de Commandement (PC).",
+      "Chaque joueur prépare tous ses agents (pion d'ordre face préparée visible).",
+      "En commençant par le joueur à l'initiative, les joueurs effectuent des MANŒUVRES STRATÉGIQUES à tour de rôle, jusqu'à ce que les deux aient passé."
+    ],
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Phase de Stratégie »"
+  },
+  {
+    "id": "seq-003",
+    "category": "core-rules",
+    "title": "Phase d'Affrontement",
+    "description": "Comment se déroule l'activation des agents à chaque tournant.",
+    "steps": [
+      "Le joueur à l'initiative active un premier agent ami préparé.",
+      "En activant l'agent, on choisit son ordre : Engagement ou Dissimulation.",
+      "L'agent effectue des actions, chacune coûtant des PA, sans dépasser sa LPA.",
+      "Une fois ses actions terminées, l'agent devient indisponible.",
+      "Les joueurs continuent d'activer leurs agents à tour de rôle jusqu'à ce que tous soient indisponibles."
+    ],
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Phase d'Affrontement »"
+  },
+  {
+    "id": "seq-004",
+    "category": "core-rules",
+    "title": "Séquence de Tir",
+    "description": "Les étapes de l'action Tirer, dans l'ordre.",
+    "steps": [
+      "L'attaquant choisit une des armes de tir de son agent.",
+      "L'attaquant choisit un agent ennemi qui est une cible éligible, sans agent ami à sa portée de contrôle.",
+      "L'attaquant jette ses dés d'attaque (autant de D6 que la caractéristique d'Attaques de l'arme).",
+      "Le défenseur jette ses dés de défense (trois D6).",
+      "Le défenseur alloue ses réussites de défense pour bloquer les réussites d'attaque.",
+      "L'attaquant résout chaque dé d'attaque non bloqué pour infliger des dégâts."
+    ],
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Tirer »"
+  },
+  {
+    "id": "seq-005",
+    "category": "core-rules",
+    "title": "Séquence de Combattre",
+    "description": "Les étapes de l'action Combattre, dans l'ordre.",
+    "steps": [
+      "L'attaquant choisit un agent ennemi à sa portée de contrôle ; cet agent ripostera.",
+      "Les deux joueurs choisissent chacun une arme de mêlée.",
+      "Les deux joueurs jettent leurs dés d'attaque (autant de D6 que la caractéristique d'Attaques de l'arme).",
+      "En commençant par l'attaquant, les joueurs résolvent leurs dés d'attaque réussis, à tour de rôle, pour frapper ou bloquer."
+    ],
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Combattre »"
+  }
+]

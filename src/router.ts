@@ -2,7 +2,9 @@ export type Route =
   | { name: "home" }
   | { name: "quiz"; categoryId: string }
   | { name: "results" }
-  | { name: "progress" };
+  | { name: "progress" }
+  | { name: "sequences" }
+  | { name: "sequence"; sequenceId: string };
 
 function parseHash(hash: string): Route {
   const path = hash.replace(/^#\/?/, "");
@@ -15,6 +17,10 @@ function parseHash(hash: string): Route {
       return { name: "results" };
     case "progress":
       return { name: "progress" };
+    case "sequences":
+      return { name: "sequences" };
+    case "sequence":
+      return param ? { name: "sequence", sequenceId: param } : { name: "sequences" };
     case "home":
     case "":
     default:

@@ -1,5 +1,5 @@
 import { createInitialCardProgress, nextCardProgress } from "./srs.ts";
-import type { Attempt, CardProgress, CategoryId, PersistedState } from "./types.ts";
+import type { Attempt, CardProgress, CategoryId, PersistedState, SequenceProgress } from "./types.ts";
 
 const STORAGE_KEY = "kt-learn:v1";
 const MAX_SESSION_LOG = 500;
@@ -11,6 +11,7 @@ function createDefaultState(): PersistedState {
     progress: {},
     sessionLog: [],
     settings: { batchSize: DEFAULT_BATCH_SIZE },
+    sequenceProgress: {},
   };
 }
 
@@ -25,10 +26,15 @@ function loadState(): PersistedState {
       progress: parsed.progress ?? {},
       sessionLog: parsed.sessionLog ?? [],
       settings: { batchSize: parsed.settings?.batchSize ?? DEFAULT_BATCH_SIZE },
+      sequenceProgress: parsed.sequenceProgress ?? {},
     };
   } catch {
     return createDefaultState();
   }
+}
+
+function createInitialSequenceProgress(): SequenceProgress {
+  return { timesAttempted: 0, timesFullyCorrect: 0, bestCorrectCount: 0, lastAttemptAt: null };
 }
 
 function persist(state: PersistedState): void {
@@ -77,6 +83,28 @@ class Store {
       ...this.state,
       progress: { ...this.state.progress, [questionId]: updated },
       sessionLog,
+    };
+
+    persist(this.state);
+    this.notify();
+  }
+
+  getSequenceProgress(sequenceId: string): SequenceProgress {
+    return this.state.sequenceProgress[sequenceId] ?? createInitialSequenceProgress();
+  }
+
+  recordSequenceAttempt(sequenceId: string, correctCount: number, fullyCorrect: boolean, now: number): void {
+    const current = this.getSequenceProgress(sequenceId);
+    const updated: SequenceProgress = {
+      timesAttempted: current.timesAttempted + 1,
+      timesFullyCorrect: current.timesFullyCorrect + (fullyCorrect ? 1 : 0),
+      bestCorrectCount: Math.max(current.bestCorrectCount, correctCount),
+      lastAttemptAt: now,
+    };
+
+    this.state = {
+      ...this.state,
+      sequenceProgress: { ...this.state.sequenceProgress, [sequenceId]: updated },
     };
 
     persist(this.state);

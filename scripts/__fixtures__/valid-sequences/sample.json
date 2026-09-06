@@ -1,0 +1,9 @@
+[
+  {
+    "id": "seq-999",
+    "category": "core-rules",
+    "title": "Fixture valide",
+    "steps": ["Étape un", "Étape deux", "Étape trois"],
+    "status": "draft"
+  }
+]
