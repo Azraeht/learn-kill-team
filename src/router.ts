@@ -9,7 +9,8 @@ export type Route =
   | { name: "scenario"; scenarioId: string }
   | { name: "reference" }
   | { name: "settings" }
-  | { name: "tracker" };
+  | { name: "tracker" }
+  | { name: "glossary" };
 
 function parseHash(hash: string): Route {
   const path = hash.replace(/^#\/?/, "");
@@ -36,6 +37,8 @@ function parseHash(hash: string): Route {
       return { name: "settings" };
     case "tracker":
       return { name: "tracker" };
+    case "glossary":
+      return { name: "glossary" };
     case "home":
     case "":
     default:

@@ -1,9 +1,10 @@
 # Adding and editing content
 
-There are three kinds of content: **questions** (quiz cards, also the source
+There are four kinds of content: **questions** (quiz cards, also the source
 of the Antisèche reference screen), **sequences** (the "remettre dans l'ordre"
-game mode for learning game flow/phases), and **scenarios** (multi-step
-tabletop situations for the "Cas pratiques" mode).
+game mode for learning game flow/phases), **scenarios** (multi-step
+tabletop situations for the "Cas pratiques" mode), and **glossary entries**
+(named-rule lookups for the "Glossaire" fast-search index).
 
 ## Questions
 
@@ -135,24 +136,58 @@ same time), which is where Kill Team actually trips people up.
 - To add a new scenario category: add a file here, add it to the `scenarios`
   array in `src/data/scenarios.ts`.
 
+## Glossary (the "Glossaire" fast-search index)
+
+Glossary entries live in `src/data/glossary/`, one JSON file per category
+(today just `core-rules.json`). Each entry is one named rule keyword — a
+weapon rule, an order, a status effect — with a short, self-contained
+definition. Unlike questions, this isn't a quiz: it's a lookup index, meant
+to be found by typing the rule's *name* and read in one glance mid-game.
+
+```jsonc
+{
+  "id": "gl-027",                      // required, unique across ALL glossary files, format "<prefix>-###"
+  "term": "Traqueuse",                 // required, unique across ALL glossary files, the exact rule name
+  "category": "core-rules",            // required, must match a category id
+  "definition": "Quand vous choisissez une cible éligible, les agents ne peuvent pas utiliser le terrain comme couvert.",
+  "status": "verified",
+  "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+}
+```
+
+- `term` is what the search matches against — not the definition body. Keep
+  it exactly as printed on the rule (e.g. `"Létal x+"`, not `"la règle
+  Létal"`), since that's what a player will actually type.
+- `definition` should stand alone: no "this rule means that when you..." —
+  just the rule text itself, the way it reads on the card.
+- Reusing an already-verified question's `explanation` verbatim (or composing
+  one from a few already-verified questions about the same term, keeping
+  their exact wording) is the safest way to add entries: it doesn't require
+  re-checking new facts against the source PDF, only extracting what's
+  already been checked.
+- To add a new glossary category: add a file here, add it to the `glossary`
+  array in `src/data/glossary.ts`.
+
 ## Validating your edits
 
-After editing any file in `src/data/questions/`, `src/data/sequences/` or
-`src/data/scenarios/`, run:
+After editing any file in `src/data/questions/`, `src/data/sequences/`,
+`src/data/scenarios/` or `src/data/glossary/`, run:
 
 ```bash
 npm run validate-content
 ```
 
 This checks every entry against its schema in `src/data/schema/`
-(`question.schema.json`, `sequence.schema.json`, `scenario.schema.json`), and
-additionally checks (in `scripts/validate-content.ts`):
+(`question.schema.json`, `sequence.schema.json`, `scenario.schema.json`,
+`glossary.schema.json`), and additionally checks (in
+`scripts/validate-content.ts`):
 
 - every `id` is unique across all files of its kind,
 - `correctIndex` is within bounds of `choices`, for both multiple-choice
   questions and every scenario step,
 - steps are unique within a sequence, and choices are distinct within a
   scenario step,
+- every glossary `term` is unique across all glossary files,
 - a `"verified"` entry has a non-empty `sourceRef` (warning, not a hard
   failure).
 

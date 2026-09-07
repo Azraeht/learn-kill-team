@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "glossary.schema.json",
+  "title": "GlossaryEntry",
+  "type": "object",
+  "required": ["id", "term", "category", "definition", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*-[0-9]{3}$",
+      "description": "Stable unique id, format '<prefix>-###', e.g. gl-001"
+    },
+    "term": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The rule name as printed, e.g. 'Brutale' or 'Ordre de Dissimulation'."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "core-rules",
+        "terrain-missions",
+        "aquilon-tempestus",
+        "frelons-vespides",
+        "yaegirs-hernkogs",
+        "exo-armures-stealth",
+        "cibleurs",
+        "cercle-canoptek",
+        "deathwatch"
+      ]
+    },
+    "definition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "verified"]
+    },
+    "sourceRef": {
+      "type": "string"
+    }
+  }
+}

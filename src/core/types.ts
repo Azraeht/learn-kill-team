@@ -98,6 +98,16 @@ export interface ScenarioProgress {
   lastAttemptAt: number | null;
 }
 
+/** A single named-rule lookup entry, e.g. a weapon rule keyword or an order. */
+export interface GlossaryEntry {
+  id: string;
+  term: string;
+  category: CategoryId;
+  definition: string;
+  status: QuestionStatus;
+  sourceRef?: string;
+}
+
 /** Answer counts for a single local calendar day, keyed 'YYYY-MM-DD'. */
 export interface DayActivity {
   answered: number;
