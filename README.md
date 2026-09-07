@@ -29,6 +29,11 @@ ajouter ou corriger du contenu.
 - **Antisèche** — toutes les règles du jeu de questions, avec leur réponse et
   leur source, cherchables (la recherche ignore les accents) et filtrables
   par catégorie. Conçue pour être ouverte *pendant* une partie.
+- **Glossaire** — un index des règles nommées (armes, ordres, états) pour
+  retrouver une définition en tapant juste son nom, sans chercher dans le
+  texte. Le champ de recherche est actif dès l'ouverture et ne filtre que sur
+  le nom, pas sur la définition ; taper ouvre un petit encart avec le texte
+  et sa source. Voir `src/core/glossarySearch.ts`.
 - **Progression** — maîtrise et réussite par catégorie, série de jours
   consécutifs et carte d'assiduité sur 12 semaines.
 - **Compteur de Partie** — un outil indépendant de l'apprentissage, pour

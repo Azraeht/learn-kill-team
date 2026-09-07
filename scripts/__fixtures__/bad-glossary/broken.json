@@ -1,0 +1,26 @@
+[
+  {
+    "id": "fixture-001",
+    "term": "Duplicate Term",
+    "category": "core-rules",
+    "definition": "First definition of this term.",
+    "status": "verified",
+    "sourceRef": "Fixture"
+  },
+  {
+    "id": "fixture-002",
+    "term": "Duplicate Term",
+    "category": "core-rules",
+    "definition": "Same term defined again — should be rejected.",
+    "status": "verified",
+    "sourceRef": "Fixture"
+  },
+  {
+    "id": "fixture-001",
+    "term": "Reused Id",
+    "category": "not-a-real-category",
+    "definition": "Reuses the id above and names a category that does not exist.",
+    "status": "verified",
+    "sourceRef": "Fixture"
+  }
+]

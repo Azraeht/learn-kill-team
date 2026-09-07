@@ -1,0 +1,210 @@
+[
+  {
+    "id": "gl-001",
+    "term": "Ordre de Dissimulation",
+    "category": "core-rules",
+    "definition": "Un agent avec cet ordre ne peut pas faire d'actions Tirer ni Charger.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Ordre de Dissimulation »"
+  },
+  {
+    "id": "gl-002",
+    "term": "Ordre d'Engagement",
+    "category": "core-rules",
+    "definition": "Un agent avec cet ordre peut effectuer des actions normalement et contre-attaquer.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Ordre d'Engagement »"
+  },
+  {
+    "id": "gl-003",
+    "term": "Contre-Attaquer",
+    "category": "core-rules",
+    "definition": "Un agent ami indisponible avec un ordre d'Engagement peut contre-attaquer, une seule fois par tournant : il peut effectuer une action à 1PA gratuitement, sans se déplacer de plus de 2\" si c'est une action de mouvement.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Contre-Attaquer »"
+  },
+  {
+    "id": "gl-004",
+    "term": "Estropié",
+    "category": "core-rules",
+    "definition": "Un agent qui a moins de la moitié de ses PV de départ est estropié : soustrayez 2\" à son Mouvement et dégradez de 1 la Touche de ses armes.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Dégâts »"
+  },
+  {
+    "id": "gl-005",
+    "term": "Neutralisé",
+    "category": "core-rules",
+    "definition": "Un agent avec 0 point de vie ou moins est neutralisé et retiré du jeu.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Dégâts »"
+  },
+  {
+    "id": "gl-006",
+    "term": "Brutale",
+    "category": "core-rules",
+    "definition": "Votre adversaire ne peut bloquer qu'avec des réussites critiques.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-007",
+    "term": "Choc",
+    "category": "core-rules",
+    "definition": "La première fois de chaque séquence que vous frappez avec une réussite critique, vous défaussez en plus une réussite normale non résolue de votre adversaire (ou une réussite critique s'il n'y a pas de réussite normale).",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-008",
+    "term": "Dévastatrice x",
+    "category": "core-rules",
+    "definition": "Chaque réussite critique conservée inflige immédiatement x dégâts à l'agent contre lequel cette arme est utilisée.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-009",
+    "term": "Équilibrée",
+    "category": "core-rules",
+    "definition": "Vous pouvez relancer un de vos dés d'attaque.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-010",
+    "term": "Étourdissant",
+    "category": "core-rules",
+    "definition": "Si vous conservez au moins une réussite critique, soustrayez 1 à la caractéristique de LPA de l'agent contre lequel cette arme a été utilisée jusqu'à la fin de sa prochaine activation.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-011",
+    "term": "Létal x+",
+    "category": "core-rules",
+    "definition": "Vos réussites dont le résultat est supérieur ou égal à x sont des réussites critiques, ex : Létal 5+.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-012",
+    "term": "Fatale",
+    "category": "core-rules",
+    "definition": "Si vous ne conservez aucune réussite critique, vous pouvez changer une de vos réussites normales en réussite critique.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-013",
+    "term": "Fracassante",
+    "category": "core-rules",
+    "definition": "Si vous conservez au moins une réussite critique, vous pouvez conserver une de vos réussites normales comme une réussite critique à la place.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-014",
+    "term": "Implacable",
+    "category": "core-rules",
+    "definition": "Vous pouvez relancer n'importe lesquels de vos dés d'attaque.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-015",
+    "term": "Inexorable",
+    "category": "core-rules",
+    "definition": "Vous pouvez relancer n'importe lesquels de vos dés d'attaque d'un résultat donné (par exemple, les résultats de 2).",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-016",
+    "term": "Limitée x",
+    "category": "core-rules",
+    "definition": "Une fois qu'un agent a utilisé cette arme autant de fois que x pendant la bataille, il ne la possède plus.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-017",
+    "term": "Lourde",
+    "category": "core-rules",
+    "definition": "Un agent ne peut pas se déplacer lors d'une activation ou d'un contre-attaque où il a utilisé cette arme (et inversement).",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-018",
+    "term": "Perforante x",
+    "category": "core-rules",
+    "definition": "Le défenseur prend x dés de défense en moins, ex : Perforante 1.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-019",
+    "term": "Portée x",
+    "category": "core-rules",
+    "definition": "Seuls les agents à distance de x de l'agent actif peuvent être des cibles éligibles, ex : Portée 9\".",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-020",
+    "term": "Précision x",
+    "category": "core-rules",
+    "definition": "Vous pouvez conserver jusqu'à x dés de votre attaque comme réussites normales sans les jeter.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-021",
+    "term": "Saturation",
+    "category": "core-rules",
+    "definition": "Le défenseur ne peut pas conserver de sauvegardes de couvert.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-022",
+    "term": "Silencieuse",
+    "category": "core-rules",
+    "definition": "Un agent peut effectuer l'action Tirer avec cette arme même s'il a un ordre de Dissimulation.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-023",
+    "term": "Torrent x",
+    "category": "core-rules",
+    "definition": "Choisissez une cible éligible comme cible principale, puis n'importe quel nombre d'autres cibles éligibles à x de la première comme cibles secondaires, mais hors de portée de contrôle de tout agent ami.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-024",
+    "term": "Traqueuse",
+    "category": "core-rules",
+    "definition": "Quand vous choisissez une cible éligible, les agents ne peuvent pas utiliser le terrain comme couvert.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-025",
+    "term": "Vengeresse",
+    "category": "core-rules",
+    "definition": "Si vous conservez au moins une réussite critique, vous pouvez conserver un de vos échecs en tant que réussite normale au lieu de le défausser.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-026",
+    "term": "Surchauffe",
+    "category": "core-rules",
+    "definition": "Après qu'un agent a utilisé cette arme, jetez 1D6. Si le résultat est inférieur à la caractéristique de Touche de l'arme, infligez à l'agent autant de dégâts que le double du résultat du dé.",
+    "status": "verified",
+    "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  }
+]

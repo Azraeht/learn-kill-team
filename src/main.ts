@@ -13,6 +13,7 @@ import { renderScenarioPlay } from "./screens/scenarioPlay.ts";
 import { renderReference } from "./screens/reference.ts";
 import { renderSettings } from "./screens/settings.ts";
 import { renderMatchTracker } from "./screens/matchTracker.ts";
+import { renderGlossary } from "./screens/glossary.ts";
 import { registerServiceWorker } from "./registerServiceWorker.ts";
 
 registerServiceWorker();
@@ -64,6 +65,9 @@ function render(route: Route): void {
       break;
     case "tracker":
       renderMatchTracker(main!);
+      break;
+    case "glossary":
+      renderGlossary(main!);
       break;
     case "home":
     default:

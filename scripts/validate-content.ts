@@ -7,9 +7,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const questionsDir = path.join(__dirname, "..", "src", "data", "questions");
 const sequencesDir = path.join(__dirname, "..", "src", "data", "sequences");
 const scenariosDir = path.join(__dirname, "..", "src", "data", "scenarios");
+const glossaryDir = path.join(__dirname, "..", "src", "data", "glossary");
 const questionSchemaPath = path.join(__dirname, "..", "src", "data", "schema", "question.schema.json");
 const sequenceSchemaPath = path.join(__dirname, "..", "src", "data", "schema", "sequence.schema.json");
 const scenarioSchemaPath = path.join(__dirname, "..", "src", "data", "schema", "scenario.schema.json");
+const glossarySchemaPath = path.join(__dirname, "..", "src", "data", "schema", "glossary.schema.json");
 
 interface RawQuestion {
   id: string;
@@ -33,6 +35,14 @@ interface RawScenario {
   id: string;
   category: string;
   steps: { prompt: string; choices: string[]; correctIndex: number }[];
+  status: string;
+  sourceRef?: string;
+}
+
+interface RawGlossaryEntry {
+  id: string;
+  term: string;
+  category: string;
   status: string;
   sourceRef?: string;
 }
@@ -132,16 +142,36 @@ export function validateScenarios(dir: string = scenariosDir): ValidationResult 
   });
 }
 
+export function validateGlossary(dir: string = glossaryDir): ValidationResult {
+  const seenTerms = new Map<string, string>();
+
+  return validateEntries<RawGlossaryEntry>(dir, glossarySchemaPath, (label, entry, errors) => {
+    const prevLabel = seenTerms.get(entry.term);
+    if (prevLabel) {
+      errors.push(`${label}: duplicate term "${entry.term}" also defined at ${prevLabel}`);
+    } else {
+      seenTerms.set(entry.term, label);
+    }
+  });
+}
+
 function main() {
   const questionResult = validateContent();
   const sequenceResult = validateSequences();
   const scenarioResult = validateScenarios();
+  const glossaryResult = validateGlossary();
 
-  const errors = [...questionResult.errors, ...sequenceResult.errors, ...scenarioResult.errors];
+  const errors = [
+    ...questionResult.errors,
+    ...sequenceResult.errors,
+    ...scenarioResult.errors,
+    ...glossaryResult.errors,
+  ];
   const warnings = [
     ...questionResult.warnings,
     ...sequenceResult.warnings,
     ...scenarioResult.warnings,
+    ...glossaryResult.warnings,
   ];
 
   for (const warning of warnings) {

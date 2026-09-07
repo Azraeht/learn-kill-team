@@ -1,0 +1,10 @@
+[
+  {
+    "id": "fixture-001",
+    "term": "Fixture Term",
+    "category": "core-rules",
+    "definition": "A well-formed glossary entry used to prove the validator accepts valid input.",
+    "status": "verified",
+    "sourceRef": "Fixture"
+  }
+]

@@ -283,3 +283,66 @@
   color: var(--text-muted);
   opacity: 0.75;
 }
+
+.glossary-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.glossary-entry {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.glossary-entry--open {
+  border-color: var(--border-bright);
+}
+
+.glossary-entry__term {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  min-height: 48px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.glossary-entry__chevron {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.glossary-entry__definition {
+  padding: 0 var(--space-3) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border-top: 1px solid var(--border);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.glossary-entry__definition p {
+  padding-top: var(--space-2);
+  color: var(--text);
+}
+
+.glossary-entry__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
