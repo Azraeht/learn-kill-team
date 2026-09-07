@@ -66,10 +66,6 @@ function bindResults(root: HTMLElement): void {
 export function renderGlossary(root: HTMLElement): void {
   root.innerHTML = `
     <h2 class="screen-title">Glossaire</h2>
-    <p class="text-muted">
-      Index des règles nommées — armes, ordres, états — pour retrouver une définition en un tap
-      pendant une partie.
-    </p>
     <input
       class="search-input"
       type="search"
@@ -97,8 +93,16 @@ export function renderGlossary(root: HTMLElement): void {
     bindResults(root);
   });
 
+  // preventScroll, then an explicit top-aligned scroll: letting the browser's
+  // own focus-scroll run instead (its default is to center the field) leaves
+  // it mid-screen just as the on-screen keyboard eats the bottom half, so the
+  // result list ends up squeezed into whatever's left below — exactly the
+  // "results too low, hidden behind the keyboard" problem on Android. Aligning
+  // the field to the TOP of the viewport instead maximises the space left for
+  // results once the keyboard opens.
   searchInput?.focus({ preventScroll: true });
   searchInput?.setSelectionRange(searchInput.value.length, searchInput.value.length);
+  searchInput?.scrollIntoView({ block: "start" });
 
   root.querySelector("[data-home]")?.addEventListener("click", () => navigate("home"));
 }
