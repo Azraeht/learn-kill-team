@@ -133,7 +133,7 @@ export function renderQuizSession(root: HTMLElement, categoryId: string): void {
     </div>
     <div class="question-card">
       <div class="question-card__top">
-        <span class="badge badge--muted">${escapeHtml(categoryLabel(active.categoryId))}</span>
+        <span class="badge badge--muted">${escapeHtml(categoryLabel(current.category))}</span>
         ${!answered ? draftBadge : ""}
       </div>
       <p class="question-card__prompt">${escapeHtml(current.prompt)}</p>
