@@ -10,7 +10,8 @@
     "explanation": "La liste d'agents indique : « KILL TEAM DE YAEGIRS HERNKOGS ARCHÉTYPES : INFILTRATION, RECHERCHE & DESTRUCTION ».",
     "status": "verified",
     "sourceRef": "Kill Team – Yaegirs Hernkogs, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["yaeg-002"]
   },
   {
     "id": "yaeg-002",
@@ -22,7 +23,8 @@
     "explanation": "La liste d'agents précise « ↘ 1 agent THEYN YAEGIR HERNKOG ».",
     "status": "verified",
     "sourceRef": "Kill Team – Yaegirs Hernkogs, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["yaeg-003"]
   },
   {
     "id": "yaeg-003",
@@ -35,7 +37,8 @@
     "explanation": "La liste d'agents indique « ↘ 9 agents YAEGIRS HERNKOGS choisis dans la liste suivante ».",
     "status": "verified",
     "sourceRef": "Kill Team – Yaegirs Hernkogs, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["yaeg-004"]
   },
   {
     "id": "yaeg-004",
@@ -47,7 +50,8 @@
     "explanation": "Le texte précise : « À part les agents GUERRIERS, votre kill team ne peut inclure qu'un seul de chaque agent de cette liste. »",
     "status": "verified",
     "sourceRef": "Kill Team – Yaegirs Hernkogs, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["yaeg-005"]
   },
   {
     "id": "yaeg-005",
@@ -72,7 +76,8 @@
     "explanation": "La règle Débrouillards précise que cela se produit « à l'étape de Préparation de chaque phase de Stratégie après la première ».",
     "status": "verified",
     "sourceRef": "Kill Team – Yaegirs Hernkogs, Règle de Faction (Débrouillards)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["yaeg-007"]
   },
   {
     "id": "yaeg-007",
@@ -85,7 +90,8 @@
     "explanation": "Le tableau de la règle Débrouillards indique « 5+ : 2 » points de Débrouillardise.",
     "status": "verified",
     "sourceRef": "Kill Team – Yaegirs Hernkogs, Règle de Faction (Débrouillards)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["yaeg-008"]
   },
   {
     "id": "yaeg-008",
@@ -98,7 +104,8 @@
     "explanation": "Le tableau de la règle Débrouillards indique « 1-4 : 1 » point de Débrouillardise.",
     "status": "verified",
     "sourceRef": "Kill Team – Yaegirs Hernkogs, Règle de Faction (Débrouillards)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["yaeg-009"]
   },
   {
     "id": "yaeg-009",
@@ -110,7 +117,8 @@
     "explanation": "La règle précise : « À la fin de chaque tournant, défaussez vos points de Débrouillardise. »",
     "status": "verified",
     "sourceRef": "Kill Team – Yaegirs Hernkogs, Règle de Faction (Débrouillards)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["yaeg-010"]
   },
   {
     "id": "yaeg-010",

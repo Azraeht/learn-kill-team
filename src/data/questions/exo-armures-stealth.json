@@ -10,7 +10,8 @@
     "explanation": "La liste d'agents indique « 1 SHAS'VRE EXO-ARMURE XV26 STEALTH avec pistolet à impulsions et une des options suivantes : Canon à induction ou éclateur à fusion ».",
     "status": "verified",
     "sourceRef": "Kill Team – Exo-Armures XV26 Stealth, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["stealth-002"]
   },
   {
     "id": "stealth-002",
@@ -22,7 +23,8 @@
     "explanation": "La liste d'agents mentionne « 1 DRONE DE MARQUAGE MV75 EXO-ARMURE XV26 STEALTH » et « 1 DRONE ARMÉ MV15 EXO-ARMURE XV26 STEALTH ».",
     "status": "verified",
     "sourceRef": "Kill Team – Exo-Armures XV26 Stealth, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["stealth-003"]
   },
   {
     "id": "stealth-003",
@@ -35,7 +37,8 @@
     "explanation": "La liste d'agents indique « 4 agents EXO-ARMURES XV26 STEALTH choisis dans la liste suivante ».",
     "status": "verified",
     "sourceRef": "Kill Team – Exo-Armures XV26 Stealth, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["stealth-005"]
   },
   {
     "id": "stealth-004",
@@ -48,7 +51,8 @@
     "explanation": "La liste d'agents est intitulée « KILL D'EXO-ARMURES TEAM XV26 STEALTH ARCHÉTYPES : INFILTRATION, RECONNAISSANCE ».",
     "status": "verified",
     "sourceRef": "Kill Team – Exo-Armures XV26 Stealth, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["stealth-001"]
   },
   {
     "id": "stealth-005",
@@ -74,7 +78,8 @@
     "explanation": "« Quand un agent EXO-ARMURE XV26 STEALTH ami tire sur un agent ennemi, ses armes de tir ont la règle Précision X. »",
     "status": "verified",
     "sourceRef": "Kill Team – Exo-Armures XV26 Stealth, Règle de Faction (Kauyon)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["stealth-007"]
   },
   {
     "id": "stealth-007",
@@ -87,7 +92,8 @@
     "explanation": "Le tableau de Kauyon indique « Sur votre territoire → Précision 2 ».",
     "status": "verified",
     "sourceRef": "Kill Team – Exo-Armures XV26 Stealth, Règle de Faction (Kauyon)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["stealth-008"]
   },
   {
     "id": "stealth-008",
@@ -112,7 +118,8 @@
     "explanation": "« Quand un agent EXO-ARMURE XV26 STEALTH ami a un ordre de Dissimulation, il peut effectuer l'action Battre en Retraite pour 1PA de moins. »",
     "status": "verified",
     "sourceRef": "Kill Team – Exo-Armures XV26 Stealth, Règle de Faction (Champs Stealth)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["stealth-010"]
   },
   {
     "id": "stealth-010",

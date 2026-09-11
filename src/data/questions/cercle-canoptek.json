@@ -10,7 +10,8 @@
     "explanation": "La liste d'agents du Cercle Canoptek est intitulée « KILL TEAM DE CERCLE CANOPTEK ARCHÉTYPES : RECONNAISSANCE, SÉCURITÉ ».",
     "status": "verified",
     "sourceRef": "Kill Team – Cercle Canoptek, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["canop-002"]
   },
   {
     "id": "canop-002",
@@ -23,7 +24,8 @@
     "explanation": "La liste d'agents inclut 3 agents GUERRIER CERCLE CANOPTEK, chacun équipé soit d'un Scalpel Gauss soit d'un Projecteur Tesla, en plus de griffes et queue.",
     "status": "verified",
     "sourceRef": "Kill Team – Cercle Canoptek, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["canop-003"]
   },
   {
     "id": "canop-003",
@@ -35,7 +37,8 @@
     "explanation": "Le document précise : « Votre kill team ne peut inclure qu'un seul isolateur transdimensionnel. »",
     "status": "verified",
     "sourceRef": "Kill Team – Cercle Canoptek, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["canop-004"]
   },
   {
     "id": "canop-004",
@@ -48,7 +51,8 @@
     "explanation": "La liste d'agents comprend 2 agents ARPENTEUR SÉPULCRAL CERCLE CANOPTEK, chacun avec faucheuse Gauss jumelée + griffes, ou isolateur transdimensionnel + griffes.",
     "status": "verified",
     "sourceRef": "Kill Team – Cercle Canoptek, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["canop-005"]
   },
   {
     "id": "canop-005",
@@ -74,7 +78,8 @@
     "explanation": "La règle de faction s'intitule MATRICE D'OBÉLISQUES NODAUX.",
     "status": "verified",
     "sourceRef": "Kill Team – Cercle Canoptek, Règle de Faction",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["canop-007"]
   },
   {
     "id": "canop-007",
@@ -87,7 +92,8 @@
     "explanation": "« En tant que MANŒUVRE STRATÉGIQUE à chaque tournant après le premier, vous pouvez déplacer chacun de vos marqueurs OBÉLISQUE NODAL de jusqu'à 3\" horizontalement. »",
     "status": "verified",
     "sourceRef": "Kill Team – Cercle Canoptek, Règle de Faction",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["canop-008"]
   },
   {
     "id": "canop-008",
@@ -100,7 +106,8 @@
     "explanation": "« Quand un de vos marqueurs OBÉLISQUE NODAL est horizontalement à 6\" d'un autre de vos marqueurs OBÉLISQUE NODAL, ces marqueurs et la zone qui les sépare créent une MATRICE D'OBÉLISQUES NODAUX. »",
     "status": "verified",
     "sourceRef": "Kill Team – Cercle Canoptek, Règle de Faction",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["canop-009"]
   },
   {
     "id": "canop-009",
@@ -113,7 +120,8 @@
     "explanation": "Dans la Matrice, « les armes de sa carte technique ont la règle Précision 1 ».",
     "status": "verified",
     "sourceRef": "Kill Team – Cercle Canoptek, Règle de Faction",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["canop-010"]
   },
   {
     "id": "canop-010",

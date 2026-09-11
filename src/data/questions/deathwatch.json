@@ -10,7 +10,8 @@
     "explanation": "Le document indique : « KILL TEAM DE LA DEATHWATCH ARCHÉTYPES : RECHERCHE & DESTRUCTION, SÉCURITÉ AGENTS ».",
     "status": "verified",
     "sourceRef": "Kill Team – Deathwatch, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["dwatch-002"]
   },
   {
     "id": "dwatch-002",
@@ -23,7 +24,8 @@
     "explanation": "La liste d'agents précise : « 5 agents DEATHWATCH choisis dans la liste suivante ».",
     "status": "verified",
     "sourceRef": "Kill Team – Deathwatch, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["dwatch-003"]
   },
   {
     "id": "dwatch-003",
@@ -35,7 +37,8 @@
     "explanation": "Le document précise que la kill team « ne peut inclure qu'un seul agent GRAVIS ».",
     "status": "verified",
     "sourceRef": "Kill Team – Deathwatch, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["dwatch-004"]
   },
   {
     "id": "dwatch-004",
@@ -47,7 +50,8 @@
     "explanation": "La kill team « ne peut inclure qu'un seul de chaque agent de cette liste ».",
     "status": "verified",
     "sourceRef": "Kill Team – Deathwatch, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["dwatch-005"]
   },
   {
     "id": "dwatch-005",
@@ -73,7 +77,8 @@
     "explanation": "Vétérans de l'Adeptus Astartes permet cela « pendant chaque activation d'un agent DEATHWATCH ami ».",
     "status": "verified",
     "sourceRef": "Kill Team – Deathwatch, Règle de Faction",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["dwatch-007"]
   },
   {
     "id": "dwatch-007",
@@ -85,7 +90,8 @@
     "explanation": "Le texte précise que l'agent peut effectuer soit deux actions Tirer, soit deux actions Combattre, jamais une combinaison des deux.",
     "status": "verified",
     "sourceRef": "Kill Team – Deathwatch, Règle de Faction",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["dwatch-008"]
   },
   {
     "id": "dwatch-008",
@@ -123,7 +129,8 @@
     "explanation": "Une fois par tournant, à l'étape Choisir l'Arme, vous pouvez donner une des règles d'arme listées (Déflagration 1, Dévastatrice 1, Létale 5+, Perforante Critiques 1, Saturation, Fatale) aux armes de tir de l'agent jusqu'à la fin de l'action.",
     "status": "verified",
     "sourceRef": "Kill Team – Deathwatch, Règle de Faction",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["dwatch-011"]
   },
   {
     "id": "dwatch-011",

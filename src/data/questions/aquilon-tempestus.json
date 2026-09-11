@@ -10,7 +10,8 @@
     "explanation": "L'archétype présenté est « Reconnaissance, Recherche & Destruction ».",
     "status": "verified",
     "sourceRef": "Kill Team – Aquilon du Tempestus, Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["temp-002"]
   },
   {
     "id": "temp-002",
@@ -23,7 +24,8 @@
     "explanation": "1 Tempestor, 1 Servosentinelle et 9 agents choisis dans la liste, soit 11 au total.",
     "status": "verified",
     "sourceRef": "Kill Team – Aquilon du Tempestus, Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["temp-003"]
   },
   {
     "id": "temp-003",
@@ -48,7 +50,8 @@
     "explanation": "Le premier tiers de la kill team doit être placé normalement ; chaque tiers suivant peut être placé en altitude.",
     "status": "verified",
     "sourceRef": "Kill Team – Aquilon du Tempestus, Règle de Faction (Insertion Aérienne)",
-    "tags": ["insertion-aerienne"]
+    "tags": ["insertion-aerienne"],
+    "followUps": ["temp-005"]
   },
   {
     "id": "temp-005",
@@ -66,7 +69,8 @@
     "explanation": "Pour chaque tiers placé en altitude, vous devez y placer toutes les figurines de ce tiers, pas seulement une partie d'entre elles.",
     "status": "verified",
     "sourceRef": "Kill Team – Aquilon du Tempestus, Règle de Faction (Insertion Aérienne)",
-    "tags": ["insertion-aerienne"]
+    "tags": ["insertion-aerienne"],
+    "followUps": ["temp-006"]
   },
   {
     "id": "temp-006",
@@ -79,7 +83,8 @@
     "explanation": "Vous pouvez déplacer vos marqueurs d'insertion de 4\" au maximum, en ne mesurant que la distance horizontale.",
     "status": "verified",
     "sourceRef": "Kill Team – Aquilon du Tempestus, Règle de Faction (Insertion Aérienne)",
-    "tags": ["insertion-aerienne"]
+    "tags": ["insertion-aerienne"],
+    "followUps": ["temp-007"]
   },
   {
     "id": "temp-007",
@@ -91,7 +96,8 @@
     "explanation": "L'agent qui atterrit compte comme effectuant l'action Repositionnement (dépensez les PA nécessaires), puis poursuit normalement son activation.",
     "status": "verified",
     "sourceRef": "Kill Team – Aquilon du Tempestus, Règle de Faction (Insertion Aérienne)",
-    "tags": ["insertion-aerienne"]
+    "tags": ["insertion-aerienne"],
+    "followUps": ["temp-008"]
   },
   {
     "id": "temp-008",
@@ -109,7 +115,8 @@
     "explanation": "Il compte comme masqué jusqu'à la fin de la prochaine activation ou jusqu'à la fin du tournant (selon ce qui se produit en premier).",
     "status": "verified",
     "sourceRef": "Kill Team – Aquilon du Tempestus, Règle de Faction (Insertion Aérienne)",
-    "tags": ["insertion-aerienne"]
+    "tags": ["insertion-aerienne"],
+    "followUps": ["temp-009"]
   },
   {
     "id": "temp-009",
@@ -122,7 +129,8 @@
     "explanation": "Moins de la moitié de vos agents peuvent être placés en altitude à la fin du premier tournant — donc plus de la moitié doit être sur la killzone.",
     "status": "verified",
     "sourceRef": "Kill Team – Aquilon du Tempestus, Règle de Faction (Insertion Aérienne)",
-    "tags": ["insertion-aerienne"]
+    "tags": ["insertion-aerienne"],
+    "followUps": ["temp-010"]
   },
   {
     "id": "temp-010",
@@ -134,7 +142,8 @@
     "explanation": "Quand vous préparez vos agents aux 2e et 3e tournants, vous retirez un marqueur d'insertion, ce qui signifie que les agents encore en altitude sont neutralisés à la fin du 2e tournant.",
     "status": "verified",
     "sourceRef": "Kill Team – Aquilon du Tempestus, Règle de Faction (Insertion Aérienne)",
-    "tags": ["insertion-aerienne"]
+    "tags": ["insertion-aerienne"],
+    "followUps": ["temp-011"]
   },
   {
     "id": "temp-011",
