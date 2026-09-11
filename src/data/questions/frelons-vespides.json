@@ -10,7 +10,8 @@
     "explanation": "La Liste d'Agents indique les archétypes RECONNAISSANCE, RECHERCHE & DESTRUCTION pour la kill team des Frelons Vespides.",
     "status": "verified",
     "sourceRef": "Kill Team – Frelons Vespides, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["vesp-002"]
   },
   {
     "id": "vesp-002",
@@ -23,7 +24,8 @@
     "explanation": "La composition de la kill team requiert '1 agent LEADER FRELON VESPIDE'.",
     "status": "verified",
     "sourceRef": "Kill Team – Frelons Vespides, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["vesp-003"]
   },
   {
     "id": "vesp-003",
@@ -35,7 +37,8 @@
     "explanation": "'1 agent DRONE DE SUPERVISION FRELON VESPIDE' est requis dans la composition de la kill team.",
     "status": "verified",
     "sourceRef": "Kill Team – Frelons Vespides, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["vesp-004"]
   },
   {
     "id": "vesp-004",
@@ -48,7 +51,8 @@
     "explanation": "'9 agents FRELONS VESPIDES choisis dans la liste suivante' complètent le leader et le drone.",
     "status": "verified",
     "sourceRef": "Kill Team – Frelons Vespides, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["vesp-005"]
   },
   {
     "id": "vesp-005",
@@ -74,7 +78,8 @@
     "explanation": "'vous gagnez D3 points de Communion' à l'étape Préparer de chaque phase de Stratégie.",
     "status": "verified",
     "sourceRef": "Kill Team – Frelons Vespides, Règle de Faction (Communion)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["vesp-007"]
   },
   {
     "id": "vesp-007",
@@ -86,7 +91,8 @@
     "explanation": "La règle Communion précise '(vous gagnez D3 points de Communion,) plus 1 si un agent DRONE DE SUPERVISION ami est sur la killzone'.",
     "status": "verified",
     "sourceRef": "Kill Team – Frelons Vespides, Règle de Faction (Communion)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["vesp-008"]
   },
   {
     "id": "vesp-008",
@@ -99,7 +105,8 @@
     "explanation": "La règle de Communion limite le ciblage à 'l'agent ennemi le plus proche à 8\" de lui' sauf dépense d'un point de Communion.",
     "status": "verified",
     "sourceRef": "Kill Team – Frelons Vespides, Règle de Faction (Communion)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["vesp-009"]
   },
   {
     "id": "vesp-009",
@@ -111,7 +118,8 @@
     "explanation": "'Dans le cas des armes avec les règles Déflagration ou Torrent, seule la première cible doit être choisie ainsi.'",
     "status": "verified",
     "sourceRef": "Kill Team – Frelons Vespides, Règle de Faction (Communion)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["vesp-010"]
   },
   {
     "id": "vesp-010",
@@ -124,7 +132,8 @@
     "explanation": "La règle de Communion impose de terminer la Charge à portée de contrôle de l'ennemi le plus proche 'à moins que vous dépensiez 1 de vos points de Communion'.",
     "status": "verified",
     "sourceRef": "Kill Team – Frelons Vespides, Règle de Faction (Communion)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["vesp-011"]
   },
   {
     "id": "vesp-011",
@@ -136,7 +145,8 @@
     "explanation": "'les agents DRONES DE SUPERVISION ne sont pas affectés par ces effets.'",
     "status": "verified",
     "sourceRef": "Kill Team – Frelons Vespides, Règle de Faction (Communion)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["vesp-012"]
   },
   {
     "id": "vesp-012",
@@ -162,7 +172,8 @@
     "explanation": "'Les armes à neutrons sont toutes les armes dont le nom contient le mot neutron, comme éclateur à neutrons, lance-grenades à neutrons, etc.'",
     "status": "verified",
     "sourceRef": "Kill Team – Frelons Vespides, Règle de Faction (Charge à Neutrons)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["vesp-014"]
   },
   {
     "id": "vesp-014",
@@ -175,7 +186,8 @@
     "explanation": "'ses armes à neutrons ont la règle Perforante 1 jusqu'à la fin du tournant' quand l'agent se déplace ou utilise VOL.",
     "status": "verified",
     "sourceRef": "Kill Team – Frelons Vespides, Règle de Faction (Charge à Neutrons)",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["vesp-015"]
   },
   {
     "id": "vesp-015",

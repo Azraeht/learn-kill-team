@@ -10,7 +10,8 @@
     "explanation": "La zone d'insertion d'un joueur est une bande de 3\" de large le long de son bord de killzone.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Mise en Place »",
-    "tags": ["deploiement"]
+    "tags": ["deploiement"],
+    "followUps": ["core-002"]
   },
   {
     "id": "core-002",
@@ -35,7 +36,8 @@
     "explanation": "Un agent placé en zone d'insertion reçoit un ordre de Dissimulation, pas un ordre d'Engagement.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Mise en Place »",
-    "tags": ["ordres", "deploiement"]
+    "tags": ["ordres", "deploiement"],
+    "followUps": ["core-004"]
   },
   {
     "id": "core-004",
@@ -48,7 +50,8 @@
     "explanation": "Un agent avec un ordre de Dissimulation ne peut pas faire d'actions Tirer ni Charger.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Ordre de Dissimulation »",
-    "tags": ["ordres"]
+    "tags": ["ordres"],
+    "followUps": ["core-005"]
   },
   {
     "id": "core-005",
@@ -60,7 +63,8 @@
     "explanation": "Un agent avec un ordre d'Engagement peut effectuer des actions normalement et contre-attaquer.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Ordre d'Engagement »",
-    "tags": ["ordres"]
+    "tags": ["ordres"],
+    "followUps": ["core-016"]
   },
   {
     "id": "core-006",
@@ -73,7 +77,8 @@
     "explanation": "Sauf mention contraire, une bataille compte quatre tournants.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Commencer la Bataille »",
-    "tags": ["phases"]
+    "tags": ["phases"],
+    "followUps": ["core-007"]
   },
   {
     "id": "core-007",
@@ -86,7 +91,8 @@
     "explanation": "Chaque tournant inclut une phase de Stratégie et une phase d'Affrontement.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Commencer la Bataille »",
-    "tags": ["phases"]
+    "tags": ["phases"],
+    "followUps": ["core-008"]
   },
   {
     "id": "core-008",
@@ -104,7 +110,8 @@
     "explanation": "Chaque joueur jette 1D6 : celui qui obtient le plus haut résultat décide qui a l'initiative ; en cas d'égalité, le joueur qui n'a pas l'initiative actuellement décide.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Phase de Stratégie »",
-    "tags": ["phases", "initiative"]
+    "tags": ["phases", "initiative"],
+    "followUps": ["core-009"]
   },
   {
     "id": "core-009",
@@ -117,7 +124,8 @@
     "explanation": "Chaque joueur commence la bataille avec 2PC à dépenser en subterfuge.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Phase de Stratégie »",
-    "tags": ["phases", "commandement"]
+    "tags": ["phases", "commandement"],
+    "followUps": ["core-010"]
   },
   {
     "id": "core-010",
@@ -130,7 +138,8 @@
     "explanation": "À chaque phase de Stratégie suivante, le joueur qui a l'initiative gagne 1PC, tandis que l'autre gagne 2PC.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Phase de Stratégie »",
-    "tags": ["phases", "commandement"]
+    "tags": ["phases", "commandement"],
+    "followUps": ["core-011"]
   },
   {
     "id": "core-011",
@@ -154,7 +163,8 @@
     "explanation": "Sauf mention contraire, un agent ne peut pas effectuer la même action plus d'une fois pendant son activation.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Phase d'Affrontement »",
-    "tags": ["phases", "actions"]
+    "tags": ["phases", "actions"],
+    "followUps": ["core-020"]
   },
   {
     "id": "core-013",
@@ -184,7 +194,8 @@
     "explanation": "Chaque subterfuge coûte 1PC et, en dehors de la Relance de Commandement, un joueur ne peut utiliser chaque subterfuge qu'une seule fois par tournant.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Phase d'Affrontement »",
-    "tags": ["subterfuges"]
+    "tags": ["subterfuges"],
+    "followUps": ["core-015"]
   },
   {
     "id": "core-015",
@@ -215,7 +226,8 @@
     "explanation": "Un agent ami indisponible avec un ordre d'Engagement peut contre-attaquer.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Contre-Attaquer »",
-    "tags": ["contre-attaque"]
+    "tags": ["contre-attaque"],
+    "followUps": ["core-017"]
   },
   {
     "id": "core-017",
@@ -228,7 +240,8 @@
     "explanation": "Un agent qui contre-attaque peut effectuer une action à 1PA gratuitement.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Contre-Attaquer »",
-    "tags": ["contre-attaque"]
+    "tags": ["contre-attaque"],
+    "followUps": ["core-018"]
   },
   {
     "id": "core-018",
@@ -240,7 +253,8 @@
     "explanation": "L'agent qui contre-attaque ne peut pas se déplacer de plus de 2\" ce faisant.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Contre-Attaquer »",
-    "tags": ["contre-attaque"]
+    "tags": ["contre-attaque"],
+    "followUps": ["core-019"]
   },
   {
     "id": "core-019",
@@ -265,7 +279,8 @@
     "explanation": "Battre en Retraite coûte 2PA ; les autres actions listées ici coûtent 1PA.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Actions »",
-    "tags": ["actions"]
+    "tags": ["actions"],
+    "followUps": ["core-021"]
   },
   {
     "id": "core-021",
@@ -278,7 +293,8 @@
     "explanation": "Sprinter est comme un Repositionnement, sauf que l'agent ne peut pas se déplacer de plus de 3\" ni escalader.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Sprinter »",
-    "tags": ["actions"]
+    "tags": ["actions"],
+    "followUps": ["core-022"]
   },
   {
     "id": "core-022",
@@ -291,7 +307,8 @@
     "explanation": "L'action Charge est comme un Repositionnement, sauf que l'agent peut se déplacer de 2\" supplémentaires.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Charge »",
-    "tags": ["actions"]
+    "tags": ["actions"],
+    "followUps": ["core-023"]
   },
   {
     "id": "core-023",
@@ -303,7 +320,8 @@
     "explanation": "Un agent ne peut pas faire l'action Charge tant qu'il a un ordre de Dissimulation.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Charge »",
-    "tags": ["actions", "ordres"]
+    "tags": ["actions", "ordres"],
+    "followUps": ["core-024"]
   },
   {
     "id": "core-024",
@@ -329,7 +347,8 @@
     "explanation": "Les résultats de 6 sont toujours des réussites et sont critiques ; les autres réussites sont normales ; les résultats de 1 sont toujours des échecs.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Tirer »",
-    "tags": ["tir", "des"]
+    "tags": ["tir", "des"],
+    "followUps": ["core-026"]
   },
   {
     "id": "core-026",
@@ -342,7 +361,8 @@
     "explanation": "Un agent ne peut pas faire l'action Tirer tant qu'il a un ordre de Dissimulation, ni tant qu'il est à portée de contrôle d'un agent ennemi.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Tirer »",
-    "tags": ["tir"]
+    "tags": ["tir"],
+    "followUps": ["core-027"]
   },
   {
     "id": "core-027",
@@ -354,7 +374,8 @@
     "explanation": "Le défenseur jette ses dés de défense : trois D6, quelle que soit l'arme de l'attaquant.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Tirer »",
-    "tags": ["tir"]
+    "tags": ["tir"],
+    "followUps": ["core-028"]
   },
   {
     "id": "core-028",
@@ -372,7 +393,8 @@
     "explanation": "Si la cible est à couvert, le défenseur peut conserver un dé de défense comme une réussite normale sans le jeter.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Tirer »",
-    "tags": ["tir", "couvert"]
+    "tags": ["tir", "couvert"],
+    "followUps": ["core-029"]
   },
   {
     "id": "core-029",
@@ -403,7 +425,8 @@
     "explanation": "Un agent ne peut pas faire l'action Combattre sauf s'il y a un agent ennemi à sa portée de contrôle.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Combattre »",
-    "tags": ["combattre"]
+    "tags": ["combattre"],
+    "followUps": ["core-031"]
   },
   {
     "id": "core-031",
@@ -433,7 +456,8 @@
     "explanation": "Les agents qui ont moins de la moitié de leurs points de vie de départ sont estropiés.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Dégâts »",
-    "tags": ["degats"]
+    "tags": ["degats"],
+    "followUps": ["core-033"]
   },
   {
     "id": "core-033",
@@ -451,7 +475,8 @@
     "explanation": "Soustrayez 2\" à la caractéristique de Mouvement de l'agent estropié et dégradez de 1 la caractéristique de Touche de ses armes.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Dégâts »",
-    "tags": ["degats"]
+    "tags": ["degats"],
+    "followUps": ["core-034"]
   },
   {
     "id": "core-034",
@@ -481,7 +506,8 @@
     "explanation": "Un agent ne peut pas être à couvert tant qu'il est à 2\" de l'autre agent — ce dernier est trop proche pour s'en cacher.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Couvert »",
-    "tags": ["couvert"]
+    "tags": ["couvert"],
+    "followUps": ["core-036"]
   },
   {
     "id": "core-036",

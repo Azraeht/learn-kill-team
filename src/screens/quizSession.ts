@@ -1,8 +1,9 @@
-import { allQuestions, categories, getQuestionsForCategory } from "../data/categories.ts";
+import { allQuestions, categories, getQuestionById, getQuestionsForCategory } from "../data/categories.ts";
 import { store } from "../core/store.ts";
 import { applyAnswer, createSessionState, pickNextQuestion } from "../core/sessionEngine.ts";
 import type { SessionState } from "../core/sessionEngine.ts";
 import { getWeakQuestions } from "../core/weakPoints.ts";
+import { enqueueFollowUps, popNextFollowUp } from "../core/followUps.ts";
 import type { Question } from "../core/types.ts";
 import { navigate } from "../router.ts";
 import { escapeHtml } from "../ui/html.ts";
@@ -25,6 +26,10 @@ interface ActiveSession {
   current: Question | null;
   answered: boolean;
   selectedIndex: number | null;
+  /** Pending drill-down questions queued by followUps, drained before normal picking resumes. */
+  followUpQueue: string[];
+  /** Whether `current` came from the follow-up queue rather than normal SRS picking. */
+  currentIsFollowUp: boolean;
 }
 
 let active: ActiveSession | null = null;
@@ -56,7 +61,17 @@ function startSession(categoryId: string): void {
   const current = pickNextQuestion(pool, (id) => store.getCardProgress(id, now), shownIds, now);
   if (current) shownIds.add(current.id);
 
-  active = { categoryId, pool, shownIds, session, current, answered: false, selectedIndex: null };
+  active = {
+    categoryId,
+    pool,
+    shownIds,
+    session,
+    current,
+    answered: false,
+    selectedIndex: null,
+    followUpQueue: [],
+    currentIsFollowUp: false,
+  };
 }
 
 function finishSession(): void {
@@ -134,6 +149,7 @@ export function renderQuizSession(root: HTMLElement, categoryId: string): void {
     <div class="question-card">
       <div class="question-card__top">
         <span class="badge badge--muted">${escapeHtml(categoryLabel(current.category))}</span>
+        ${active.currentIsFollowUp ? '<span class="badge badge--muted">↳ Suite du sujet</span>' : ""}
         ${!answered ? draftBadge : ""}
       </div>
       <p class="question-card__prompt">${escapeHtml(current.prompt)}</p>
@@ -158,6 +174,7 @@ function handleAnswer(root: HTMLElement, categoryId: string, choiceIndex: number
 
   store.recordAnswer(active.current.id, active.current.category, correct, now);
   active.session = applyAnswer(active.session, correct);
+  active.followUpQueue = enqueueFollowUps(active.followUpQueue, active.current.followUps, active.shownIds);
   active.answered = true;
   active.selectedIndex = choiceIndex;
 
@@ -174,12 +191,16 @@ function handleNext(root: HTMLElement, categoryId: string): void {
   }
 
   const now = Date.now();
-  const nextQuestion = pickNextQuestion(
-    active.pool,
-    (id) => store.getCardProgress(id, now),
-    active.shownIds,
-    now,
-  );
+
+  // Drain the follow-up queue first — a queued drill-down question always
+  // takes priority over normal SRS-driven picking, regardless of session mode.
+  const { id: followUpId, remainingQueue } = popNextFollowUp(active.followUpQueue, active.shownIds);
+  active.followUpQueue = remainingQueue;
+  const followUpQuestion = followUpId ? getQuestionById(followUpId) : undefined;
+
+  const nextQuestion =
+    followUpQuestion ??
+    pickNextQuestion(active.pool, (id) => store.getCardProgress(id, now), active.shownIds, now);
 
   if (!nextQuestion) {
     finishSession();
@@ -188,6 +209,7 @@ function handleNext(root: HTMLElement, categoryId: string): void {
 
   active.shownIds.add(nextQuestion.id);
   active.current = nextQuestion;
+  active.currentIsFollowUp = Boolean(followUpQuestion);
   active.answered = false;
   active.selectedIndex = null;
 

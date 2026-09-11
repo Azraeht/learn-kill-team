@@ -10,7 +10,8 @@
     "explanation": "La liste d'agents Cibleurs indique les archétypes « Infiltration, Reconnaissance ».",
     "status": "verified",
     "sourceRef": "Kill Team – Cibleurs, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["cibl-002"]
   },
   {
     "id": "cibl-002",
@@ -22,7 +23,8 @@
     "explanation": "La liste d'agents précise « 1 agent SHAS'UI CIBLEUR ».",
     "status": "verified",
     "sourceRef": "Kill Team – Cibleurs, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["cibl-003"]
   },
   {
     "id": "cibl-003",
@@ -35,7 +37,8 @@
     "explanation": "La liste d'agents précise « 11 agents CIBLEUR choisis dans la liste suivante ».",
     "status": "verified",
     "sourceRef": "Kill Team – Cibleurs, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["cibl-004"]
   },
   {
     "id": "cibl-004",
@@ -47,7 +50,8 @@
     "explanation": "Le texte précise que le DRONE DE RECONNAISSANCE MB3 « compte comme deux choix ».",
     "status": "verified",
     "sourceRef": "Kill Team – Cibleurs, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["cibl-005"]
   },
   {
     "id": "cibl-005",
@@ -60,7 +64,8 @@
     "explanation": "« Votre kill team peut inclure deux agents EXPERT EN ARMES maximum. »",
     "status": "verified",
     "sourceRef": "Kill Team – Cibleurs, Liste d'Agents",
-    "tags": ["composition"]
+    "tags": ["composition"],
+    "followUps": ["cibl-006"]
   },
   {
     "id": "cibl-006",
@@ -86,7 +91,8 @@
     "explanation": "« Choisissez un agent ennemi visible de cet agent. Cet agent ennemi gagne un de vos pions de Désignateur Laser (jusqu'à un maximum de quatre). »",
     "status": "verified",
     "sourceRef": "Kill Team – Cibleurs, Règle de Faction",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["cibl-008"]
   },
   {
     "id": "cibl-008",
@@ -98,7 +104,8 @@
     "explanation": "« Un agent ne peut pas effectuer cette action tant qu'il est à portée de contrôle d'un agent ennemi. »",
     "status": "verified",
     "sourceRef": "Kill Team – Cibleurs, Règle de Faction",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["cibl-009"]
   },
   {
     "id": "cibl-009",
@@ -111,7 +118,8 @@
     "explanation": "« Une seule fois à chacune de ses activations, quand un agent ennemi qui a un ou plusieurs de vos pions de Désignateur Laser effectue l'action Sprinter, Charger, Battre en Retraite ou Repositionnement, retirez un de ces pions. »",
     "status": "verified",
     "sourceRef": "Kill Team – Cibleurs, Règle de Faction",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["cibl-010"]
   },
   {
     "id": "cibl-010",
@@ -124,7 +132,8 @@
     "explanation": "L'action précise « jusqu'à un maximum de quatre » pions de Désignateur Laser.",
     "status": "verified",
     "sourceRef": "Kill Team – Cibleurs, Règle de Faction",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["cibl-011"]
   },
   {
     "id": "cibl-011",
@@ -137,7 +146,8 @@
     "explanation": "Le tableau des règles additionnelles indique qu'avec 1 pion, les armes obtiennent « Règles d'arme Saturation et Équilibrée ».",
     "status": "verified",
     "sourceRef": "Kill Team – Cibleurs, Règle de Faction",
-    "tags": ["regle-de-faction"]
+    "tags": ["regle-de-faction"],
+    "followUps": ["cibl-012"]
   },
   {
     "id": "cibl-012",

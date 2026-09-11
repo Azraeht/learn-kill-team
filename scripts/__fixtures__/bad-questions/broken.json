@@ -32,5 +32,23 @@
     "choices": ["A", "B"],
     "correctIndex": 0,
     "status": "final"
+  },
+  {
+    "id": "core-996",
+    "category": "core-rules",
+    "type": "true-false",
+    "prompt": "followUps references a question id that does not exist anywhere.",
+    "correctIndex": 0,
+    "status": "draft",
+    "followUps": ["core-nonexistent-001"]
+  },
+  {
+    "id": "core-995",
+    "category": "core-rules",
+    "type": "true-false",
+    "prompt": "followUps references itself.",
+    "correctIndex": 0,
+    "status": "draft",
+    "followUps": ["core-995"]
   }
 ]
