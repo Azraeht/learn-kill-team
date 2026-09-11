@@ -41,7 +41,8 @@ that same file, and add the category id to `CategoryId` in
   "explanation": "Why that's the answer, shown after answering.", // optional but recommended
   "status": "draft",                // required: "draft" | "verified"
   "sourceRef": "Core Rules p.12, 'Actions'", // recommended once status is "verified"
-  "tags": ["apl", "activation"]     // optional, free text
+  "tags": ["apl", "activation"],    // optional, free text
+  "followUps": ["core-007"]         // optional, ids of questions to drill into right after this one
 }
 ```
 
@@ -51,6 +52,19 @@ that same file, and add the category id to `CategoryId` in
 - Set `"status": "verified"` only once you've checked the question against
   the official rules, and fill in `sourceRef` (page/section) when you do —
   the app shows a `DRAFT — unverified` badge on anything still `"draft"`.
+- `followUps` chains questions into a "drawer": as soon as this one is
+  answered (correct or not), each id in the list gets queued to appear next,
+  in order, overriding normal SRS-driven picking — good for a topic that
+  naturally splits into "and once that happens, what next?" (see
+  `core-005`→`core-016`→`core-017`→`core-018`→`core-019` for a worked
+  example: Engagement order enables counter-attacking → which order an
+  agent needs → what it grants → its movement cap → its once-per-turning-point
+  limit). A follow-up can itself have `followUps`, so a chain can run
+  arbitrarily deep — that's what makes it a tree rather than a fixed list. A
+  question already shown this session (including one shown before the chain
+  even started) is skipped rather than repeated. Ids must exist somewhere in
+  the question bank (checked across all files, not just the current one) and
+  a question can't list itself; both are enforced by `validate-content`.
 
 ### Template to copy-paste
 

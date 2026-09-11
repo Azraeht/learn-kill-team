@@ -80,6 +80,19 @@ const questionsByCategory: Record<string, Question[]> = {
 
 export const allQuestions: Question[] = Object.values(questionsByCategory).flat();
 
+const questionsById: Record<string, Question> = Object.fromEntries(
+  allQuestions.map((question) => [question.id, question]),
+);
+
 export function getQuestionsForCategory(categoryId: string): Question[] {
   return questionsByCategory[categoryId] ?? [];
+}
+
+/**
+ * Looks up a question by id across every category — used for follow-up
+ * chains, where a question's next step may belong to a different category
+ * than the current session's filter.
+ */
+export function getQuestionById(id: string): Question | undefined {
+  return questionsById[id];
 }

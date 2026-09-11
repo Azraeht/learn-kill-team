@@ -5,6 +5,15 @@
     "type": "true-false",
     "prompt": "This is a valid fixture question.",
     "correctIndex": 0,
+    "status": "draft",
+    "followUps": ["core-998"]
+  },
+  {
+    "id": "core-998",
+    "category": "core-rules",
+    "type": "true-false",
+    "prompt": "A valid follow-up target for the fixture above.",
+    "correctIndex": 0,
     "status": "draft"
   }
 ]

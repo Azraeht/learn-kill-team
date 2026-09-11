@@ -60,7 +60,8 @@
     "explanation": "Un agent avec un ordre d'Engagement peut effectuer des actions normalement et contre-attaquer.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Ordre d'Engagement »",
-    "tags": ["ordres"]
+    "tags": ["ordres"],
+    "followUps": ["core-016"]
   },
   {
     "id": "core-006",
@@ -215,7 +216,8 @@
     "explanation": "Un agent ami indisponible avec un ordre d'Engagement peut contre-attaquer.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Contre-Attaquer »",
-    "tags": ["contre-attaque"]
+    "tags": ["contre-attaque"],
+    "followUps": ["core-017"]
   },
   {
     "id": "core-017",
@@ -228,7 +230,8 @@
     "explanation": "Un agent qui contre-attaque peut effectuer une action à 1PA gratuitement.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Contre-Attaquer »",
-    "tags": ["contre-attaque"]
+    "tags": ["contre-attaque"],
+    "followUps": ["core-018"]
   },
   {
     "id": "core-018",
@@ -240,7 +243,8 @@
     "explanation": "L'agent qui contre-attaque ne peut pas se déplacer de plus de 2\" ce faisant.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Contre-Attaquer »",
-    "tags": ["contre-attaque"]
+    "tags": ["contre-attaque"],
+    "followUps": ["core-019"]
   },
   {
     "id": "core-019",

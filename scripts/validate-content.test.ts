@@ -23,6 +23,10 @@ describe("validateContent", () => {
     expect(errors.some((e) => e.includes("out of bounds"))).toBe(true);
     expect(errors.some((e) => e.includes("must have required property 'choices'"))).toBe(true);
     expect(errors.some((e) => e.includes("must be equal to one of the allowed values"))).toBe(true);
+    expect(errors.some((e) => e.includes('references unknown question id "core-nonexistent-001"'))).toBe(
+      true,
+    );
+    expect(errors.some((e) => e.includes("followUps cannot reference itself"))).toBe(true);
   });
 });
 

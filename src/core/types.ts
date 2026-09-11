@@ -25,6 +25,13 @@ export interface Question {
   status: QuestionStatus;
   sourceRef?: string;
   tags?: string[];
+  /**
+   * Ids of questions to ask right after this one, regardless of session mode
+   * or SRS due state — a drill-down "drawer" on the same topic. A follow-up
+   * can itself have follow-ups, so a chain can run arbitrarily deep; the
+   * session queues them one at a time as each is answered.
+   */
+  followUps?: string[];
 }
 
 export interface Category {

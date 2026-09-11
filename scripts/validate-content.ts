@@ -21,6 +21,7 @@ interface RawQuestion {
   correctIndex: number;
   status: string;
   sourceRef?: string;
+  followUps?: string[];
 }
 
 interface RawSequence {
@@ -106,8 +107,44 @@ function validateEntries<T extends { id: string; status: string; sourceRef?: str
   return { errors, warnings };
 }
 
+/**
+ * followUps reference other questions by id, possibly across files (a chain
+ * can cross categories), so this needs every file's ids up front rather than
+ * the per-file pass validateEntries() does — a second, cheap read.
+ */
+function validateFollowUps(dir: string): string[] {
+  const errors: string[] = [];
+  const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
+  const allQuestions: { file: string; question: RawQuestion }[] = [];
+  const allIds = new Set<string>();
+
+  for (const file of files) {
+    const content = JSON.parse(readFileSync(path.join(dir, file), "utf-8")) as RawQuestion[];
+    if (!Array.isArray(content)) continue;
+    for (const question of content) {
+      if (question?.id) allIds.add(question.id);
+      allQuestions.push({ file, question });
+    }
+  }
+
+  for (const { file, question } of allQuestions) {
+    if (!question.followUps) continue;
+    const label = `${file} (${question.id})`;
+
+    for (const followUpId of question.followUps) {
+      if (followUpId === question.id) {
+        errors.push(`${label}: followUps cannot reference itself ("${followUpId}")`);
+      } else if (!allIds.has(followUpId)) {
+        errors.push(`${label}: followUps references unknown question id "${followUpId}"`);
+      }
+    }
+  }
+
+  return errors;
+}
+
 export function validateContent(dir: string = questionsDir): ValidationResult {
-  return validateEntries<RawQuestion>(dir, questionSchemaPath, (label, question, errors) => {
+  const result = validateEntries<RawQuestion>(dir, questionSchemaPath, (label, question, errors) => {
     if (question.type === "multiple-choice" && question.choices) {
       if (question.correctIndex < 0 || question.correctIndex >= question.choices.length) {
         errors.push(
@@ -116,6 +153,8 @@ export function validateContent(dir: string = questionsDir): ValidationResult {
       }
     }
   });
+
+  return { errors: [...result.errors, ...validateFollowUps(dir)], warnings: result.warnings };
 }
 
 export function validateSequences(dir: string = sequencesDir): ValidationResult {
