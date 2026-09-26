@@ -206,5 +206,13 @@
     "definition": "Après qu'un agent a utilisé cette arme, jetez 1D6. Si le résultat est inférieur à la caractéristique de Touche de l'arme, infligez à l'agent autant de dégâts que le double du résultat du dé.",
     "status": "verified",
     "sourceRef": "Kill Team – Règles Abrégées (2024), « Règles des Armes »"
+  },
+  {
+    "id": "gl-027",
+    "term": "Masqué",
+    "category": "core-rules",
+    "definition": "Un agent masqué se trouve à plus de 2\" derrière un élément de décor masquant, du point de vue de l'agent qui le cible — une condition de ligne de vue distincte du Couvert. Tirer sur une cible masquée oblige normalement l'attaquant à défausser une réussite ; certains effets de faction suppriment spécifiquement cette contrainte, et le statut Masqué peut aussi être accordé par d'autres moyens (ex. une zone de fumée, un atterrissage en Aquilon du Tempestus).",
+    "status": "draft",
+    "sourceRef": "Reconstruit à partir de plusieurs règles déjà présentes dans l'app (Équipement Universel – fumée, Exo-Armures Stealth – Photo-Régulateurs Avancés, Deathwatch – Scan d'Auspex Avancé) et d'un logigramme non officiel — à confirmer contre le libellé exact du livre de règles de base."
   }
 ]

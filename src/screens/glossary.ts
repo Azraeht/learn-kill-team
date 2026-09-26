@@ -15,12 +15,15 @@ function categoryLabel(categoryId: string): string {
 
 function entryHtml(entry: GlossaryEntry): string {
   const expanded = entry.id === expandedId;
+  const draftBadge =
+    entry.status === "draft" ? '<span class="badge badge--draft">Brouillon — non vérifié</span>' : "";
   const definitionHtml = expanded
     ? `
       <div class="glossary-entry__definition">
         <p>${escapeHtml(entry.definition)}</p>
         <div class="glossary-entry__meta">
           <span class="badge badge--muted">${escapeHtml(categoryLabel(entry.category))}</span>
+          ${draftBadge}
           ${entry.sourceRef ? `<span class="reference-entry__source">${escapeHtml(entry.sourceRef)}</span>` : ""}
         </div>
       </div>
@@ -31,7 +34,10 @@ function entryHtml(entry: GlossaryEntry): string {
     <div class="glossary-entry${expanded ? " glossary-entry--open" : ""}">
       <button class="glossary-entry__term" data-term="${escapeHtml(entry.id)}" aria-expanded="${expanded}">
         <span>${escapeHtml(entry.term)}</span>
-        <span class="glossary-entry__chevron" aria-hidden="true">${expanded ? "▾" : "▸"}</span>
+        <span class="glossary-entry__term-end">
+          ${!expanded ? draftBadge : ""}
+          <span class="glossary-entry__chevron" aria-hidden="true">${expanded ? "▾" : "▸"}</span>
+        </span>
       </button>
       ${definitionHtml}
     </div>
