@@ -14,6 +14,7 @@ import { renderReference } from "./screens/reference.ts";
 import { renderSettings } from "./screens/settings.ts";
 import { renderMatchTracker } from "./screens/matchTracker.ts";
 import { renderGlossary } from "./screens/glossary.ts";
+import { renderShootingDiagram } from "./screens/shootingDiagram.ts";
 import { registerServiceWorker } from "./registerServiceWorker.ts";
 
 registerServiceWorker();
@@ -68,6 +69,9 @@ function render(route: Route): void {
       break;
     case "glossary":
       renderGlossary(main!);
+      break;
+    case "shooting-diagram":
+      renderShootingDiagram(main!);
       break;
     case "home":
     default:

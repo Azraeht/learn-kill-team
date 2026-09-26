@@ -34,6 +34,11 @@ ajouter ou corriger du contenu.
   texte. Le champ de recherche est actif dès l'ouverture et ne filtre que sur
   le nom, pas sur la définition ; taper ouvre un petit encart avec le texte
   et sa source. Voir `src/core/glossarySearch.ts`.
+- **Diagramme de tir** — la résolution complète de l'action Tirer en cinq
+  phases (éligibilité, cible, jet d'attaque, jet de défense/couvert,
+  résolution des dégâts), en logigramme OUI/NON, avec les règles d'armes qui
+  modifient les relances ou le couvert affichées à l'étape où elles
+  s'appliquent. Voir `src/data/shootingDiagram.ts`.
 - **Progression** — maîtrise et réussite par catégorie, série de jours
   consécutifs et carte d'assiduité sur 12 semaines.
 - **Compteur de Partie** — un outil indépendant de l'apprentissage, pour
