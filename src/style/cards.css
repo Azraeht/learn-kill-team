@@ -346,3 +346,150 @@
   gap: var(--space-2);
   flex-wrap: wrap;
 }
+
+.diagram-tree {
+  display: flex;
+  flex-direction: column;
+}
+
+.diagram-node {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.diagram-node p {
+  margin: 0;
+}
+
+.diagram-node--decision {
+  border-color: var(--accent);
+  border-left-width: 3px;
+}
+
+.diagram-node--decision p {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.diagram-node--step {
+  color: var(--text-muted);
+}
+
+.diagram-node--outcome {
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.diagram-node--stop {
+  border-color: var(--danger);
+  border-left-width: 3px;
+  color: var(--danger);
+}
+
+.diagram-node--go {
+  border-color: var(--ok);
+  border-left-width: 3px;
+  color: var(--ok);
+}
+
+.diagram-connector {
+  width: 2px;
+  min-height: var(--space-3);
+  margin-left: var(--space-4);
+  background: var(--border);
+}
+
+.diagram-branches {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--border);
+  margin-left: var(--space-2);
+}
+
+.diagram-branch {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+}
+
+.diagram-branch__label {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 2px var(--space-2);
+  border: 1px solid var(--border);
+}
+
+.diagram-branch--oui .diagram-branch__label {
+  color: var(--ok);
+  border-color: var(--ok);
+}
+
+.diagram-branch--non .diagram-branch__label {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.diagram-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.diagram-chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-bright);
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border);
+  padding: 2px var(--space-2);
+  cursor: help;
+}
+
+.diagram-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+.diagram-phase {
+  margin-bottom: var(--space-4);
+  scroll-margin-top: var(--space-3);
+}
+
+.diagram-phase__title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 var(--space-2);
+}
+
+.diagram-node--link {
+  width: 100%;
+  text-align: left;
+  border-style: dashed;
+  border-color: var(--accent);
+  color: var(--accent-bright);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.diagram-node--link:hover {
+  border-color: var(--accent-bright);
+}

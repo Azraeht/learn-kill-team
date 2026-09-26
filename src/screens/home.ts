@@ -58,6 +58,7 @@ export function renderHome(root: HTMLElement): void {
       <button class="btn" data-sequences>Séquences de jeu</button>
       <button class="btn" data-reference>Antisèche</button>
       <button class="btn" data-glossary>Glossaire</button>
+      <button class="btn" data-diagram>Diagramme de tir</button>
       <button class="btn" data-progress>Progression</button>
     </div>
     <div class="category-list">${cards}</div>
@@ -74,6 +75,7 @@ export function renderHome(root: HTMLElement): void {
   root.querySelector("[data-sequences]")?.addEventListener("click", () => navigate("sequences"));
   root.querySelector("[data-reference]")?.addEventListener("click", () => navigate("reference"));
   root.querySelector("[data-glossary]")?.addEventListener("click", () => navigate("glossary"));
+  root.querySelector("[data-diagram]")?.addEventListener("click", () => navigate("shooting-diagram"));
   root.querySelector("[data-progress]")?.addEventListener("click", () => navigate("progress"));
   root.querySelector("[data-tracker]")?.addEventListener("click", () => navigate("tracker"));
   root.querySelector("[data-settings]")?.addEventListener("click", () => navigate("settings"));

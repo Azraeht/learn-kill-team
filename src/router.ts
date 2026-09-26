@@ -10,7 +10,8 @@ export type Route =
   | { name: "reference" }
   | { name: "settings" }
   | { name: "tracker" }
-  | { name: "glossary" };
+  | { name: "glossary" }
+  | { name: "shooting-diagram" };
 
 function parseHash(hash: string): Route {
   const path = hash.replace(/^#\/?/, "");
@@ -39,6 +40,8 @@ function parseHash(hash: string): Route {
       return { name: "tracker" };
     case "glossary":
       return { name: "glossary" };
+    case "shooting-diagram":
+      return { name: "shooting-diagram" };
     case "home":
     case "":
     default:
