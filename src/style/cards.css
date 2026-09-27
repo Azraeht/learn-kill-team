@@ -347,99 +347,19 @@
   flex-wrap: wrap;
 }
 
-.diagram-tree {
-  display: flex;
-  flex-direction: column;
+.diagram-phase {
+  margin-bottom: var(--space-5);
+  scroll-margin-top: var(--space-3);
 }
 
-.diagram-node {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: 0;
-  padding: var(--space-3);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  font-size: 0.92rem;
-  line-height: 1.4;
-}
-
-.diagram-node p {
-  margin: 0;
-}
-
-.diagram-node--decision {
-  border-color: var(--accent);
-  border-left-width: 3px;
-}
-
-.diagram-node--decision p {
-  font-weight: 700;
-  color: var(--text);
-}
-
-.diagram-node--step {
-  color: var(--text-muted);
-}
-
-.diagram-node--outcome {
+.diagram-phase__title {
   font-family: var(--font-mono);
+  font-size: 0.85rem;
   font-weight: 700;
-}
-
-.diagram-node--stop {
-  border-color: var(--danger);
-  border-left-width: 3px;
-  color: var(--danger);
-}
-
-.diagram-node--go {
-  border-color: var(--ok);
-  border-left-width: 3px;
-  color: var(--ok);
-}
-
-.diagram-connector {
-  width: 2px;
-  min-height: var(--space-3);
-  margin-left: var(--space-4);
-  background: var(--border);
-}
-
-.diagram-branches {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  padding-left: var(--space-4);
-  border-left: 2px solid var(--border);
-  margin-left: var(--space-2);
-}
-
-.diagram-branch {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  padding: var(--space-2) 0;
-}
-
-.diagram-branch__label {
-  align-self: flex-start;
-  font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 0.75rem;
+  color: var(--accent);
+  text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 2px var(--space-2);
-  border: 1px solid var(--border);
-}
-
-.diagram-branch--oui .diagram-branch__label {
-  color: var(--ok);
-  border-color: var(--ok);
-}
-
-.diagram-branch--non .diagram-branch__label {
-  color: var(--danger);
-  border-color: var(--danger);
+  margin: 0 0 var(--space-3);
 }
 
 .diagram-chip-list {
@@ -465,23 +385,143 @@
   margin: 0;
 }
 
-.diagram-phase {
-  margin-bottom: var(--space-4);
-  scroll-margin-top: var(--space-3);
+/* Flowchart: real SVG arrows overlaid on normal-flow boxes. Each box carries
+   a stable data-node-id; drawArrows() in shootingDiagram.ts measures boxes
+   after layout and draws a curve from parent to child into the overlay, so
+   the arrows always match wherever the browser actually put the boxes
+   (including after font swap or a resize). */
+.flow-canvas {
+  position: relative;
+  /* Reserved so "non" rail lines (drawn out to width - 14 - depth * 10) never
+     run underneath box content — see drawArrows() in shootingDiagram.ts. */
+  padding-right: 48px;
 }
 
-.diagram-phase__title {
+.flow-arrows {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.flow-arrow {
+  fill: none;
+  stroke-width: 2;
+}
+
+.flow-arrow--oui {
+  stroke: var(--ok);
+}
+
+.flow-arrow--non {
+  stroke: var(--danger);
+}
+
+.flow-arrow--through {
+  stroke: var(--border-bright);
+}
+
+.flow-arrow-label rect {
+  fill: var(--bg);
+  stroke: var(--border);
+}
+
+.flow-arrow-label text {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 11px;
   font-weight: 700;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 0 0 var(--space-2);
+  letter-spacing: 0.03em;
 }
 
-.diagram-node--link {
+.flow-arrow-label--oui rect {
+  stroke: var(--ok);
+}
+
+.flow-arrow-label--oui text {
+  fill: var(--ok);
+}
+
+.flow-arrow-label--non rect {
+  stroke: var(--danger);
+}
+
+.flow-arrow-label--non text {
+  fill: var(--danger);
+}
+
+.flow-box {
+  position: relative;
+  z-index: 1;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: var(--space-3);
+  margin-bottom: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.flow-box p {
+  margin: 0;
+}
+
+.flow-box__icon {
+  align-self: flex-start;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.flow-box--decision {
+  border-color: var(--accent);
+  border-top-width: 3px;
+}
+
+.flow-box--decision p {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.flow-box--decision .flow-box__icon {
+  background: var(--accent);
+  color: #01120a;
+}
+
+.flow-box--step {
+  color: var(--text-muted);
+}
+
+.flow-box--outcome {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  border-width: 2px;
+}
+
+.flow-box--stop {
+  background: color-mix(in srgb, var(--danger) 16%, var(--bg-elevated));
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.flow-box--go {
+  background: color-mix(in srgb, var(--ok) 16%, var(--bg-elevated));
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+.flow-box--link {
   width: 100%;
+  flex-direction: row;
+  align-items: center;
   text-align: left;
   border-style: dashed;
   border-color: var(--accent);
@@ -490,6 +530,18 @@
   font-weight: 700;
 }
 
-.diagram-node--link:hover {
+.flow-box--link:hover {
   border-color: var(--accent-bright);
+}
+
+.flow-box--link .flow-box__icon {
+  width: auto;
+  color: var(--accent-bright);
+  font-size: 1.1rem;
+}
+
+.flow-indent {
+  margin-left: var(--space-4);
+  padding-left: var(--space-3);
+  border-left: 1px dashed var(--border);
 }
