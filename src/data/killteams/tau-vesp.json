@@ -1,6 +1,7 @@
 {
   "id": "TAU-VESP",
-  "name": "Vespid Stingwings",
+  "name": "Frelons Vespides",
+  "nameEn": "Vespid Stingwings",
   "status": "imported",
   "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
   "operatives": [

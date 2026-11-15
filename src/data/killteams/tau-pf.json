@@ -1,6 +1,7 @@
 {
   "id": "TAU-PF",
-  "name": "Pathfinders",
+  "name": "Cibleurs",
+  "nameEn": "Pathfinders",
   "status": "imported",
   "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
   "operatives": [

@@ -2,7 +2,7 @@
 // src/data/killteams/*.json for the shooting helper.
 //
 // Usage:
-//   npm run import-killteams                 # fetch from the KTDash API
+//   npm run import-killteams                 # fetch the teams listed in TEAMS from the KTDash API
 //   npm run import-killteams -- --from DIR   # use already-downloaded <killteamId>.json files
 //
 // Only ranged weapons (and grenade-type equipment) are kept. Weapon rules are
@@ -19,6 +19,21 @@ import type { KillTeam, Operative, RangedWeapon, SpecialRule } from "../src/core
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outDir = path.join(__dirname, "..", "src", "data", "killteams");
 const API = "https://ktdash.app/api";
+
+/**
+ * Kill teams imported, keyed by KTDash id, with the French name used in the
+ * app's question categories (src/data/categories.ts). Add a line here to
+ * import another team.
+ */
+export const TEAMS: Record<string, string> = {
+  "IMP-TEMPAQ": "Aquilon du Tempestus",
+  "TAU-VESP": "Frelons Vespides",
+  "VOT-HKY": "Yaegirs Hernkogs",
+  "TAU-XV26": "Exo-Armures XV26 Stealth",
+  "TAU-PF": "Cibleurs",
+  "NEC-CAN": "Cercle Canoptek",
+  "IMP-DW": "Deathwatch",
+};
 
 interface KtdProfile {
   wepprofileId: string;
@@ -178,7 +193,8 @@ export function convert(team: KtdKillTeam, importedOn: string): KillTeam {
 
   return {
     id: team.killteamId,
-    name: team.killteamName,
+    name: TEAMS[team.killteamId] ?? team.killteamName,
+    nameEn: team.killteamName,
     status: "imported",
     sourceRef: `KTDash (ktdash.app), import du ${importedOn}`,
     operatives,
@@ -195,12 +211,11 @@ async function loadTeams(fromDir: string | undefined): Promise<KtdKillTeam[]> {
   if (fromDir) {
     return readdirSync(fromDir)
       .filter((f) => f.endsWith(".json"))
-      .map((f) => JSON.parse(readFileSync(path.join(fromDir, f), "utf8")) as KtdKillTeam);
+      .map((f) => JSON.parse(readFileSync(path.join(fromDir, f), "utf8")) as KtdKillTeam)
+      .filter((t) => t.killteamId in TEAMS);
   }
-  const list = await fetchJson<{ killteamId: string; isHomebrew?: boolean }[]>(`${API}/killteams`);
   const teams: KtdKillTeam[] = [];
-  for (const { killteamId, isHomebrew } of list) {
-    if (isHomebrew || killteamId.startsWith("SPEC-")) continue;
+  for (const killteamId of Object.keys(TEAMS)) {
     teams.push(await fetchJson<KtdKillTeam>(`${API}/killteams/${encodeURIComponent(killteamId)}`));
     await new Promise((r) => setTimeout(r, 500)); // be gentle with the API
   }
@@ -212,8 +227,9 @@ async function main(): Promise<void> {
   const fromDir = fromIdx > -1 ? process.argv[fromIdx + 1] : undefined;
   const importedOn = new Date().toISOString().slice(0, 10);
 
-  const teams = (await loadTeams(fromDir)).filter((t) => !t.isHomebrew && !t.killteamId.startsWith("SPEC-"));
-  if (teams.length === 0) throw new Error("No kill teams found");
+  const teams = await loadTeams(fromDir);
+  const missing = Object.keys(TEAMS).filter((id) => !teams.some((t) => t.killteamId === id));
+  if (missing.length) throw new Error(`Kill teams not found: ${missing.join(", ")}`);
 
   rmSync(outDir, { recursive: true, force: true });
   mkdirSync(outDir, { recursive: true });

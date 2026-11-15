@@ -1,6 +1,7 @@
 {
   "id": "NEC-CAN",
-  "name": "Canoptek Circle",
+  "name": "Cercle Canoptek",
+  "nameEn": "Canoptek Circle",
   "status": "imported",
   "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
   "operatives": [

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { convert, normaliseRule } from "./import-ktdash.ts";
+import { convert, normaliseRule, TEAMS } from "./import-ktdash.ts";
+import { killTeams } from "../src/data/killTeams.ts";
 
 describe("normaliseRule", () => {
   it.each([
@@ -86,5 +87,12 @@ describe("convert", () => {
         special: [{ name: "Blaze", text: "Sets things on fire." }],
       },
     ]);
+  });
+});
+
+describe("imported kill teams", () => {
+  it("are exactly the teams listed in TEAMS, with their French names", () => {
+    expect(killTeams.map((t) => t.id).sort()).toEqual(Object.keys(TEAMS).sort());
+    for (const t of killTeams) expect(t.name).toBe(TEAMS[t.id]);
   });
 });

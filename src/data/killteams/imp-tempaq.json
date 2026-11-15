@@ -1,6 +1,7 @@
 {
   "id": "IMP-TEMPAQ",
-  "name": "Tempestus Aquilon",
+  "name": "Aquilon du Tempestus",
+  "nameEn": "Tempestus Aquilon",
   "status": "imported",
   "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
   "operatives": [

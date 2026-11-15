@@ -217,11 +217,15 @@ automatically and listed in the team dropdown.
 These files are generated from [KTDash](https://ktdash.app):
 
 ```bash
-npm run import-killteams                 # fetch every kill team from the KTDash API
+npm run import-killteams                 # fetch the kill teams listed in TEAMS from the KTDash API
 npm run import-killteams -- --from DIR   # or convert already-downloaded <killteamId>.json files
 ```
 
-The importer (`scripts/import-ktdash.ts`) **replaces the whole folder**. It
+Only the kill teams that have a question category in the app are imported.
+They are listed, with their French name, in `TEAMS` at the top of
+`scripts/import-ktdash.ts`: add a line there to import another one.
+
+The importer **replaces the whole folder**. It
 keeps ranged weapons only, expands KTDash abbreviations into the official
 English wording (`Prc1` → `Piercing 1`, `Hvy(Dash)` → `Heavy (Dash only)`), and
 stores team-specific rules (marked `*` on the datacard) under `special`, with

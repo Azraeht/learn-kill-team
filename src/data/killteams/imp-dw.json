@@ -1,6 +1,7 @@
 {
   "id": "IMP-DW",
   "name": "Deathwatch",
+  "nameEn": "Deathwatch",
   "status": "imported",
   "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
   "operatives": [
