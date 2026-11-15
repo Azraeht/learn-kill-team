@@ -35,10 +35,11 @@ Le livre officiel range ses règles comme un dictionnaire. On lit le déroulemen
 | agent | operative |
 | tour | turning point |
 | phase de Stratégie | Strategy phase |
-| phase de Fusillade | Firefight phase |
+| phase d'Affrontement | Firefight phase |
 | points de commandement (PC) | Command points (CP) |
-| stratagème | ploy |
-| gambit stratégique | STRATEGIC GAMBIT |
+| subterfuge | ploy |
+| subterfuge stratégique / d'affrontement | strategy ploy / firefight ploy |
+| étape des Subterfuges | Gambit step (STRATEGIC GAMBIT) |
 | prêt / épuisé | ready / expended |
 | ordre Engagement / Dissimulation | Engage / Conceal order |
 | points d'action (PA) | Action points (AP) |

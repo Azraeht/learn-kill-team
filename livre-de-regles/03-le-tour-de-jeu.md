@@ -14,19 +14,19 @@ Une bataille se découpe en **tours** (*turning points*). La mission précise co
 
 Chaque tour comporte deux phases, toujours dans le même ordre :
 
-1. **La phase de Stratégie** (*Strategy phase*) : les chefs d'équipe prennent leurs dispositions. On détermine qui a l'initiative, on reçoit des points de commandement et on joue d'éventuels stratagèmes.
-2. **La phase de Fusillade** (*Firefight phase*) : les agents agissent, l'un après l'autre, en alternance entre les deux joueurs.
+1. **La phase de Stratégie** (*Strategy phase*) : les chefs d'équipe prennent leurs dispositions. On détermine qui a l'initiative, on reçoit des points de commandement et on joue d'éventuels subterfuges stratégiques.
+2. **La phase d'Affrontement** (*Firefight phase*) : les agents agissent, l'un après l'autre, en alternance entre les deux joueurs.
 
-On termine entièrement une phase avant de passer à la suivante. Quand la phase de Fusillade est terminée, le tour prend fin et le suivant commence.
+On termine entièrement une phase avant de passer à la suivante. Quand la phase d'Affrontement est terminée, le tour prend fin et le suivant commence.
 
 > ### Le tour en bref
 >
 > **PHASE DE STRATÉGIE**
 > 1. **Initiative** : on détermine qui a l'initiative.
 > 2. **Préparation** : chaque joueur gagne des PC, puis tous les agents redeviennent prêts.
-> 3. **Gambits** : à tour de rôle, chaque joueur joue un gambit stratégique ou passe.
+> 3. **Subterfuges** : à tour de rôle, chaque joueur joue un subterfuge stratégique ou passe.
 >
-> **PHASE DE FUSILLADE**
+> **PHASE D'AFFRONTEMENT**
 > - Les joueurs activent leurs agents en alternance, en commençant par celui qui a l'initiative.
 > - Pour chaque activation : 1. choisir l'ordre ; 2. effectuer des actions ; 3. l'agent est épuisé.
 > - Quand un joueur n'a plus d'agent prêt, il peut faire des **contre-actions** pendant que l'adversaire termine.
@@ -54,33 +54,33 @@ Deux choses se passent dans cette étape :
 1. **Chaque joueur gagne 1 point de commandement (PC).** À partir du deuxième tour, le joueur qui n'a **pas** l'initiative gagne 2 PC au lieu de 1. Les PC non dépensés sont conservés d'un tour à l'autre.
 2. **Chaque joueur rend prêts tous ses agents.** Retournez leurs jetons d'ordre sur la face claire.
 
-#### Les points de commandement et les stratagèmes
+#### Les points de commandement et les subterfuges
 
-Les PC servent à jouer des **stratagèmes** (*ploys*). Ce sont des coups de pouce tactiques que l'on déclenche au bon moment. Sauf indication contraire, un stratagème coûte **1 PC**. Il en existe deux sortes :
+Les PC servent à jouer des **subterfuges** (*ploys*). Ce sont des coups de pouce tactiques que l'on déclenche au bon moment. Sauf indication contraire, un subterfuge coûte **1 PC**. Il en existe deux sortes :
 
-- **Les stratagèmes de stratégie** (*strategy ploys*) se jouent pendant l'étape des Gambits (ci-dessous). Leur effet dure jusqu'à la fin du tour, sauf s'il est précisé qu'il s'applique « immédiatement ».
-- **Les stratagèmes de fusillade** (*firefight ploys*) se jouent pendant la phase de Fusillade, au moment indiqué par le stratagème. On ne peut pas les jouer en dehors de cette phase.
+- **Les subterfuges stratégiques** (*strategy ploys*) se jouent pendant l'étape des Subterfuges de la phase de Stratégie (ci-dessous). Leur effet dure jusqu'à la fin du tour, sauf s'il est précisé qu'il s'applique « immédiatement ».
+- **Les subterfuges d'affrontement** (*firefight ploys*) se jouent pendant la phase d'Affrontement, au moment indiqué par le subterfuge. On ne peut pas les jouer en dehors de cette phase.
 
-Chaque équipe a ses propres stratagèmes, présentés dans ses règles. Tous les joueurs disposent en plus du stratagème suivant :
+Chaque équipe a ses propres subterfuges, présentés dans ses règles. Tous les joueurs disposent en plus du subterfuge suivant :
 
-> **RELANCE DE COMMANDEMENT** (*Command Re-roll*), 1 PC, stratagème de fusillade
+> **RELANCE DE COMMANDEMENT** (*Command Re-roll*), 1 PC, subterfuge d'affrontement
 > À jouer après avoir lancé vos dés d'attaque ou de défense. Vous pouvez relancer un de ces dés.
 
-**Un même stratagème ne peut être joué qu'une fois par tour**, à l'exception de la Relance de commandement, qu'on peut utiliser autant de fois qu'on a de PC.
+**Un même subterfuge ne peut être joué qu'une fois par tour**, à l'exception de la Relance de commandement, qu'on peut utiliser autant de fois qu'on a de PC.
 
-### Étape 3 : Gambits
+### Étape 3 : Subterfuges (*Gambit*)
 
-En commençant par le joueur qui a l'initiative, chaque joueur, à son tour, **joue un gambit stratégique** (*STRATEGIC GAMBIT*) **ou passe**. On continue ainsi jusqu'à ce que les deux joueurs passent l'un après l'autre.
+En commençant par le joueur qui a l'initiative, chaque joueur, à son tour, **joue un subterfuge stratégique ou passe**. On continue ainsi jusqu'à ce que les deux joueurs passent l'un après l'autre.
 
-Tous les stratagèmes de stratégie sont des gambits stratégiques, mais d'autres règles peuvent porter cette mention. Chaque gambit stratégique ne peut être utilisé qu'une fois par tour.
+Chaque subterfuge stratégique ne peut être utilisé qu'une fois par tour. Les subterfuges stratégiques sont les plus courants, mais toute règle portant le mot-clé *STRATEGIC GAMBIT* se joue de la même façon pendant cette étape.
 
-> **Exemple.** Alice a l'initiative. Elle joue un stratagème de stratégie qui donne un bonus à ses agents à couvert. Bruno joue à son tour un gambit. Alice passe. Bruno en joue un second. L'étape n'est pas finie : Bruno vient de jouer, donc les deux joueurs n'ont pas passé l'un après l'autre. Alice passe de nouveau, puis Bruno passe : l'étape est terminée.
+> **Exemple.** Alice a l'initiative. Elle joue un subterfuge stratégique qui donne un bonus à ses agents à couvert. Bruno joue à son tour un subterfuge stratégique. Alice passe. Bruno en joue un second. L'étape n'est pas finie : Bruno vient de jouer, donc les deux joueurs n'ont pas passé l'un après l'autre. Alice passe de nouveau, puis Bruno passe : l'étape est terminée.
 
 ---
 
-## 3.3 La phase de Fusillade
+## 3.3 La phase d'Affrontement
 
-C'est le cœur de la partie. Le joueur qui a l'initiative **active** un de ses agents prêts. Quand cette activation est terminée, son adversaire active à son tour un de ses agents prêts. Les joueurs alternent ainsi jusqu'à ce que **tous les agents** des deux camps soient **épuisés** (*expended*). La phase de Fusillade est alors terminée, et le tour avec elle.
+C'est le cœur de la partie. Le joueur qui a l'initiative **active** un de ses agents prêts. Quand cette activation est terminée, son adversaire active à son tour un de ses agents prêts. Les joueurs alternent ainsi jusqu'à ce que **tous les agents** des deux camps soient **épuisés** (*expended*). La phase d'Affrontement est alors terminée, et le tour avec elle.
 
 ### Le jeton d'ordre
 
@@ -137,7 +137,7 @@ La contre-action est facultative. Que vous en fassiez une ou non, la main revien
 
 Une contre-action **n'est pas une activation**, elle la remplace. Par conséquent, la règle « pas deux fois la même action » ne s'applique pas : un agent qui a tiré pendant son activation peut tirer de nouveau en contre-action.
 
-> **Exemple.** Alice a 6 agents et Bruno 8. Après six alternances, tous les agents d'Alice sont épuisés, mais Bruno en a encore deux prêts. Bruno active son septième agent. Puis, au lieu d'une activation, Alice choisit son sniper épuisé, en Engagement, et lui fait effectuer un Tir gratuit. Bruno active son huitième agent. Alice fait une nouvelle contre-action avec un autre agent, car son sniper a déjà fait la sienne ce tour-ci. Tous les agents sont épuisés : la phase de Fusillade se termine.
+> **Exemple.** Alice a 6 agents et Bruno 8. Après six alternances, tous les agents d'Alice sont épuisés, mais Bruno en a encore deux prêts. Bruno active son septième agent. Puis, au lieu d'une activation, Alice choisit son sniper épuisé, en Engagement, et lui fait effectuer un Tir gratuit. Bruno active son huitième agent. Alice fait une nouvelle contre-action avec un autre agent, car son sniper a déjà fait la sienne ce tour-ci. Tous les agents sont épuisés : la phase d'Affrontement se termine.
 
 ---
 
@@ -270,9 +270,9 @@ Pour finir, suivons un tour en entier. Alice joue 6 agents, Bruno en joue 6 auss
 **Phase de Stratégie.**
 1. *Initiative* : jet en opposition. Bruno fait 5, Alice fait 3. Bruno choisit de garder l'initiative.
 2. *Préparation* : Bruno gagne 1 PC. Alice, qui n'a pas l'initiative, en gagne 2. Tous les jetons d'ordre sont retournés sur leur face claire.
-3. *Gambits* : Bruno joue un stratagème de stratégie (−1 PC). Alice passe. Bruno passe. Les deux joueurs ont passé l'un après l'autre : l'étape est terminée.
+3. *Subterfuges* : Bruno joue un subterfuge stratégique (−1 PC). Alice passe. Bruno passe. Les deux joueurs ont passé l'un après l'autre : l'étape est terminée.
 
-**Phase de Fusillade.**
+**Phase d'Affrontement.**
 - Bruno active son chef. Il lui donne un ordre d'Engagement, fait un Repositionnement de 6" pour rejoindre un angle de ruine, puis un Tir. Le chef a dépensé 2 PA sur 2 : il est épuisé.
 - Alice active un agent qui se trouvait au contact d'un ennemi depuis le tour précédent. Elle choisit Engagement et, plutôt que de dépenser 2 PA pour un Repli, elle le fait combattre.
 - Bruno active un éclaireur. Il le passe en Dissimulation, lui fait faire Repositionnement puis Course pour aller s'abriter derrière un mur près d'un objectif. Tant qu'il est à couvert, il ne peut plus être pris pour cible.
