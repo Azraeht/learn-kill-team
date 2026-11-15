@@ -211,7 +211,8 @@ build before it ever reaches the deployed site.
 # Kill teams for the shooting helper (Assistant de tir)
 
 The shooting helper (`#/shoot`) reads rosters from `src/data/killteams/`,
-one JSON file per kill team, registered in `src/data/killteams/index.ts`.
+one JSON file per kill team. Any JSON file dropped in that folder is picked up
+automatically and listed in the team dropdown.
 Only ranged weapons are listed. Each weapon has `atk`, `hit` (3 = 3+),
 `dmg` (`[normal, crit]`), and `rules`. Write the rules in English, exactly
 as printed on the datacard: `"Piercing 1"`, `"Lethal 5+"`, `"Torrent 1\""`,

@@ -91,18 +91,20 @@ export function renderShoot(root: HTMLElement): void {
 }
 
 function renderPicker(team: KillTeam | undefined, operative: Operative | undefined, weapon: RangedWeapon | undefined): string {
-  const teamChips =
-    killTeams.length > 1 || !team
-      ? `<div class="shoot-section">
-          <div class="shoot-label">Équipe</div>
-          <div class="chip-row">${killTeams
-            .map(
-              (t) =>
-                `<button class="chip ${t.id === team?.id ? "chip--on" : ""}" data-team="${t.id}">${esc(t.name)}</button>`,
-            )
-            .join("")}</div>
-        </div>`
-      : `<div class="shoot-label">Équipe : <strong>${esc(team.name)}</strong></div>`;
+  const teamSelect = `<div class="shoot-section">
+      <label class="shoot-label" for="team-select">Équipe</label>
+      <select id="team-select" class="team-select" data-team-select>
+        ${team ? "" : `<option value="" selected disabled>Choisir une équipe…</option>`}
+        ${killTeams
+          .map(
+            (t) =>
+              `<option value="${t.id}" ${t.id === team?.id ? "selected" : ""}>${esc(t.name)}${
+                t.nameEn && t.nameEn !== t.name ? ` (${esc(t.nameEn)})` : ""
+              }</option>`,
+          )
+          .join("")}
+      </select>
+    </div>`;
 
   const agents = team
     ? `<div class="shoot-section">
@@ -137,7 +139,7 @@ function renderPicker(team: KillTeam | undefined, operative: Operative | undefin
       </div>`
     : "";
 
-  return `<div class="shoot-picker">${teamChips}${agents}${weapons}</div>`;
+  return `<div class="shoot-picker">${teamSelect}${agents}${weapons}</div>`;
 }
 
 function toggle(key: keyof ShotConditions, label: string, sub = ""): string {
@@ -236,12 +238,11 @@ function update(root: HTMLElement, patch: Partial<ShootState>): void {
 function bind(root: HTMLElement, team: KillTeam | undefined, operative: Operative | undefined): void {
   root.querySelector("[data-open-picker]")?.addEventListener("click", () => update(root, { pickerOpen: true }));
 
-  root.querySelectorAll<HTMLButtonElement>("[data-team]").forEach((btn) =>
-    btn.addEventListener("click", () => {
-      if (btn.dataset.team === team?.id) return;
-      update(root, { teamId: btn.dataset.team, operativeId: undefined, weaponId: undefined, pickerOpen: true });
-    }),
-  );
+  root.querySelector<HTMLSelectElement>("[data-team-select]")?.addEventListener("change", (e) => {
+    const teamId = (e.target as HTMLSelectElement).value;
+    if (teamId === team?.id) return;
+    update(root, { teamId, operativeId: undefined, weaponId: undefined, pickerOpen: true });
+  });
 
   root.querySelectorAll<HTMLButtonElement>("[data-operative]").forEach((btn) =>
     btn.addEventListener("click", () => {
