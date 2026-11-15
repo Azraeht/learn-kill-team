@@ -1,0 +1,359 @@
+.header-link {
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.shoot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.shoot-picker,
+.shoot-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.shoot-section {
+  gap: var(--space-2);
+}
+
+.shoot-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.shoot-label strong {
+  color: var(--text);
+}
+
+.shoot-label--row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.chip-row {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.chip {
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chip--on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0c1220;
+}
+
+.pick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+}
+
+.pick-btn,
+.weapon-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  padding: 10px 12px;
+  min-height: 56px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.pick-btn--on,
+.weapon-btn--on {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 15%, var(--bg-elevated));
+}
+
+.pick-btn__title {
+  font-weight: 700;
+  font-size: 0.92rem;
+  line-height: 1.2;
+}
+
+.pick-btn__sub,
+.weapon-btn__rules {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.weapon-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.weapon-btn__top {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.weapon-btn__name {
+  font-weight: 700;
+}
+
+.weapon-btn__profile {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--accent);
+}
+
+.shoot-selection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+  text-align: left;
+  padding: var(--space-3);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.shoot-selection__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.shoot-selection__op {
+  font-weight: 800;
+}
+
+.shoot-selection__weapon {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.shoot-selection__edit {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.toggle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+}
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.toggle__label {
+  font-weight: 700;
+}
+
+.toggle__sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.toggle--on {
+  background: color-mix(in srgb, var(--warn) 22%, var(--bg-elevated));
+  border-color: var(--warn);
+}
+
+.toggle--on .toggle__sub {
+  color: var(--text);
+}
+
+.save-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.shoot-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+
+.shoot-summary--invalid .dice-tiles {
+  opacity: 0.4;
+}
+
+.shoot-alert {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.shoot-alert--danger {
+  background: color-mix(in srgb, var(--danger) 25%, transparent);
+  border: 1px solid var(--danger);
+}
+
+.shoot-alert--warn {
+  background: color-mix(in srgb, var(--warn) 18%, transparent);
+  border: 1px solid var(--warn);
+}
+
+.dice-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.dice-tile {
+  background: var(--bg-elevated-2);
+  border-radius: var(--radius-sm);
+  padding: 10px 6px;
+  text-align: center;
+  border-top: 3px solid var(--border);
+}
+
+.dice-tile--atk {
+  border-top-color: var(--accent);
+}
+
+.dice-tile--def {
+  border-top-color: var(--accent-2);
+}
+
+.dice-tile--dmg {
+  border-top-color: var(--danger);
+}
+
+.dice-tile__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.dice-tile__value {
+  font-size: 1.7rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.dice-tile__plus {
+  font-size: 1rem;
+  color: var(--accent-2);
+}
+
+.dice-tile__sep {
+  color: var(--text-muted);
+  margin: 0 2px;
+}
+
+.dice-tile__detail {
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.dice-tile__mod {
+  color: var(--warn);
+  font-size: 0.75rem;
+}
+
+.summary-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary-block__title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.summary-block ul {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.summary-rules summary {
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.summary-rules dl {
+  margin: var(--space-1) 0 0;
+  font-size: 0.88rem;
+}
+
+.summary-rules dt {
+  font-weight: 700;
+  margin-top: var(--space-2);
+}
+
+.summary-rules dd {
+  margin: 2px 0 0;
+  line-height: 1.4;
+}
