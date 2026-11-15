@@ -24,9 +24,12 @@ Le livre officiel range ses règles comme un dictionnaire. On lit le déroulemen
 
 ## Conventions
 
-- Le texte est en français. Le terme officiel anglais est donné entre parenthèses la première fois, pour qu'on puisse s'y retrouver sur les fiches et en tournoi.
-- Les encadrés **Exemple** illustrent une règle juste après son énoncé.
-- Les encadrés **Conseil** sont des notes de jeu. Ils ne contiennent pas de règle.
+- Texte condensé : seulement les règles, sans périphrases.
+- Le terme anglais officiel est donné entre parenthèses **une seule fois**, à sa première apparition, pour recouper avec le livre anglais.
+- Tout ce qui n'est pas une règle est placé dans un encart :
+  - `> [!NOTE]` → **Exemple**
+  - `> [!TIP]` → **Astuce** (conseil de jeu)
+  - `> [!IMPORTANT]` → **Résumé** (aide-mémoire)
 
 ## Petit lexique
 
