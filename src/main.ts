@@ -15,6 +15,7 @@ import { renderSettings } from "./screens/settings.ts";
 import { renderMatchTracker } from "./screens/matchTracker.ts";
 import { renderGlossary } from "./screens/glossary.ts";
 import { renderShootingDiagram } from "./screens/shootingDiagram.ts";
+import { renderRulebook } from "./screens/rulebook.ts";
 import { registerServiceWorker } from "./registerServiceWorker.ts";
 
 registerServiceWorker();
@@ -72,6 +73,9 @@ function render(route: Route): void {
       break;
     case "shooting-diagram":
       renderShootingDiagram(main!);
+      break;
+    case "rulebook":
+      renderRulebook(main!, route.chapter);
       break;
     case "home":
     default:

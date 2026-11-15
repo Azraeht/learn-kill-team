@@ -4,7 +4,7 @@
 
 Le livre officiel range ses règles comme un dictionnaire. On lit le déroulement du tour, puis on part chercher chaque terme au fond du livre, dans les « Principes clés » classés par ordre alphabétique. Ici, on suit la méthode des anciens livres de Battle, de 40K v5/v6 ou de Mordheim : **une règle est expliquée au moment où on en a besoin**, et elle est suivie d'un exemple.
 
-> **Source.** Ce texte reformule les règles du *Kill Team Core Book* (3e édition, mise à jour d'octobre 2026) telles que les publie Wahapedia. En cas de doute, c'est le texte officiel de Games Workshop qui fait foi. Ce document est destiné à un usage personnel et n'est pas publié sur le site de l'application.
+> **Source.** Ce texte reformule les règles du *Kill Team Core Book* (3e édition, mise à jour d'octobre 2026) telles que les publie Wahapedia. En cas de doute, c'est le texte officiel de Games Workshop qui fait foi.
 
 ## Sommaire
 

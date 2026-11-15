@@ -545,3 +545,41 @@
   padding-left: var(--space-3);
   border-left: 1px dashed var(--border);
 }
+
+/* ── Narrative rulebook (livre-de-regles/*.md rendered as prose) ── */
+.rulebook {
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+.rulebook h1 { font-size: 1.35rem; margin: 0 0 var(--space-3); color: var(--accent-bright); }
+.rulebook h2 { font-size: 1.1rem; margin: var(--space-5) 0 var(--space-2); color: var(--accent-bright); }
+.rulebook h3 { font-size: 1rem; margin: var(--space-4) 0 var(--space-2); }
+.rulebook h4 { font-size: 0.95rem; margin: var(--space-3) 0 var(--space-1); color: var(--accent); }
+.rulebook p, .rulebook ul, .rulebook ol { margin: 0 0 var(--space-3); }
+.rulebook ul, .rulebook ol { padding-left: 1.4em; }
+.rulebook li { margin-bottom: var(--space-1); }
+.rulebook strong { color: var(--accent-bright); }
+.rulebook a { color: var(--accent-bright); }
+.rulebook hr { border: 0; border-top: 1px dashed var(--border); margin: var(--space-4) 0; }
+.rulebook blockquote {
+  margin: 0 0 var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-left: 3px solid var(--border-bright);
+  background: var(--bg-elevated);
+}
+.rulebook blockquote > :last-child { margin-bottom: 0; }
+.rulebook blockquote h3 { margin-top: var(--space-1); }
+.rulebook table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 0 0 var(--space-3);
+  font-size: 0.85rem;
+}
+.rulebook th, .rulebook td {
+  border: 1px solid var(--border);
+  padding: var(--space-1) var(--space-2);
+  text-align: left;
+  vertical-align: top;
+}
+.rulebook th { background: var(--bg-elevated-2); }
