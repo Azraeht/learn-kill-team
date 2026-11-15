@@ -56,6 +56,7 @@ export function renderHome(root: HTMLElement): void {
       <button class="btn" data-weak>Points faibles${weakCount > 0 ? ` (${weakCount})` : ""}</button>
       <button class="btn" data-scenarios>Cas pratiques</button>
       <button class="btn" data-sequences>Séquences de jeu</button>
+      <button class="btn" data-rulebook>Livre de règles</button>
       <button class="btn" data-reference>Antisèche</button>
       <button class="btn" data-glossary>Glossaire</button>
       <button class="btn" data-diagram>Diagramme de tir</button>
@@ -69,6 +70,7 @@ export function renderHome(root: HTMLElement): void {
   root.querySelectorAll<HTMLButtonElement>("[data-category]").forEach((btn) => {
     btn.addEventListener("click", () => navigate(`quiz/${btn.dataset.category}`));
   });
+  root.querySelector("[data-rulebook]")?.addEventListener("click", () => navigate("livre"));
   root.querySelector("[data-start-all]")?.addEventListener("click", () => navigate("quiz/all"));
   root.querySelector("[data-weak]")?.addEventListener("click", () => navigate("quiz/weak"));
   root.querySelector("[data-scenarios]")?.addEventListener("click", () => navigate("scenarios"));
