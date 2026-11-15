@@ -40,7 +40,7 @@
 >
 > 1. Arme : prendre autant de dés que son Att.
 > 2. Cible : en Engagement, il suffit qu'elle soit visible. En Dissimulation, elle doit être visible et pas à couvert. Aucun ami de l'attaquant dans sa zone de contrôle.
-> 3. Attaque : un résultat ≥ CT est une réussite, le 6 est critique, le 1 est un échec. Cible gênée : écarter 1 réussite, les critiques deviennent normales.
+> 3. Attaque : un résultat ≥ CT est une réussite, le 6 est critique, le 1 est un échec. Cible masquée : écarter 1 réussite, les critiques deviennent normales.
 > 4. Défense : 3 dés, résultat ≥ Sauvegarde. Cible à couvert : 1 réussite normale gratuite.
 > 5. Blocage : 1 normale bloque 1 normale, 2 normales bloquent 1 critique, 1 critique bloque n'importe quelle réussite.
 > 6. Dégâts : normaux ou critiques. Les agents mis hors de combat sont retirés à la fin de l'action.
@@ -54,10 +54,10 @@
 > 4. En alternance, en commençant par l'attaquant : frapper (infliger les dégâts) ou parer. Une normale pare une normale, une critique pare n'importe quelle réussite. L'action s'arrête dès qu'un agent est mis hors de combat.
 
 > [!IMPORTANT]
-> **Couvert et gêne**
+> **Couvert et masquage**
 >
 > - **Couvert** : décor en interposition dans la zone de contrôle de la cible, et tireur à plus de 2".
-> - **Gêne** : décor Lourd en interposition, sans compter les parties à 1" ou moins de l'un des agents.
+> - **Masquage** : décor Lourd en interposition, sans compter les parties à 1" ou moins de l'un des agents.
 > - **Surélevé** : Précis 1 si la cible est au moins 2" plus bas, Précis 2 si elle est au moins 4" plus bas (cible en Engagement). Le décor Léger ne protège pas une cible en Dissimulation au moins 2" plus bas, mais elle reçoit une sauvegarde de couvert améliorée.
 
 > [!IMPORTANT]

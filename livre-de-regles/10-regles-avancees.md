@@ -55,7 +55,7 @@ Quand deux règles se contredisent, celle qui l'emporte est déterminée dans l'
 |---|---|
 | **Précis x** (*Accurate x*) | Conservez jusqu'à x dés d'attaque comme réussites normales, sans les lancer. Deux instances de Précis peuvent être traitées comme Précis 2. |
 | **Équilibré** (*Balanced*) | Relancez un de vos dés d'attaque. |
-| **Explosion x** (*Blast x*) | Après avoir tiré sur la cible principale, tirez sur chaque cible secondaire, dans l'ordre de votre choix, avec un jet séparé pour chacune. Les cibles secondaires sont les autres agents visibles et à x" ou moins de la cible principale, amis compris. Elles sont valides même en Dissimulation, et à couvert ou gênées si la cible principale l'était. |
+| **Explosion x** (*Blast x*) | Après avoir tiré sur la cible principale, tirez sur chaque cible secondaire, dans l'ordre de votre choix, avec un jet séparé pour chacune. Les cibles secondaires sont les autres agents visibles et à x" ou moins de la cible principale, amis compris. Elles sont valides même en Dissimulation, et à couvert ou masquées si la cible principale l'était. |
 | **Brutal** | L'adversaire ne peut parer qu'avec des réussites critiques. |
 | **Incessant** (*Ceaseless*) | Relancez tous vos dés d'attaque qui affichent un même résultat de votre choix, par exemple tous les 2. |
 | **Dévastateur x** (*Devastating x*) | Chaque réussite critique conservée inflige immédiatement x dégâts. La réussite reste résolue normalement ensuite. Sous la forme **y" Dévastateur x**, les x dégâts touchent aussi chaque autre agent visible et à y" ou moins de la cible. |
