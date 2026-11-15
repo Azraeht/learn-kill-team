@@ -31,7 +31,7 @@ Chaque phase est jouée en entier avant de passer à la suivante.
 
 Le joueur qui a l'**initiative** active le premier agent. Si plusieurs règles s'appliquent en même temps, c'est lui qui décide de leur ordre de résolution.
 
-Pour la déterminer, les joueurs font un **jet en opposition** (*roll-off*) : chacun lance 1D6, le plus haut résultat gagne. Le gagnant choisit quel joueur a l'initiative. En cas d'égalité :
+Pour la déterminer, les joueurs font un **jet en opposition** : chacun lance 1D6, le plus haut résultat gagne. Le gagnant choisit quel joueur a l'initiative. En cas d'égalité :
 - **au tour 1**, le joueur qui n'avait pas l'initiative pendant la mise en place décide ;
 - **aux tours suivants**, le joueur qui n'avait pas l'initiative au tour précédent décide.
 
@@ -74,7 +74,7 @@ Le joueur qui a l'initiative active un de ses agents prêts, puis son adversaire
 
 Au début de la bataille, tous les agents sont en Dissimulation.
 
-**2. Effectuer des actions.** L'agent en train d'agir est l'**agent actif** (*active operative*). Chaque action coûte des **points d'action** (PA, *Action points*). Le total dépensé ne peut pas dépasser la **limite de PA** (LPA, *APL*) indiquée sur la fiche de l'agent.
+**2. Effectuer des actions.** L'agent en train d'agir est l'**agent actif** (*active operative*). Chaque action coûte des **points d'action** (PA, *Action points*). Le total dépensé ne peut pas dépasser la **limite de PA** (LPA) indiquée sur la fiche de l'agent.
 - Une même action ne peut pas être effectuée deux fois dans la même activation.
 - Les actions s'annoncent une par une, pas à l'avance.
 - Une action qui ne peut pas être menée à terme est annulée : le jeu revient à l'état d'avant et les PA ne sont pas dépensés.
@@ -120,8 +120,7 @@ Ce chapitre traite des déplacements. Pour le Tir et le Combat, voir les chapitr
 
 ### Notions de base
 
-- **Distances** : elles se mesurent en pouces ("), depuis le point le plus proche, et toujours depuis le **socle** de l'agent.
-- **Socles** : ils peuvent se toucher, mais jamais se chevaucher. Un agent peut traverser ses agents amis, mais **jamais un ennemi**. Il ne traverse pas non plus le décor et ne sort pas de la killzone.
+- **Distances et socles** : voir le chapitre 1. On mesure depuis le socle, et on ne traverse jamais un agent ennemi.
 - **Visible** : une ligne droite dégagée existe depuis la tête de l'agent jusqu'à une partie quelconque de la cible. On ignore les socles.
 - **Zone de contrôle** (*control range*) : un élément est dans la zone de contrôle d'un agent s'il est **visible et à 1" ou moins** de lui. Cette relation est réciproque.
 
