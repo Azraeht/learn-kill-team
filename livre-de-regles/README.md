@@ -24,9 +24,12 @@ Le livre officiel range ses règles comme un dictionnaire. On lit le déroulemen
 
 ## Conventions
 
-- Le texte est en français. Le terme officiel anglais est donné entre parenthèses la première fois, pour qu'on puisse s'y retrouver sur les fiches et en tournoi.
-- Les encadrés **Exemple** illustrent une règle juste après son énoncé.
-- Les encadrés **Conseil** sont des notes de jeu. Ils ne contiennent pas de règle.
+- Texte condensé : seulement les règles, sans périphrases.
+- Le terme anglais officiel est donné entre parenthèses **une seule fois**, à sa première apparition, pour recouper avec le livre anglais.
+- Tout ce qui n'est pas une règle est placé dans un encart :
+  - `> [!NOTE]` → **Exemple**
+  - `> [!TIP]` → **Astuce** (conseil de jeu)
+  - `> [!IMPORTANT]` → **Résumé** (aide-mémoire)
 
 ## Petit lexique
 
@@ -35,10 +38,11 @@ Le livre officiel range ses règles comme un dictionnaire. On lit le déroulemen
 | agent | operative |
 | tour | turning point |
 | phase de Stratégie | Strategy phase |
-| phase de Fusillade | Firefight phase |
+| phase d'Affrontement | Firefight phase |
 | points de commandement (PC) | Command points (CP) |
-| stratagème | ploy |
-| gambit stratégique | STRATEGIC GAMBIT |
+| subterfuge | ploy |
+| subterfuge stratégique / d'affrontement | strategy ploy / firefight ploy |
+| étape des Subterfuges | Gambit step (STRATEGIC GAMBIT) |
 | prêt / épuisé | ready / expended |
 | ordre Engagement / Dissimulation | Engage / Conceal order |
 | points d'action (PA) | Action points (AP) |

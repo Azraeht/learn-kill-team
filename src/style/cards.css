@@ -583,3 +583,32 @@
   vertical-align: top;
 }
 .rulebook th { background: var(--bg-elevated-2); }
+
+/* Rulebook callouts: rules stay plain prose, examples/tips/summaries are boxed. */
+.rulebook .callout {
+  border: 1px solid;
+  border-left-width: 6px;
+  border-radius: 4px;
+  padding: var(--space-3);
+  margin: var(--space-3) 0 var(--space-4);
+}
+.rulebook .callout > p:first-child strong:first-child {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+.rulebook .callout--exemple {
+  border-color: #3fa9ff;
+  background: color-mix(in srgb, #3fa9ff 10%, var(--bg));
+}
+.rulebook .callout--exemple > p:first-child strong:first-child { color: #8fd0ff; }
+.rulebook .callout--astuce {
+  border-color: var(--warn);
+  background: color-mix(in srgb, var(--warn) 10%, var(--bg));
+}
+.rulebook .callout--astuce > p:first-child strong:first-child { color: var(--warn); }
+.rulebook .callout--resume {
+  border-color: var(--border-bright);
+  background: var(--bg-elevated-2);
+}
