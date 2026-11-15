@@ -1,6 +1,7 @@
 import "./style/base.css";
 import "./style/layout.css";
 import "./style/cards.css";
+import "./style/shoot.css";
 import { onRouteChange, navigate, type Route } from "./router.ts";
 import { renderHome } from "./screens/home.ts";
 import { renderQuizSession } from "./screens/quizSession.ts";
@@ -16,6 +17,7 @@ import { renderMatchTracker } from "./screens/matchTracker.ts";
 import { renderGlossary } from "./screens/glossary.ts";
 import { renderShootingDiagram } from "./screens/shootingDiagram.ts";
 import { renderRulebook } from "./screens/rulebook.ts";
+import { renderShoot } from "./screens/shoot.ts";
 import { registerServiceWorker } from "./registerServiceWorker.ts";
 
 registerServiceWorker();
@@ -76,6 +78,9 @@ function render(route: Route): void {
       break;
     case "rulebook":
       renderRulebook(main!, route.chapter);
+      break;
+    case "shoot":
+      renderShoot(main!);
       break;
     case "home":
     default:

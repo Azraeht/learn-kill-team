@@ -207,3 +207,19 @@ This checks every entry against its schema in `src/data/schema/`
 
 This same check runs in CI on every push, so malformed content fails the
 build before it ever reaches the deployed site.
+
+# Kill teams for the shooting helper (Assistant de tir)
+
+The shooting helper (`#/shoot`) reads rosters from `src/data/killteams/`,
+one JSON file per kill team, registered in `src/data/killteams/index.ts`.
+Only ranged weapons are listed. Each weapon has `atk`, `hit` (3 = 3+),
+`dmg` (`[normal, crit]`), and `rules`. Write the rules in English, exactly
+as printed on the datacard: `"Piercing 1"`, `"Lethal 5+"`, `"Torrent 1\""`,
+`"Heavy (Dash only)"`, `"1\" Devastating 2"`. The tool parses these names
+and shows them in French. A weapon with two profiles (plasma
+standard/supercharge, sniper ammunition) gets one entry per profile.
+
+`npm test` fails if a rule name isn't recognised (see
+`src/core/weaponRules.ts`) or if an id is duplicated. Leave `"status": "draft"`
+until every profile has been checked against the official datacards. The
+screen shows a "Profils à vérifier" badge while it is draft.

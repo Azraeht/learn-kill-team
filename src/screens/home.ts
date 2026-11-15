@@ -51,6 +51,7 @@ export function renderHome(root: HTMLElement): void {
         <div class="stat-tile__label">Jour${streak > 1 ? "s" : ""} d'affilée</div>
       </div>
     </div>
+    <button class="btn btn--block" data-shoot>🎯 Assistant de tir</button>
     <button class="btn btn--primary btn--block" data-start-all>Réviser toutes les catégories</button>
     <div class="mode-grid">
       <button class="btn" data-weak>Points faibles${weakCount > 0 ? ` (${weakCount})` : ""}</button>
@@ -81,4 +82,5 @@ export function renderHome(root: HTMLElement): void {
   root.querySelector("[data-progress]")?.addEventListener("click", () => navigate("progress"));
   root.querySelector("[data-tracker]")?.addEventListener("click", () => navigate("tracker"));
   root.querySelector("[data-settings]")?.addEventListener("click", () => navigate("settings"));
+  root.querySelector("[data-shoot]")?.addEventListener("click", () => navigate("shoot"));
 }
