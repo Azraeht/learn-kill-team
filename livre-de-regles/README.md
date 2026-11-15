@@ -13,7 +13,7 @@ Le livre officiel range ses règles comme un dictionnaire. On lit le déroulemen
 | 1 | [**Avant de commencer** : matériel, dés, distances, socles, jetons](./01-avant-de-commencer.md) |
 | 2 | [**Les agents** : fiche, caractéristiques, armes, équipement](./02-les-agents.md) |
 | 3 | [**Le Tour de Jeu** : initiative, subterfuges, activations, déplacement](./03-le-tour-de-jeu.md) |
-| 4 | [**Le Tir** : visible, couvert, gêne, séquence de tir](./04-le-tir.md) |
+| 4 | [**Le Tir** : visible, couvert, masquage, séquence de tir](./04-le-tir.md) |
 | 5 | [**Le Corps à corps** : séquence de combat, frapper et parer](./05-le-corps-a-corps.md) |
 | 6 | [**Blessures et pertes** : dégâts, agent blessé, mise hors de combat](./06-blessures-et-pertes.md) |
 | 7 | [**Objectifs et marqueurs** : contrôler, ramasser, poser](./07-objectifs-et-marqueurs.md) |
@@ -48,6 +48,7 @@ Le livre officiel range ses règles comme un dictionnaire. On lit le déroulemen
 | points d'action (PA) | Action points (AP) |
 | limite de points d'action (LPA) | Action Point Limit (APL) |
 | zone de contrôle | control range |
+| masqué | obscured |
 | contre-action | counteract |
 | Repositionnement, Course, Repli, Charge | Reposition, Dash, Fall Back, Charge |
 | mis hors de combat | incapacitated |

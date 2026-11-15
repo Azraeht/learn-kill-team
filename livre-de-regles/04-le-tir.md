@@ -16,7 +16,7 @@ L'agent actif tire en suivant la séquence ci-dessous. Son joueur est l'**attaqu
 > 5. Résoudre les dés de défense (blocages).
 > 6. Résoudre les dés d'attaque (dégâts).
 
-Avant d'entrer dans la séquence, il faut connaître quatre notions : **visible**, **en interposition**, **à couvert** et **gêné**.
+Avant d'entrer dans la séquence, il faut connaître quatre notions : **visible**, **en interposition**, **à couvert** et **masqué**.
 
 ## 4.2 Visible (*visible*)
 
@@ -53,23 +53,23 @@ Effets :
 > - Un muret est collé à la cible, mais il n'est pas entre elle et le tireur : elle n'est pas à couvert.
 > - Un muret en interposition est collé à la cible, mais le tireur est à 2" ou moins d'elle : elle n'est pas à couvert.
 
-## 4.5 Gêné (*obscured*)
+## 4.5 Masqué (*obscured*)
 
-Une cible est gênée si un élément de décor **Lourd** (*Heavy*, chapitre 9) est en interposition. Les parties de ce décor situées à 1" ou moins de l'un des deux agents ne comptent pas.
+Une cible est masquée si un élément de décor **Lourd** (*Heavy*, chapitre 9) est en interposition. Les parties de ce décor situées à 1" ou moins de l'un des deux agents ne comptent pas.
 
-Une même pièce de décor ne peut pas rendre la cible à la fois à couvert et gênée. Si c'est le cas, le défenseur choisit l'un des deux effets pour cette séquence de tir.
+Une même pièce de décor ne peut pas rendre la cible à la fois à couvert et masquée. Si c'est le cas, le défenseur choisit l'un des deux effets pour cette séquence de tir.
 
 > [!NOTE]
 > **Exemples**
 >
-> - La cible est visible à travers la fenêtre d'une ruine Lourde, à plus de 1" des deux agents : elle est gênée.
-> - Le tireur est collé au mur Lourd : la partie du mur à 1" ou moins de lui ne compte pas, donc la cible n'est pas gênée.
-> - Seule une partie d'un grand mur Lourd est à 1" ou moins des agents. Le reste du mur est toujours en interposition : la cible est gênée.
+> - La cible est visible à travers la fenêtre d'une ruine Lourde, à plus de 1" des deux agents : elle est masquée.
+> - Le tireur est collé au mur Lourd : la partie du mur à 1" ou moins de lui ne compte pas, donc la cible n'est pas masquée.
+> - Seule une partie d'un grand mur Lourd est à 1" ou moins des agents. Le reste du mur est toujours en interposition : la cible est masquée.
 
 > [!TIP]
 > **Astuce**
 >
-> Un agent posté contre un obstacle tire par-dessus ou autour, comme s'il se penchait à une fenêtre. C'est pourquoi le décor collé à l'un des agents ne gêne pas le tir.
+> Un agent posté contre un obstacle tire par-dessus ou autour, comme s'il se penchait à une fenêtre. C'est pourquoi le décor collé à l'un des agents ne masque pas la cible.
 
 ## 4.6 La séquence de tir
 
@@ -93,7 +93,7 @@ Chaque dé dont le résultat est **supérieur ou égal à la CT** est une **réu
 - Les autres réussites sont des **réussites normales** (*normal successes*).
 - Un **1** est toujours un échec.
 
-**Si la cible est gênée :**
+**Si la cible est masquée :**
 - l'attaquant doit écarter une réussite de son choix ;
 - toutes ses réussites critiques deviennent des réussites normales et ne peuvent plus redevenir critiques. Cette règle prime sur toutes les autres.
 
@@ -131,9 +131,9 @@ Les agents mis hors de combat ne sont retirés qu'à la fin de l'action (chapitr
 ## 4.7 Récapitulatif
 
 > [!IMPORTANT]
-> **Couvert et gêne**
+> **Couvert et masquage**
 >
 > | | Condition | Effet |
 > |---|---|---|
 > | **À couvert** | décor en interposition dans la zone de contrôle de la cible ; tireur à plus de 2" | Dissimulation : pas une cible valide. Engagement : 1 sauvegarde de couvert |
-> | **Gêné** | décor Lourd en interposition, sans compter les parties à 1" ou moins de l'un des agents | l'attaquant écarte 1 réussite ; ses critiques deviennent normales |
+> | **Masqué** | décor Lourd en interposition, sans compter les parties à 1" ou moins de l'un des agents | l'attaquant écarte 1 réussite ; ses critiques deviennent normales |

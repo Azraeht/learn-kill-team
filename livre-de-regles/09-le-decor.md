@@ -12,13 +12,13 @@ Le **sol** (*killzone floor*) est le niveau le plus bas de la killzone.
 
 | Type | Règle |
 |---|---|
-| **Lourd** | Grands éléments. Il peut **gêner** la cible (chapitre 4.5). |
+| **Lourd** | Grands éléments. Il peut **masquer** la cible (chapitre 4.5). |
 | **Léger** (*Light*) | Petits éléments. Pas de règle propre, mais d'autres règles le traitent différemment, notamment le décor Surélevé. |
-| **Bloquant** (*Blocking*) | Désigne en général des trous dans ou sous un décor. On ne peut pas voir à travers, et ces trous comptent comme en interposition pour le couvert et la gêne. |
+| **Bloquant** (*Blocking*) | Désigne en général des trous dans ou sous un décor. On ne peut pas voir à travers, et ces trous comptent comme en interposition pour le couvert et le masquage. |
 | **Surélevé** | Niveaux supérieurs sur lesquels on peut se tenir. Il compte aussi comme du décor **Léger**. Voir 9.3. |
 | **Accessible** | On peut le traverser, pour **+1"**. Seul le centre du socle doit passer. |
 | **Insignifiant** | Ignoré pour l'escalade et la descente. |
-| **Exposé** (*Exposed*) | Jamais en interposition pour le couvert ou la gêne. |
+| **Exposé** (*Exposed*) | Jamais en interposition pour le couvert ou le masquage. |
 | **Plafond** | Un agent sur socle rond de 50 mm ou moins, ou ovale de 60 × 35 mm, peut passer dessous. Il doit quand même terminer son déplacement à un emplacement valide. |
 
 On ne peut terminer un déplacement ou être déployé que sur le sol ou sur du décor Surélevé. Le reste du décor ne peut qu'être franchi. Les règles d'escalade, de descente et de saut sont au chapitre 3.6.
@@ -34,10 +34,10 @@ Un agent sur une partie Surélevée bénéficie de quatre effets :
 
 1. **Précision** : quand il tire sur une cible en **Engagement**, son arme de tir gagne **Précis 1** si la cible est au moins 2" plus bas, et **Précis 2** si elle est au moins 4" plus bas (chapitre 10.3).
 2. **Couvert léger ignoré** : quand il choisit une cible, un ennemi en **Dissimulation** situé au moins 2" plus bas ne peut pas utiliser le décor **Léger** pour être à couvert. L'ennemi peut donc devenir une cible valide, mais il garde sa sauvegarde de couvert, **améliorée** : le défenseur conserve soit cette sauvegarde comme réussite **critique**, soit **une sauvegarde de couvert supplémentaire**.
-3. **Gêne** : on ignore le décor Lourd qui fait partie du même élément que la partie Surélevée où se tient le tireur ou la cible.
+3. **Masquage** : on ignore le décor Lourd qui fait partie du même élément que la partie Surélevée où se tient le tireur ou la cible.
 4. **Parapets** : quand on vise depuis le bas un agent sur une partie Surélevée, un parapet situé au-dessus de la ligne de visée et dans la zone de contrôle de la cible compte comme en interposition.
 
-Un agent gêné par d'autres agents ou par du décor pendant qu'il se déplace sur une partie Surélevée peut les contourner sans descendre, tant qu'une partie de son socle reste sur la partie Surélevée.
+Un agent bloqué par d'autres agents ou par du décor pendant qu'il se déplace sur une partie Surélevée peut les contourner sans descendre, tant qu'une partie de son socle reste sur la partie Surélevée.
 
 > [!NOTE]
 > **Exemple**
@@ -73,7 +73,7 @@ Plateau de 606 × 703 mm, découpé en grille de 6 × 7 cases.
   - Rien ne peut les franchir ni les traverser. Cette règle prime sur toutes les autres.
   - On ne peut pas voir à travers ni par-dessus.
   - On mesure les distances en les contournant, par le chemin le plus court. Exception : les distances vers les zones de la killzone se mesurent normalement.
-  - Pour le couvert et la gêne, seuls les **angles et les extrémités** d'un mur peuvent être en interposition, sauf si le tireur les a déjà dépassés.
+  - Pour le couvert et le masquage, seuls les **angles et les extrémités** d'un mur peuvent être en interposition, sauf si le tireur les a déjà dépassés.
 - **Écoutilles** (*hatchways*) : elles commencent la bataille fermées.
   - **Fermée** : l'écoutille est Lourde et de type Mur.
   - **Ouverte** : le passage (*access point*) est Accessible, Insignifiant et Exposé. Le panneau reste Lourd et de type Mur, et l'espace dessous est Bloquant.
