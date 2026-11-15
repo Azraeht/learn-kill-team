@@ -17,6 +17,13 @@ function slugFromPath(path: string): string {
 
 const bySlug = new Map(Object.entries(chapters).map(([path, md]) => [slugFromPath(path), md]));
 const INDEX_SLUG = "README";
+/** Reading order: numbered chapters first, then appendices (file names sort that way). */
+const chapterOrder = [...bySlug.keys()].filter((s) => s !== INDEX_SLUG).sort();
+
+function chapterTitle(slug: string): string {
+  const heading = bySlug.get(slug)?.match(/^#\s+(.+)$/m)?.[1] ?? slug;
+  return heading.replace(/^Chapitre\s+\d+\s*:\s*/, "").replace(/^Annexe\s*:\s*/, "");
+}
 
 const CALLOUTS: Record<string, string> = { NOTE: "exemple", TIP: "astuce", IMPORTANT: "resume" };
 
@@ -41,10 +48,19 @@ export function renderRulebook(root: HTMLElement, slug?: string): void {
   const markdown = bySlug.get(key) ?? "# Livre de règles\n\nAucun chapitre disponible.";
   const body = styleCallouts(rewriteChapterLinks(marked.parse(markdown, { async: false })));
 
+  const position = chapterOrder.indexOf(key);
+  const prev = position > 0 ? chapterOrder[position - 1] : undefined;
+  const next = key === INDEX_SLUG ? chapterOrder[0] : chapterOrder[position + 1];
+  const pager = `
+    <div class="mode-grid">
+      ${prev ? `<button class="btn" data-goto="${prev}">← ${chapterTitle(prev)}</button>` : "<span></span>"}
+      ${next ? `<button class="btn" data-goto="${next}">${chapterTitle(next)} →</button>` : ""}
+    </div>`;
+
   const nav =
     key === INDEX_SLUG
-      ? `<button class="btn btn--block" data-home>Retour à l'accueil</button>`
-      : `<button class="btn btn--block" data-index>Sommaire du livre</button>
+      ? `${pager}<button class="btn btn--block" data-home>Retour à l'accueil</button>`
+      : `${pager}<button class="btn btn--block" data-index>Sommaire du livre</button>
          <button class="btn btn--block" data-home>Retour à l'accueil</button>`;
 
   root.innerHTML = `
@@ -54,4 +70,7 @@ export function renderRulebook(root: HTMLElement, slug?: string): void {
 
   root.querySelector("[data-home]")?.addEventListener("click", () => navigate("home"));
   root.querySelector("[data-index]")?.addEventListener("click", () => navigate("livre"));
+  root.querySelectorAll<HTMLButtonElement>("[data-goto]").forEach((btn) => {
+    btn.addEventListener("click", () => navigate(`livre/${btn.dataset.goto}`));
+  });
 }

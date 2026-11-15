@@ -8,19 +8,19 @@ Le livre officiel range ses règles comme un dictionnaire. On lit le déroulemen
 
 ## Sommaire
 
-| # | Chapitre | État |
-|---|----------|------|
-| 1 | **Avant de commencer** : ce qu'il faut pour jouer, dés, mesures, socles | à écrire |
-| 2 | **Les agents** : lire une fiche (datacard), caractéristiques, armes | à écrire |
-| 3 | [**Le Tour de Jeu** : initiative, stratégie, activations et mouvement](./03-le-tour-de-jeu.md) | ✅ chapitre test |
-| 4 | **Le Tir** : voir sa cible, couvert, gêne, jets d'attaque et de défense | à écrire |
-| 5 | **Le Corps à corps** : charger, combattre, frapper et parer | à écrire |
-| 6 | **Blessures et pertes** : dégâts, agents blessés, mise hors de combat | à écrire |
-| 7 | **Objectifs et marqueurs** : contrôler, ramasser, poser | à écrire |
-| 8 | **Préparer et jouer une mission** : séquence de jeu, déploiement, mission *Preliminary Ops*, victoire | à écrire |
-| 9 | **Le décor en détail** : types de terrain, positions surélevées (Vantage), killzones | à écrire |
-| 10 | **Règles avancées** : Garde (Guard), priorité des règles, relances, règles d'armes | à écrire |
-| A | **Aide de jeu** : le tour en une page, tableau des actions | à écrire |
+| # | Chapitre |
+|---|----------|
+| 1 | [**Avant de commencer** : matériel, dés, distances, socles, jetons](./01-avant-de-commencer.md) |
+| 2 | [**Les agents** : fiche, caractéristiques, armes, équipement](./02-les-agents.md) |
+| 3 | [**Le Tour de Jeu** : initiative, subterfuges, activations, déplacement](./03-le-tour-de-jeu.md) |
+| 4 | [**Le Tir** : visible, couvert, gêne, séquence de tir](./04-le-tir.md) |
+| 5 | [**Le Corps à corps** : séquence de combat, frapper et parer](./05-le-corps-a-corps.md) |
+| 6 | [**Blessures et pertes** : dégâts, agent blessé, mise hors de combat](./06-blessures-et-pertes.md) |
+| 7 | [**Objectifs et marqueurs** : contrôler, ramasser, poser](./07-objectifs-et-marqueurs.md) |
+| 8 | [**Jouer une mission** : séquence de jeu, *Preliminary Ops*, victoire](./08-jouer-une-mission.md) |
+| 9 | [**Le décor** : types de terrain, décor Surélevé, killzones](./09-le-decor.md) |
+| 10 | [**Règles avancées** : Garde, priorité des règles, règles d'armes](./10-regles-avancees.md) |
+| A | [**Aide de jeu** : tout le jeu en une page](./annexe-aide-de-jeu.md) |
 
 ## Conventions
 
