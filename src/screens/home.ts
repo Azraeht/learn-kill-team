@@ -49,6 +49,7 @@ export function renderHome(root: HTMLElement): void {
     <button class="btn btn--primary btn--block" data-start-all>Study all categories</button>
     <div class="category-list">${cards}</div>
     <button class="btn btn--block" data-progress>View progress</button>
+    <button class="btn btn--block" data-shoot>🎯 Assistant de tir</button>
   `;
 
   root.querySelectorAll<HTMLButtonElement>("[data-category]").forEach((btn) => {
@@ -56,4 +57,5 @@ export function renderHome(root: HTMLElement): void {
   });
   root.querySelector("[data-start-all]")?.addEventListener("click", () => navigate("quiz/all"));
   root.querySelector("[data-progress]")?.addEventListener("click", () => navigate("progress"));
+  root.querySelector("[data-shoot]")?.addEventListener("click", () => navigate("shoot"));
 }

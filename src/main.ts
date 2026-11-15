@@ -1,11 +1,13 @@
 import "./style/base.css";
 import "./style/layout.css";
 import "./style/cards.css";
+import "./style/shoot.css";
 import { onRouteChange, navigate, type Route } from "./router.ts";
 import { renderHome } from "./screens/home.ts";
 import { renderQuizSession } from "./screens/quizSession.ts";
 import { renderResults } from "./screens/results.ts";
 import { renderProgress } from "./screens/progress.ts";
+import { renderShoot } from "./screens/shoot.ts";
 
 const app = document.getElementById("app");
 if (!app) throw new Error("Missing #app root element");
@@ -13,11 +15,13 @@ if (!app) throw new Error("Missing #app root element");
 app.innerHTML = `
   <header class="app-header">
     <h1 data-title-home style="cursor:pointer">Kill Team Trainer</h1>
+    <button class="header-link" data-header-shoot>🎯 Tir</button>
   </header>
   <main class="app-main" id="main"></main>
 `;
 
 app.querySelector("[data-title-home]")?.addEventListener("click", () => navigate("home"));
+app.querySelector("[data-header-shoot]")?.addEventListener("click", () => navigate("shoot"));
 
 const main = document.getElementById("main");
 if (!main) throw new Error("Missing #main container");
@@ -32,6 +36,9 @@ function render(route: Route): void {
       break;
     case "progress":
       renderProgress(main!);
+      break;
+    case "shoot":
+      renderShoot(main!);
       break;
     case "home":
     default:
