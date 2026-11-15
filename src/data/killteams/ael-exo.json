@@ -1,0 +1,111 @@
+{
+  "id": "AEL-EXO",
+  "name": "Exodite Dragon Masters",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "AEL-EXO-CB",
+      "name": "Clanblade",
+      "apl": 4,
+      "move": 12,
+      "save": 3,
+      "wounds": 24,
+      "weapons": [
+        {
+          "id": "AEL-EXO-CB-SC-0",
+          "name": "Solar Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AEL-EXO-LS",
+      "name": "Leystalker",
+      "apl": 4,
+      "move": 12,
+      "save": 3,
+      "wounds": 24,
+      "weapons": [
+        {
+          "id": "AEL-EXO-LS-LR-0",
+          "name": "Long Rifle (Mobile)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 1"
+          ]
+        },
+        {
+          "id": "AEL-EXO-LS-LR-1",
+          "name": "Long Rifle (Stationary)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3"
+          ],
+          "special": [
+            {
+              "name": "Aimed",
+              "text": "This operative cannot use this weapon during an activation in which it moved more than 3\", and it cannot move more than 3\" during an activation in which it used this weapon. This weapon rule has no effect on preventing the Guard action."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AEL-EXO-SS",
+      "name": "Stonesinger",
+      "apl": 4,
+      "move": 12,
+      "save": 3,
+      "wounds": 24,
+      "weapons": [
+        {
+          "id": "AEL-EXO-SS-SC-0",
+          "name": "Solar Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 1"
+          ]
+        },
+        {
+          "id": "AEL-EXO-SS-VS-0",
+          "name": "Venomcrest Spit",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Severe",
+            "Torrent 2\""
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "id": "CHAOS-WC",
+  "name": "Warp Coven",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "CHAOS-WC-SOD",
+      "name": "Sorcerer Of Destiny",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 15,
+      "weapons": [
+        {
+          "id": "CHAOS-WC-SOD-DB-0",
+          "name": "Doombolt",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            2
+          ],
+          "rules": [
+            "Psychic",
+            "Devastating 2",
+            "Lethal 5+"
+          ]
+        },
+        {
+          "id": "CHAOS-WC-SOD-IBP-0",
+          "name": "Inferno Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "CHAOS-WC-SOD-WFP-0",
+          "name": "Warpflame Pistol",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Piercing 1",
+            "Torrent 1\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-WC-SOT",
+      "name": "Sorcerer Of Tempyrion",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 15,
+      "weapons": [
+        {
+          "id": "CHAOS-WC-SOT-FB-0",
+          "name": "Fluxblast",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Psychic",
+            "Blast 2\"",
+            "Rending"
+          ]
+        },
+        {
+          "id": "CHAOS-WC-SOT-IBP-0",
+          "name": "Inferno Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "CHAOS-WC-SOT-WFP-0",
+          "name": "Warpflame Pistol",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Piercing 1",
+            "Torrent 1\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-WC-SOW",
+      "name": "Sorcerer Of Warpfire",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 15,
+      "weapons": [
+        {
+          "id": "CHAOS-WC-SOW-FSTRM-0",
+          "name": "Firestorm",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Psychic",
+            "Saturate",
+            "Seek Light",
+            "Torrent 2\""
+          ]
+        },
+        {
+          "id": "CHAOS-WC-SOW-IBP-0",
+          "name": "Inferno Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "CHAOS-WC-SOW-MB-0",
+          "name": "Mindburn",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            1,
+            1
+          ],
+          "rules": [
+            "Psychic",
+            "Lethal 5+",
+            "Saturate",
+            "Seek Light"
+          ],
+          "special": [
+            {
+              "name": "Mindburn",
+              "text": "In the Resolve Attack Dice step, if you inflict damage with any critical successes, the operative this weapon is being used against gains one of your Mindburn tokens (if it does not already have one)\nuntil the end of its next activation, until it’s incapacitated or until a friendly operative uses this weapon again (whichever comes first).\nWhenever an operative has one of your Mindburn tokens, worsen the Hit stat of its weapons by 1 (this is not cumulative with being injured)."
+            }
+          ]
+        },
+        {
+          "id": "CHAOS-WC-SOW-WFP-0",
+          "name": "Warpflame Pistol",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Piercing 1",
+            "Torrent 1\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-WC-GNR",
+      "name": "Rubric Marine Gunner",
+      "apl": 3,
+      "move": 5,
+      "save": 2,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-WC-GNR-SRC-0",
+          "name": "Soulreaper Cannon (Focused)",
+          "atk": 5,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "CHAOS-WC-GNR-SRC-1",
+          "name": "Soulreaper Cannon (Sweeping)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "CHAOS-WC-GNR-WFL-0",
+          "name": "Warpflamer",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Saturate",
+            "Piercing 1",
+            "Torrent 2\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-WC-IB",
+      "name": "Rubric Marine Icon Bearer",
+      "apl": 3,
+      "move": 5,
+      "save": 2,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-WC-IB-IBG-0",
+          "name": "Inferno Boltgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-WC-WAR",
+      "name": "Rubric Marine Warrior",
+      "apl": 3,
+      "move": 5,
+      "save": 2,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-WC-WAR-IBG-0",
+          "name": "Inferno Boltgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-WC-TZWAR",
+      "name": "Tzaangor Warrior",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "CHAOS-WC-TZWAR-AP-0",
+          "name": "Autopistol",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    }
+  ]
+}

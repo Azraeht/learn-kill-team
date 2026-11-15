@@ -1,0 +1,329 @@
+{
+  "id": "TAU-FSKB",
+  "name": "Farstalker Kinband",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "TAU-FSKB-KB",
+      "name": "Kroot Kill-Broker",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "TAU-FSKB-KB-KR-0",
+          "name": "Kroot Rifle",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "TAU-FSKB-KB-PC-0",
+          "name": "Pulse Weapon",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "TAU-FSKB-BH",
+      "name": "Kroot Bow-Hunter",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "TAU-FSKB-BH-AB-0",
+          "name": "Accelerator Bow (Fused Arrow)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "TAU-FSKB-BH-AB-1",
+          "name": "Accelerator Bow (Glide Arrow)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Silent"
+          ]
+        },
+        {
+          "id": "TAU-FSKB-BH-AB-2",
+          "name": "Accelerator Bow (Voltaic Arrow)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Blast 1\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-FSKB-CB",
+      "name": "Kroot Cold-Blood",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "TAU-FSKB-CB-KR-0",
+          "name": "Kroot Rifle",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "TAU-FSKB-HGNR",
+      "name": "Kroot Heavy Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "TAU-FSKB-HGNR-DV-0",
+          "name": "Dvorgite Skinner",
+          "atk": 5,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Heavy (Reposition only)",
+            "Piercing 2",
+            "Torrent 2\""
+          ]
+        },
+        {
+          "id": "TAU-FSKB-HGNR-LT-0",
+          "name": "Londaxi Tribalest",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Piercing 1",
+            "Rending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-FSKB-LS",
+      "name": "Kroot Long-Sight",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "TAU-FSKB-LS-KHR-0",
+          "name": "Kroot Hunting Rifle (Concealed)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Heavy",
+            "Devastating 3",
+            "Silent"
+          ],
+          "special": [
+            {
+              "name": "Concealed Position",
+              "text": "This operative can only use this weapon the first time it’s performing the Shoot action during the battle."
+            }
+          ]
+        },
+        {
+          "id": "TAU-FSKB-LS-KHR-1",
+          "name": "Kroot Hunting Rifle (Mobile)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "TAU-FSKB-LS-KHR-2",
+          "name": "Kroot Hunting Rifle (Stationary)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Heavy",
+            "Devastating 3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-FSKB-PST",
+      "name": "Kroot Pistolier",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "TAU-FSKB-PST-DKP-0",
+          "name": "Dual Kroot Pistols (Focused)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Ceaseless",
+            "Lethal 5+"
+          ]
+        },
+        {
+          "id": "TAU-FSKB-PST-DKP-1",
+          "name": "Dual Kroot Pistols (Salvo)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\""
+          ],
+          "special": [
+            {
+              "name": "Salvo",
+              "text": "Select up to two different valid targets that aren't within control ranges of friendly operatives. Shoot with this weapon against both of them in an order of your choice (roll each sequence separately)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-FSKB-STK",
+      "name": "Kroot Stalker",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "TAU-FSKB-STK-KSG-0",
+          "name": "Kroot Scattergun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-FSKB-TRK",
+      "name": "Kroot Tracker",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "TAU-FSKB-TRK-KR-0",
+          "name": "Kroot Rifle",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "TAU-FSKB-WAR",
+      "name": "Kroot Warrior",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "TAU-FSKB-WAR-KR-0",
+          "name": "Kroot Rifle",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "TAU-FSKB-WAR-KSG-0",
+          "name": "Kroot Scattergun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        }
+      ]
+    }
+  ]
+}

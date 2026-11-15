@@ -365,3 +365,9 @@
   outline: 2px solid var(--accent);
   outline-offset: 1px;
 }
+
+.shoot-selection__team {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

@@ -1,0 +1,1960 @@
+{
+  "id": "IMP-INQ",
+  "name": "Inquisitorial Agents",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "IMP-INQ-INQ24-INT",
+      "name": "Interrogator",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ24-INT-ESAP-0",
+          "name": "Extended Stock AutoPistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Range 12\"",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INQ24-QK",
+      "name": "Questkeeper",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ24-QK-AP-0",
+          "name": "AutoPistol",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INQ24-VET",
+      "name": "Deathworld Veteran",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ24-VET-AP-0",
+          "name": "AutoPistol",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INQ24-ENL",
+      "name": "Enlightener",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ24-ENL-AP-0",
+          "name": "AutoPistol",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INQ24-GUNS",
+      "name": "Gun Servitor",
+      "apl": 1,
+      "move": 6,
+      "save": 4,
+      "wounds": 11,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ24-GUNS-HB-0",
+          "name": "Heavy Bolter (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Piercing Crits 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ24-GUNS-HB-1",
+          "name": "Heavy Bolter (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Piercing Crits 1",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ24-GUNS-MM-0",
+          "name": "Multi-Melta",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Devastating 4",
+            "Heavy (Dash only)",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ24-GUNS-PC-0",
+          "name": "Plasma Cannon (Standard)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Blast 2\"",
+            "Heavy (Dash only)",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ24-GUNS-PC-1",
+          "name": "Plasma Cannon (Supercharge)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Blast 2\"",
+            "Heavy (Dash only)",
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INQ24-HEX",
+      "name": "Hexorcist",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ24-HEX-SG-0",
+          "name": "Shotgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INQ24-MYS",
+      "name": "Mystic",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ24-MYS-AP-0",
+          "name": "AutoPistol",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Seek"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INQ24-PEN",
+      "name": "Penal Legionnaire",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ24-PEN-HF-0",
+          "name": "Hand Flamer",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Saturate",
+            "Torrent 1\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INQ24-PST",
+      "name": "Pistolier",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ24-PST-SPP-0",
+          "name": "Scoped Plasma Pistol (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 12\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ24-PST-SPP-1",
+          "name": "Scoped Plasma Pistol (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 12\"",
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ24-PST-SAP-0",
+          "name": "Suppressed AutoPistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Silent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-SOS24-SOSPRO",
+      "name": "Sister Of Silence Prosecutor",
+      "apl": 2,
+      "move": 6,
+      "save": 3,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-SOS24-SOSPRO-BG-0",
+          "name": "Boltgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-SOS24-SOSWSK",
+      "name": "Sister Of Silence WitchSeeker",
+      "apl": 2,
+      "move": 6,
+      "save": 3,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-SOS24-SOSWSK-FL-0",
+          "name": "Flamer",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Saturate",
+            "Torrent 2\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-DKK24-BRU",
+      "name": "Death Korps Bruiser",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-DKK24-BRU-LG-0",
+          "name": "Lasgun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-DKK24-CON",
+      "name": "Death Korps Confidant",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-DKK24-CON-BP-0",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-DKK24-CON-BG-0",
+          "name": "Boltgun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-INQ-INQ-DKK24-CON-LG-0",
+          "name": "Lasgun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-INQ-INQ-DKK24-CON-RLP-0",
+          "name": "Relic Laspistol",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-DKK24-GNR",
+      "name": "Death Korps Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-DKK24-GNR-FL-0",
+          "name": "Flamer",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Saturate",
+            "Torrent 2\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-DKK24-GNR-GL-0",
+          "name": "Grenade Launcher (Frag)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Blast 2\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-DKK24-GNR-GL-1",
+          "name": "Grenade Launcher (Krak)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-DKK24-GNR-MG-0",
+          "name": "Meltagun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-DKK24-GNR-PG-0",
+          "name": "Plasma Gun (Standard)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-DKK24-GNR-PG-1",
+          "name": "Plasma Gun (Supercharge)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-DKK24-MDC",
+      "name": "Death Korps Medic",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-DKK24-MDC-LG-0",
+          "name": "Lasgun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-DKK24-SAP",
+      "name": "Death Korps Sapper",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-DKK24-SAP-LG-0",
+          "name": "Lasgun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-INQ-INQ-DKK24-SAP-RD-0",
+          "name": "Remote Detonator",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Limited 1",
+            "Piercing 1",
+            "Silent"
+          ],
+          "special": [
+            {
+              "name": "Detonate",
+              "text": "Do not select a valid target. Instead, shoot against each operative within 2\" of your Mine marker, unless Heavy terrain is wholly intervening between that operative and that marker.\r Each of those operatives cannot be in cover or obscured. Roll each sequence separately in an order of your choice.\r This weapon cannot be selected if your Mine marker isn’t in the killzone. At the end of the action, remove your Mine marker from the killzone. In a killzone that uses the close quarters rule, this weapon has the Lethal 5+ weapon rule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-DKK24-SNP",
+      "name": "Death Korps Sniper",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-DKK24-SNP-LL-0",
+          "name": "Long-Las (Concealed)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy",
+            "Silent"
+          ],
+          "special": [
+            {
+              "name": "Concealed Position",
+              "text": "This operative can only use this weapon the first time it is performing the Shoot action during the battle."
+            }
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-DKK24-SNP-LL-1",
+          "name": "Long-Las (Mobile)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-INQ-INQ-DKK24-SNP-LL-2",
+          "name": "Long-Las (Stationary)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-DKK24-TRP",
+      "name": "Death Korps Trooper",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-DKK24-TRP-LG-0",
+          "name": "Lasgun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-DKK24-VET",
+      "name": "Death Korps Veteran",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-DKK24-VET-LG-0",
+          "name": "Lasgun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-DKK24-VOX",
+      "name": "Death Korps Vox-Operator",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-DKK24-VOX-LG-0",
+          "name": "Lasgun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-DKK24-ZLT",
+      "name": "Death Korps Zealot",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-DKK24-ZLT-LG-0",
+          "name": "Lasgun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-TS24-TSVOX",
+      "name": "Tempestus Scion Vox-Operator",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-TS24-TSVOX-HSLG-0",
+          "name": "Hot-Shot Lasgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-TS24-TSGUN",
+      "name": "Tempestus Scion Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-TS24-TSGUN-FL-0",
+          "name": "Flamer",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Saturate",
+            "Torrent 2\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-TS24-TSGUN-GL-0",
+          "name": "Grenade Launcher (Frag)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Blast 2\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-TS24-TSGUN-GL-1",
+          "name": "Grenade Launcher (Krak)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-TS24-TSGUN-HSVG-0",
+          "name": "Hot-Shot Volley Gun (Focused)",
+          "atk": 5,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing Crits 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-TS24-TSGUN-HSVG-1",
+          "name": "Hot-Shot Volley Gun (Sweeping)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing Crits 1",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-TS24-TSGUN-MG-0",
+          "name": "Meltagun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-TS24-TSGUN-PG-0",
+          "name": "Plasma Gun (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-TS24-TSGUN-PG-1",
+          "name": "Plasma Gun (Superchart)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-TS24-TSMED",
+      "name": "Tempestus Scion Medic",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-TS24-TSMED-HSLG-0",
+          "name": "Hot-Shot Lasgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-TS24-TSTRP",
+      "name": "Tempestus Scion Trooper",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-TS24-TSTRP-HSLG-0",
+          "name": "Hot-Shot Lasgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-AES24-CAST",
+      "name": "Arbites Castigator",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-AES24-CAST-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-AES24-CAST-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-AES24-CHI",
+      "name": "Arbites Chirurgant",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-AES24-CHI-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-AES24-CHI-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-AES24-GNR",
+      "name": "Arbites Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-AES24-GNR-GL-0",
+          "name": "Grenade Launcher",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-AES24-GNR-HS-0",
+          "name": "Heavy Stubber (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Dash only)"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-AES24-GNR-HS-1",
+          "name": "Heavy Stubber (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-AES24-GNR-WEB-0",
+          "name": "Webber",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 12\"",
+            "Severe",
+            "Stun"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-AES24-LSH",
+      "name": "Arbites Leashmaster",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-AES24-LSH-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-AES24-LSH-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-AES24-MAL",
+      "name": "Arbites Malocator",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-AES24-MAL-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-AES24-MAL-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-AES24-MRK",
+      "name": "Arbites Marksman",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-AES24-MRK-ESG-0",
+          "name": "Executioner Shotgun (Concealed)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            4,
+            0
+          ],
+          "rules": [
+            "Devastating 4",
+            "Heavy",
+            "Silent"
+          ],
+          "special": [
+            {
+              "name": "Concealed Position",
+              "text": "This operative can only use this weapon the first time it’s performing the Shoot action during the battle."
+            }
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-AES24-MRK-ESG-1",
+          "name": "Executioner Shotgun (Mobile)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-INQ-INQ-AES24-MRK-ESG-2",
+          "name": "Executioner Shotgun (Stationary)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            4,
+            0
+          ],
+          "rules": [
+            "Devastating 4",
+            "Heavy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-AES24-REV",
+      "name": "Arbites Revelatum",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-AES24-REV-SSP-0",
+          "name": "Scoped Shot Pistol (Short Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Lethal 5+"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-AES24-REV-SSP-1",
+          "name": "Scoped Shot Pistol (Long Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-AES24-SUB",
+      "name": "Arbites Subductor",
+      "apl": 2,
+      "move": 6,
+      "save": 3,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-AES24-SUB-SP-0",
+          "name": "Shot Pistol",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-AES24-VIG",
+      "name": "Arbites Vigilant",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-AES24-VIG-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-AES24-VIG-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-AES24-VOX",
+      "name": "Arbites Vox-Signifier",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-AES24-VOX-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-AES24-VOX-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INB24-ARM",
+      "name": "Navis Armsman",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-INB24-ARM-NS-0",
+          "name": "Navis Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-ARM-NS-1",
+          "name": "Navis Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            1,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INB24-AXE",
+      "name": "Navis Axejack",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-INB24-AXE-AP-0",
+          "name": "Autopistol",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INB24-END",
+      "name": "Navis Endurant",
+      "apl": 2,
+      "move": 4,
+      "save": 2,
+      "wounds": 11,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-INB24-END-NHS-0",
+          "name": "Navis Heavy Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Relentless"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-END-NHS-1",
+          "name": "Navis Heavy Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            1,
+            2
+          ],
+          "rules": [
+            "Relentless"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INB24-GRN",
+      "name": "Navis Grenadier",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-INB24-GRN-DC-0",
+          "name": "Demolition Charge",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Range 3\"",
+            "Blast 2\"",
+            "Heavy (Reposition only)",
+            "Limited 1",
+            "Piercing 1",
+            "Saturate"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-GRN-NS-0",
+          "name": "Navis Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-GRN-NS-1",
+          "name": "Navis Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            1,
+            2
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-GRN-FG-0",
+          "name": "Frag Grenade",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Range 6\"",
+            "Blast 2\"",
+            "Saturate"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-GRN-KG-0",
+          "name": "Krak Grenade",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 6\"",
+            "Piercing 1",
+            "Saturate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INB24-GNR",
+      "name": "Navis Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-INB24-GNR-MG-0",
+          "name": "Meltagun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-GNR-NLV-0",
+          "name": "Navis Las-Volley (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Rending"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-GNR-NLV-1",
+          "name": "Navis Las-Volley (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Rending",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-GNR-PG-0",
+          "name": "Plasma Gun (Standard)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-GNR-PG-1",
+          "name": "Plasma Gun (Supercharge)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INB24-HC",
+      "name": "Navis Hatchcutter",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-INB24-HC-AP-0",
+          "name": "Autopistol",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INB24-SRV",
+      "name": "Navis Surveyor",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-INB24-SRV-NS-0",
+          "name": "Navis Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-SRV-NS-1",
+          "name": "Navis Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            1,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-INB24-VJ",
+      "name": "Navis Void-Jammer",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-INB24-VJ-GD-0",
+          "name": "Gheistskull Detonator",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Blast 1\"",
+            "Lethal 5+",
+            "Limited 1",
+            "Silent",
+            "Stun"
+          ],
+          "special": [
+            {
+              "name": "Detonate",
+              "text": "Don’t select a valid target. Instead, a friendly IMPERIAL NAVY BREACHER GHEISTSKULL operative is always the primary target and cannot be in cover or obscured. If that operative isn’t in the killzone, you cannot select this weapon."
+            }
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-VJ-NS-0",
+          "name": "Navis Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-INB24-VJ-NS-1",
+          "name": "Navis Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            1,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-KAS24-MDC",
+      "name": "Kasrkin Combat Medic",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-KAS24-MDC-HSLG-0",
+          "name": "Hot-Shot Lasgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-KAS24-DT",
+      "name": "Kasrkin Demo Trooper",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-KAS24-DT-HSLP-0",
+          "name": "Hot-Shot Laspistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-KAS24-GNR",
+      "name": "Kasrkin Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-KAS24-GNR-FL-0",
+          "name": "Flamer",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Saturate",
+            "Torrent 2\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-KAS24-GNR-GL-0",
+          "name": "Grenade Launcher (Frag)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Blast 2\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-KAS24-GNR-GL-1",
+          "name": "Grenade Launcher (Krak)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-KAS24-GNR-HSVG-0",
+          "name": "Hot-Shot Volley Gun (Focused)",
+          "atk": 5,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing Crits 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-KAS24-GNR-HSVG-1",
+          "name": "Hot-Shot Volley Gun (Sweeping)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing Crits 1",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-KAS24-GNR-MG-0",
+          "name": "Meltagun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-KAS24-GNR-PG-0",
+          "name": "Plasma Gun (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-KAS24-GNR-PG-1",
+          "name": "Plasma Gun (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-KAS24-RT",
+      "name": "Kasrkin Recon-Trooper",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-KAS24-RT-HSLG-0",
+          "name": "Hot-Shot Lasgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-KAS24-SS",
+      "name": "Kasrkin Sharpshooter",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-KAS24-SS-HSMR-0",
+          "name": "Hot-Shot Marksman Rifle (Concealed)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy",
+            "Silent"
+          ],
+          "special": [
+            {
+              "name": "Concealed Position",
+              "text": "This operative can only use this weapon the first time it is performing the Shoot action during the battle."
+            }
+          ]
+        },
+        {
+          "id": "IMP-INQ-INQ-KAS24-SS-HSMR-1",
+          "name": "Hot-Shot Marksman Rifle (Mobile)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-INQ-INQ-KAS24-SS-HSMR-2",
+          "name": "Hot-Shot Marksman Rifle (Stationary)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-KAS24-TRP",
+      "name": "Kasrkin Trooper",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-KAS24-TRP-HSLG-0",
+          "name": "Hot-Shot Lasgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-INQ-KAS24-VOX",
+      "name": "Kasrkin Vox-Trooper",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-INQ-INQ-KAS24-VOX-HSLG-0",
+          "name": "Hot-Shot Lasgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    }
+  ]
+}

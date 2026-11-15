@@ -1,0 +1,420 @@
+{
+  "id": "TYR-WB",
+  "name": "Wyrmblade",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "TYR-WB-LDR",
+      "name": "Neophyte Leader",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "TYR-WB-LDR-AG-0",
+          "name": "Autogun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        },
+        {
+          "id": "TYR-WB-LDR-BP-0",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "TYR-WB-LDR-MCAP-0",
+          "name": "Master-Crafted AutoPistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Lethal 5+"
+          ]
+        },
+        {
+          "id": "TYR-WB-LDR-SG-0",
+          "name": "Shotgun",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "TYR-WB-LDR-WB-0",
+          "name": "Web Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 6\"",
+            "Severe",
+            "Stun"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TYR-WB-KLM",
+      "name": "Kelermorph",
+      "apl": 3,
+      "move": 6,
+      "save": 4,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "TYR-WB-KLM-LAS-0",
+          "name": "Liberator Autostubs (Hypersense)",
+          "atk": 5,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 6\"",
+            "Saturate",
+            "Seek Light"
+          ],
+          "special": [
+            {
+              "name": "Hypersense",
+              "text": "Whenever this operative is shooting with this weapon profile, enemy operatives cannot be obscured."
+            }
+          ]
+        },
+        {
+          "id": "TYR-WB-KLM-LAS-1",
+          "name": "Liberator Autostubs (Long Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing Crits 1",
+            "Rending"
+          ]
+        },
+        {
+          "id": "TYR-WB-KLM-LAS-2",
+          "name": "Liberator Autostubs (Short Range)",
+          "atk": 5,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1",
+            "Rending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TYR-WB-LOC",
+      "name": "Locus",
+      "apl": 3,
+      "move": 6,
+      "save": 4,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "TYR-WB-LOC-BT-0",
+          "name": "Barbed Tail",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 3\"",
+            "Silent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TYR-WB-GNR",
+      "name": "Neophyte Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TYR-WB-GNR-FL-0",
+          "name": "Flamer",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Saturate",
+            "Torrent 2\""
+          ]
+        },
+        {
+          "id": "TYR-WB-GNR-GL-0",
+          "name": "Grenade Launcher (Frag)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Blast 2\""
+          ]
+        },
+        {
+          "id": "TYR-WB-GNR-GL-1",
+          "name": "Grenade Launcher (Krak)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "TYR-WB-GNR-WB-0",
+          "name": "Webber",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 12\"",
+            "Severe",
+            "Stun"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TYR-WB-HGNR",
+      "name": "Neophyte Heavy Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TYR-WB-HGNR-HS-0",
+          "name": "Heavy Stubber (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Dash only)"
+          ]
+        },
+        {
+          "id": "TYR-WB-HGNR-HS-1",
+          "name": "Heavy Stubber (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "TYR-WB-HGNR-ML-0",
+          "name": "Mining Laser",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "TYR-WB-HGNR-SC-0",
+          "name": "Seismic Cannon (Long-Wave)",
+          "atk": 6,
+          "hit": 4,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": [
+            "Blast 1\"",
+            "Heavy (Dash only)",
+            "Stun"
+          ]
+        },
+        {
+          "id": "TYR-WB-HGNR-SC-1",
+          "name": "Seismic Cannon (Short-Wave)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\"",
+            "Heavy (Dash only)",
+            "Piercing Crits 1",
+            "Stun"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TYR-WB-IB",
+      "name": "Neophyte Icon Bearer",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TYR-WB-IB-AG-0",
+          "name": "Autogun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        },
+        {
+          "id": "TYR-WB-IB-SG-0",
+          "name": "Shotgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TYR-WB-SNP",
+      "name": "Sanctus Sniper",
+      "apl": 3,
+      "move": 6,
+      "save": 4,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "TYR-WB-SNP-SSR-0",
+          "name": "Sanctus Sniper Rifle (Mobile)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "TYR-WB-SNP-SSR-1",
+          "name": "Sanctus Sniper Rifle (Stationary)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy (Dash only)",
+            "Silent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TYR-WB-WAR",
+      "name": "Neophyte Warrior",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TYR-WB-WAR-AG-0",
+          "name": "Autogun",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        },
+        {
+          "id": "TYR-WB-WAR-SG-0",
+          "name": "Shotgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        }
+      ]
+    }
+  ]
+}

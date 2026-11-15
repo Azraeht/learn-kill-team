@@ -93,6 +93,22 @@ export const WEAPON_RULES: Record<string, RuleInfo> = {
     en: "Punishing",
     describe: () => "Si vous conservez au moins un critique, vous pouvez conserver un de vos échecs comme succès normal.",
   },
+  psychic: {
+    fr: "Psychique",
+    en: "Psychic",
+    describe: () => "Arme psychique. Certaines règles d'équipe ou de mission s'appliquent aux armes psychiques.",
+  },
+  brutal: {
+    fr: "Brutale",
+    en: "Brutal",
+    describe: () => "Votre adversaire ne peut parer qu'avec des succès critiques.",
+  },
+  shock: {
+    fr: "Choc",
+    en: "Shock",
+    describe: () =>
+      "La première fois que vous frappez avec un critique pendant la séquence, défaussez aussi un des succès normaux non résolus de l'adversaire (ou un critique s'il n'en a pas).",
+  },
   range: {
     fr: "Portée",
     en: "Range",

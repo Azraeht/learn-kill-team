@@ -1,0 +1,351 @@
+{
+  "id": "TAU-PF",
+  "name": "Pathfinders",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "TAU-PF-SU",
+      "name": "Shas'Ui Pathfinder",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "TAU-PF-SU-PC-0",
+          "name": "Pulse Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "TAU-PF-AG",
+      "name": "Assault Grenadier Pathfinder",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TAU-PF-AG-FG-0",
+          "name": "Fusion Grenade",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 2",
+            "Limited 1",
+            "Piercing 2",
+            "Saturate"
+          ]
+        },
+        {
+          "id": "TAU-PF-AG-PC-0",
+          "name": "Pulse Carbine",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "TAU-PF-BL",
+      "name": "Blooded Pathfinder",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "TAU-PF-BL-SPC-0",
+          "name": "Suppressed Pulse Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Silent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-PF-COMMS",
+      "name": "Comms Specialist Pathfinder",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TAU-PF-COMMS-PC-0",
+          "name": "Pulse Carbine",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "TAU-PF-DC",
+      "name": "Drone Controller Pathfinder",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TAU-PF-DC-PC-0",
+          "name": "Pulse Carbine",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "TAU-PF-MARKS",
+      "name": "Marksman Pathfinder",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TAU-PF-MARKS-MRR-0",
+          "name": "Marksman Rail Rifle (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Devastating 2",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "TAU-PF-MARKS-MRR-1",
+          "name": "Marksman Rail Rifle (Dart Round)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing 1",
+            "Silent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-PF-MDC",
+      "name": "Medical Technician Pathfinder",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TAU-PF-MDC-PC-0",
+          "name": "Pulse Carbine",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "TAU-PF-SL",
+      "name": "Shas'La Pathfinder",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TAU-PF-SL-PC-0",
+          "name": "Pulse Carbine",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "TAU-PF-TSI",
+      "name": "Transpectral Interference Pathfinder",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TAU-PF-TSI-PC-0",
+          "name": "Pulse Carbine",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "TAU-PF-WE",
+      "name": "Weapons Expert Pathfinder",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TAU-PF-WE-IR-0",
+          "name": "Ion Rifle (Standard)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing Crits 1"
+          ]
+        },
+        {
+          "id": "TAU-PF-WE-IR-1",
+          "name": "Ion Rifle (Overcharge)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "TAU-PF-WE-RR-0",
+          "name": "Rail Rifle",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Devastating 2",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-PF-MB3",
+      "name": "MB3 Recon Drone",
+      "apl": 3,
+      "move": 6,
+      "save": 4,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "TAU-PF-MB3-BC-0",
+          "name": "Burst Cannon (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless",
+            "Heavy (Reposition only)",
+            "Punishing"
+          ]
+        },
+        {
+          "id": "TAU-PF-MB3-BC-1",
+          "name": "Burst Cannon (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless",
+            "Heavy (Reposition only)",
+            "Punishing",
+            "Torrent 1\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-PF-MV1",
+      "name": "MV1 Gun Drone",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TAU-PF-MV1-TPC-0",
+          "name": "Twin Pulse Carbine",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Ceaseless"
+          ]
+        }
+      ]
+    }
+  ]
+}

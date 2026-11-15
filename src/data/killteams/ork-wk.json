@@ -1,0 +1,193 @@
+{
+  "id": "ORK-WK",
+  "name": "Wrecka Krew",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "ORK-WK-NOB",
+      "name": "Wrecka Boss Nob",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "ORK-WK-NOB-RP-0",
+          "name": "Rokkit Pistol",
+          "atk": 6,
+          "hit": 5,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Blast 1\""
+          ]
+        },
+        {
+          "id": "ORK-WK-NOB-2RP-0",
+          "name": "Two Rokkit Pistols (Focused)",
+          "atk": 6,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Blast 1\"",
+            "Ceaseless"
+          ]
+        },
+        {
+          "id": "ORK-WK-NOB-2RP-1",
+          "name": "Two Rokkit Pistols (Salvo)",
+          "atk": 6,
+          "hit": 5,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Blast 1\""
+          ],
+          "special": [
+            {
+              "name": "Salvo",
+              "text": "Select up to two valid targets. Shoot this weapon against both primary targets in an order of your choice, then against all remaining secondary targets in the same manner (roll each sequence separately).\nEach target (primary or secondary) cannot be shot more than once during the action."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ORK-WK-TBGNR",
+      "name": "Tankbusta Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "ORK-WK-TBGNR-ERL-0",
+          "name": "'Eavy Rokkit Launcha",
+          "atk": 6,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Blast 1\"",
+            "Heavy (Dash only)"
+          ]
+        },
+        {
+          "id": "ORK-WK-TBGNR-RL-0",
+          "name": "Rokkit Launcha",
+          "atk": 6,
+          "hit": 5,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Blast 1\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ORK-WK-TBROK",
+      "name": "Tankbusta Rokkiteer",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "ORK-WK-TBROK-PR-0",
+          "name": "Pulsa Rokkit",
+          "atk": 6,
+          "hit": 5,
+          "dmg": [
+            0,
+            0
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Limited 1"
+          ],
+          "special": [
+            {
+              "name": "Pulsa",
+              "text": "Do not select a valid target. Instead, place your Pulsa marker Visible to this operative, or on Vantage terrain of a terrain feature Visible to this operative.\nThat marker gains 1 Pulsa point, then roll attack dice: \nIt gains 1 additional Pulsa point for each success (to a maximum of 3 additional points). Separately inflict 1D3 damage on each operative wholly within x\" of that marker, where x is that marker's Pulsa points.\nThen the action ends."
+            }
+          ]
+        },
+        {
+          "id": "ORK-WK-TBROK-RL-0",
+          "name": "Rokkit Launcha",
+          "atk": 6,
+          "hit": 5,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Blast 1\""
+          ]
+        },
+        {
+          "id": "ORK-WK-TBROK-RR-0",
+          "name": "Rokkit Rack",
+          "atk": 6,
+          "hit": 5,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Blast 2\"",
+            "Heavy (Reposition only)",
+            "Limited 1",
+            "Relentless"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ORK-WK-SQUIG",
+      "name": "Wrecka Bomb Squig",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 5,
+      "weapons": [
+        {
+          "id": "ORK-WK-SQUIG-EX-0",
+          "name": "Explosives",
+          "atk": 6,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Blast 1\"",
+            "Limited 1"
+          ],
+          "special": [
+            {
+              "name": "Explosive",
+              "text": "This operative can perform the Shoot action with this weapon while within Control Range of an enemy operative.\nDo not select a valid target. Instead, this operative is always the primary target and cannot be in Cover or Obscured."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

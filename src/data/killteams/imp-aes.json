@@ -1,0 +1,451 @@
+{
+  "id": "IMP-AES",
+  "name": "Exaction Squad",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "IMP-AES-PE",
+      "name": "Arbites Proctor-Exactant",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "IMP-AES-PE-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-AES-PE-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-AES-PE-SP-0",
+          "name": "Shot Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-AES-CAST",
+      "name": "Arbites Castigator",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-AES-CAST-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-AES-CAST-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-AES-CHI",
+      "name": "Arbites Chirurgant",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-AES-CHI-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-AES-CHI-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-AES-GNR",
+      "name": "Arbites Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-AES-GNR-GL-0",
+          "name": "Grenade Launcher",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-AES-GNR-HS-0",
+          "name": "Heavy Stubber (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Dash only)"
+          ]
+        },
+        {
+          "id": "IMP-AES-GNR-HS-1",
+          "name": "Heavy Stubber (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "IMP-AES-GNR-WEB-0",
+          "name": "Webber",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 12\"",
+            "Severe",
+            "Stun"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-AES-LSH",
+      "name": "Arbites Leashmaster",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-AES-LSH-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-AES-LSH-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-AES-LSH-SP-0",
+          "name": "Shotpistol",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-AES-MAL",
+      "name": "Arbites Malocator",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-AES-MAL-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-AES-MAL-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-AES-MRK",
+      "name": "Arbites Marksman",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-AES-MRK-ESG-0",
+          "name": "Executioner Shotgun (Concealed)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            4,
+            0
+          ],
+          "rules": [
+            "Devastating 4",
+            "Heavy",
+            "Silent"
+          ],
+          "special": [
+            {
+              "name": "Concealed Position",
+              "text": "This operative can only use this weapon the first time it’s performing the Shoot action during the battle."
+            }
+          ]
+        },
+        {
+          "id": "IMP-AES-MRK-ESG-1",
+          "name": "Executioner Shotgun (Mobile)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-AES-MRK-ESG-2",
+          "name": "Executioner Shotgun (Stationary)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            4,
+            0
+          ],
+          "rules": [
+            "Devastating 4",
+            "Heavy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-AES-REV",
+      "name": "Arbites Revelatum",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-AES-REV-SSP-0",
+          "name": "Scoped Shot Pistol (Short Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Lethal 5+"
+          ]
+        },
+        {
+          "id": "IMP-AES-REV-SSP-1",
+          "name": "Scoped Shot Pistol (Long Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-AES-SUB",
+      "name": "Arbites Subductor",
+      "apl": 2,
+      "move": 6,
+      "save": 3,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-AES-SUB-SP-0",
+          "name": "Shot Pistol",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-AES-VIG",
+      "name": "Arbites Vigilant",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-AES-VIG-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-AES-VIG-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-AES-VOX",
+      "name": "Arbites Vox-Signifier",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-AES-VOX-CS-0",
+          "name": "Combat Shotgun (Close Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "IMP-AES-VOX-CS-1",
+          "name": "Combat Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": []
+        }
+      ]
+    }
+  ]
+}

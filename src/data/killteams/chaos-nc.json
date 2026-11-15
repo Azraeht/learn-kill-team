@@ -1,0 +1,360 @@
+{
+  "id": "CHAOS-NC",
+  "name": "Nemesis Claw",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "CHAOS-NC-VIS",
+      "name": "Night Lord Visionary",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 15,
+      "weapons": [
+        {
+          "id": "CHAOS-NC-VIS-BP-0",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "CHAOS-NC-VIS-PP-0",
+          "name": "Plasma Pistol (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "CHAOS-NC-VIS-PP-1",
+          "name": "Plasma Pistol (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1",
+            "Hot",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-NC-FRM",
+      "name": "Night Lord Fearmonger",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-NC-FRM-SCP-0",
+          "name": "Scoped Bolt Pistol (Short Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Lethal 5+"
+          ]
+        },
+        {
+          "id": "CHAOS-NC-FRM-SCP-1",
+          "name": "Scoped Bolt Pistol (Long Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "CHAOS-NC-FRM-TCV-0",
+          "name": "Terrorchem Vial",
+          "atk": 5,
+          "hit": 3,
+          "dmg": [
+            2,
+            0
+          ],
+          "rules": [
+            "Range 6\"",
+            "Blast 2\"",
+            "Devastating 3",
+            "Limited 1",
+            "Saturate"
+          ],
+          "special": [
+            {
+              "name": "Terrorchem",
+              "text": "In the Resolve Attack Dice step, if you inflict damage with any Critical successes (including as a result of the Devastating weapon rule), the operative this weapon is being used against gains one of your Terrorchem tokens (if it does not already have one)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-NC-GNR",
+      "name": "Night Lord Gunner",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-NC-GNR-BP-0",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "CHAOS-NC-GNR-FL-0",
+          "name": "Flamer",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Saturate",
+            "Torrent 2\""
+          ]
+        },
+        {
+          "id": "CHAOS-NC-GNR-MG-0",
+          "name": "Meltagun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "CHAOS-NC-GNR-PG-0",
+          "name": "Plasma Gun (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "CHAOS-NC-GNR-PG-1",
+          "name": "Plasma Gun (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Piercing 1",
+            "Hot",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-NC-HGNR",
+      "name": "Night Lord Heavy Gunner",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-NC-HGNR-BP-0",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "CHAOS-NC-HGNR-HB-0",
+          "name": "Heavy Bolter (Focused)",
+          "atk": 5,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Piercing Crits 1"
+          ]
+        },
+        {
+          "id": "CHAOS-NC-HGNR-HB-1",
+          "name": "Heavy Bolter (Sweeping)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Piercing Crits 1",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "CHAOS-NC-HGNR-ML-0",
+          "name": "Missile Launcher (Frag)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Blast 2\""
+          ]
+        },
+        {
+          "id": "CHAOS-NC-HGNR-ML-1",
+          "name": "Missile Launcher (Krak)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            5,
+            7
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-NC-SKT",
+      "name": "Night Lord Skinthief",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-NC-SKT-BP-0",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-NC-VEN",
+      "name": "Night Lord Ventrilokar",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-NC-VEN-BP-0",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-NC-WAR",
+      "name": "Night Lord Warrior",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-NC-WAR-BP-0",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "CHAOS-NC-WAR-BG-0",
+          "name": "Boltgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    }
+  ]
+}

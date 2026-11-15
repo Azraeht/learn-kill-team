@@ -1,4 +1,4 @@
-import { killTeams, getKillTeam } from "../data/killteams/index.ts";
+import { killTeams, getKillTeam } from "../data/killTeams.ts";
 import type { KillTeam, Operative, RangedWeapon } from "../core/killTeamTypes.ts";
 import { computeShot, type ShotConditions, type ShotSummary } from "../core/shooting.ts";
 import { parseRule, ruleLabel } from "../core/weaponRules.ts";
@@ -52,10 +52,14 @@ function saveState(state: ShootState): void {
 const esc = (s: string): string =>
   s.replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[ch]!);
 
-const weaponRulesShort = (w: RangedWeapon): string =>
-  w.rules.length ? w.rules.map((r) => ruleLabel(parseRule(r))).join(" · ") : "—";
+const weaponRulesShort = (w: RangedWeapon): string => {
+  const all = [...w.rules.map((r) => ruleLabel(parseRule(r))), ...(w.special ?? []).map((sp) => `*${sp.name}`)];
+  return all.length ? all.join(" · ") : "—";
+};
 
-const profile = (w: RangedWeapon): string => `A${w.atk} · ${w.hit}+ · ${w.dmg[0]}/${w.dmg[1]}`;
+const dmgText = (w: RangedWeapon): string => (w.dmg[0] === 0 && w.dmg[1] === 0 ? "—" : `${w.dmg[0]}/${w.dmg[1]}`);
+
+const profile = (w: RangedWeapon): string => `A${w.atk} · ${w.hit}+ · ${dmgText(w)}`;
 
 let state: ShootState = loadState();
 
@@ -65,14 +69,19 @@ export function renderShoot(root: HTMLElement): void {
   const weapon: RangedWeapon | undefined = operative?.weapons.find((w) => w.id === state.weaponId);
   const pickerOpen = state.pickerOpen || !weapon;
 
-  const draftBadge = team?.status === "draft" ? `<span class="badge badge--draft">Profils à vérifier</span>` : "";
+  const draftBadge =
+    team?.status === "draft"
+      ? `<span class="badge badge--draft">Profils à vérifier</span>`
+      : team?.status === "imported"
+        ? `<span class="badge badge--muted" title="${esc(team.sourceRef ?? "")}">Source : KTDash</span>`
+        : "";
 
   const selectionHtml = pickerOpen
     ? renderPicker(team, operative, weapon)
     : `
       <button class="shoot-selection" data-open-picker>
         <span class="shoot-selection__main">
-          <span class="shoot-selection__op">${esc(operative!.name)}</span>
+          <span class="shoot-selection__op">${esc(operative!.name)} <span class="shoot-selection__team">· ${esc(team!.name)}</span></span>
           <span class="shoot-selection__weapon">${esc(weapon!.name)} — ${profile(weapon!)}</span>
         </span>
         <span class="shoot-selection__edit">Changer</span>
@@ -205,7 +214,11 @@ function renderSummary(s: ShotSummary): string {
         </div>
         <div class="dice-tile dice-tile--dmg">
           <div class="dice-tile__label">Dégâts</div>
-          <div class="dice-tile__value">${s.damage.normal}<span class="dice-tile__sep">/</span>${s.damage.crit}</div>
+          <div class="dice-tile__value">${
+            s.damage.normal === 0 && s.damage.crit === 0
+              ? "—"
+              : `${s.damage.normal}<span class="dice-tile__sep">/</span>${s.damage.crit}`
+          }</div>
           <div class="dice-tile__detail">Normal / Crit<br>&nbsp;</div>
         </div>
       </div>
@@ -214,6 +227,18 @@ function renderSummary(s: ShotSummary): string {
       ${list("Jet de défense", s.defence.steps)}
       ${list("Dégâts", s.damage.steps)}
       ${list("Après le tir", s.after)}
+      ${
+        s.special.length
+          ? `<div class="summary-block"><div class="summary-block__title">Règles spéciales de l'arme</div><ul>${s.special
+              .map(
+                (sp) =>
+                  `<li><strong>${esc(sp.name)}</strong> : ${
+                    sp.text ? esc(sp.text) : `<span class="text-muted">voir la fiche de l'agent.</span>`
+                  }</li>`,
+              )
+              .join("")}</ul></div>`
+          : ""
+      }
       ${
         s.rules.length || s.unknownRules.length
           ? `<details class="summary-block summary-rules">

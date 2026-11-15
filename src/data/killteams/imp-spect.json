@@ -1,0 +1,454 @@
+{
+  "id": "IMP-SPECT",
+  "name": "Spectre Squad",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "IMP-SPECT-SGT",
+      "name": "Veteran Sergeant",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "IMP-SPECT-SGT-R-1",
+          "name": "Scoped Lascarbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Rending",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-SPECT-MED",
+      "name": "Field Medicae",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-SPECT-MED-R-1",
+          "name": "Lascarbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Rending"
+          ]
+        },
+        {
+          "id": "IMP-SPECT-MED-LR-1",
+          "name": "Lasrifle",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-SPECT-GRN",
+      "name": "Grenadier",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-SPECT-GRN-R-1",
+          "name": "Lascarbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Rending"
+          ]
+        },
+        {
+          "id": "IMP-SPECT-GRN-LR-1",
+          "name": "Lasrifle",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-SPECT-GDE",
+      "name": "Guide",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-SPECT-GDE-R-1",
+          "name": "Lascarbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Rending"
+          ]
+        },
+        {
+          "id": "IMP-SPECT-GDE-LR-1",
+          "name": "Lasrifle",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-SPECT-GNR",
+      "name": "Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-SPECT-GNR-R-1",
+          "name": "Meltagun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "IMP-SPECT-GNR-PG-1",
+          "name": "Plasma Gun (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-SPECT-GNR-PG-2",
+          "name": "Plasma Gun (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-SPECT-HGNR",
+      "name": "Heavy Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-SPECT-HGNR-R-1",
+          "name": "Laspistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "IMP-SPECT-HGNR-ML-1",
+          "name": "Missile Launcher (Frag)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Blast 2\"",
+            "Heavy"
+          ]
+        },
+        {
+          "id": "IMP-SPECT-HGNR-ML-2",
+          "name": "Missile Launcher (Krak)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            5,
+            7
+          ],
+          "rules": [
+            "Heavy",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-SPECT-LDR",
+      "name": "Loader",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-SPECT-LDR-R-1",
+          "name": "Laspistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-SPECT-SS",
+      "name": "Sharpshooter",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-SPECT-SS-R-1",
+          "name": "Long-Las (Concealed)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy",
+            "Silent"
+          ],
+          "special": [
+            {
+              "name": "Concealed Position",
+              "text": "This operative can only use this weapon the first time it’s performing the Shoot action during the battle."
+            }
+          ]
+        },
+        {
+          "id": "IMP-SPECT-SS-R-2",
+          "name": "Long-Las (Mobile)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-SPECT-SS-R-3",
+          "name": "Long-Las (Stationary)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-SPECT-STUB",
+      "name": "Stub-Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-SPECT-STUB-AS-1",
+          "name": "Auto-Stubber (Focused)",
+          "atk": 5,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Heavy (Dash only)"
+          ]
+        },
+        {
+          "id": "IMP-SPECT-STUB-AS-2",
+          "name": "Auto-Stubber (Suppressive)",
+          "atk": 5,
+          "hit": 5,
+          "dmg": [
+            0,
+            0
+          ],
+          "rules": [
+            "Heavy",
+            "Lethal 5+",
+            "Seek Light",
+            "Stun",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "IMP-SPECT-STUB-AS-3",
+          "name": "Auto-Stubber (Sweeping)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Torrent 1\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-SPECT-TRP",
+      "name": "Trooper",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-SPECT-TRP-R-1",
+          "name": "Lascarbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Rending"
+          ]
+        },
+        {
+          "id": "IMP-SPECT-TRP-LR-1",
+          "name": "Lasrifle",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-SPECT-VOX",
+      "name": "Vox-Operator",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-SPECT-VOX-R-1",
+          "name": "Lascarbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Rending"
+          ]
+        },
+        {
+          "id": "IMP-SPECT-VOX-LR-1",
+          "name": "Lasrifle",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    }
+  ]
+}

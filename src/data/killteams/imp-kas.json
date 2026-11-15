@@ -1,0 +1,369 @@
+{
+  "id": "IMP-KAS",
+  "name": "Kasrkin",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "IMP-KAS-SGT",
+      "name": "Kasrkin Sergeant",
+      "apl": 3,
+      "move": 6,
+      "save": 4,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "IMP-KAS-SGT-BP-0",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "IMP-KAS-SGT-HSLG-0",
+          "name": "Hot-Shot Lasgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-KAS-SGT-HSLP-0",
+          "name": "Hot-Shot Laspistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "IMP-KAS-SGT-PP-0",
+          "name": "Plasma Pistol (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-KAS-SGT-PP-1",
+          "name": "Plasma Pistol (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-KAS-MDC",
+      "name": "Kasrkin Combat Medic",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-KAS-MDC-HSLG-0",
+          "name": "Hot-Shot Lasgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-KAS-DT",
+      "name": "Kasrkin Demo Trooper",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-KAS-DT-HSLP-0",
+          "name": "Hot-Shot Laspistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-KAS-GNR",
+      "name": "Kasrkin Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-KAS-GNR-FL-0",
+          "name": "Flamer",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Saturate",
+            "Torrent 2\""
+          ]
+        },
+        {
+          "id": "IMP-KAS-GNR-GL-0",
+          "name": "Grenade Launcher (Frag)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Blast 2\""
+          ]
+        },
+        {
+          "id": "IMP-KAS-GNR-GL-1",
+          "name": "Grenade Launcher (Krak)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-KAS-GNR-HSVG-0",
+          "name": "Hot-Shot Volley Gun (Focused)",
+          "atk": 5,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing Crits 1"
+          ]
+        },
+        {
+          "id": "IMP-KAS-GNR-HSVG-1",
+          "name": "Hot-Shot Volley Gun (Sweeping)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing Crits 1",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "IMP-KAS-GNR-MG-0",
+          "name": "Meltagun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "IMP-KAS-GNR-PG-0",
+          "name": "Plasma Gun (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-KAS-GNR-PG-1",
+          "name": "Plasma Gun (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-KAS-RT",
+      "name": "Kasrkin Recon-Trooper",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-KAS-RT-HSLG-0",
+          "name": "Hot-Shot Lasgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-KAS-SS",
+      "name": "Kasrkin Sharpshooter",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-KAS-SS-HSMR-0",
+          "name": "Hot-Shot Marksman Rifle (Concealed)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy",
+            "Silent"
+          ],
+          "special": [
+            {
+              "name": "Concealed Position",
+              "text": "This operative can only use this weapon the first time it is performing the Shoot action during the battle."
+            }
+          ]
+        },
+        {
+          "id": "IMP-KAS-SS-HSMR-1",
+          "name": "Hot-Shot Marksman Rifle (Mobile)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-KAS-SS-HSMR-2",
+          "name": "Hot-Shot Marksman Rifle (Stationary)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-KAS-TRP",
+      "name": "Kasrkin Trooper",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-KAS-TRP-HSLG-0",
+          "name": "Hot-Shot Lasgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "IMP-KAS-VOX",
+      "name": "Kasrkin Vox-Trooper",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-KAS-VOX-HSLG-0",
+          "name": "Hot-Shot Lasgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    }
+  ]
+}

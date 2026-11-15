@@ -1,0 +1,340 @@
+{
+  "id": "CHAOS-MW",
+  "name": "Murderwing",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "CHAOS-MW-CL",
+      "name": "Chaos Lord",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 15,
+      "weapons": [
+        {
+          "id": "CHAOS-MW-CL-BP-1",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "CHAOS-MW-CL-PP-1",
+          "name": "Plasma Pistol (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "CHAOS-MW-CL-PP-2",
+          "name": "Plasma Pistol (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-MW-CHP",
+      "name": "Champion",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-MW-CHP-BP-1",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "CHAOS-MW-CHP-PP-1",
+          "name": "Plasma Pistol (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "CHAOS-MW-CHP-PP-2",
+          "name": "Plasma Pistol (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-MW-CC",
+      "name": "Curseclaw",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-MW-CC-BP-1",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-MW-DEP",
+      "name": "Depredator",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-MW-DEP-BP-1",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-MW-HM",
+      "name": "Huntmaster",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-MW-HM-BP-1",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-MW-RAP",
+      "name": "Raptor",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-MW-RAP-BP-1",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "CHAOS-MW-RAP-PP-1",
+          "name": "Plasma Pistol (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "CHAOS-MW-RAP-PP-2",
+          "name": "Plasma Pistol (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-MW-SHR",
+      "name": "Shrieker",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-MW-SHR-BP-1",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-MW-SS",
+      "name": "Skysear",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-MW-SS-BP-1",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "CHAOS-MW-SS-FL-1",
+          "name": "Flamer",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Saturate",
+            "Torrent 2\""
+          ]
+        },
+        {
+          "id": "CHAOS-MW-SS-MG-1",
+          "name": "Meltagun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "CHAOS-MW-SS-PG-1",
+          "name": "Plasma Gun (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "CHAOS-MW-SS-PG-2",
+          "name": "Plasma Gun (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    }
+  ]
+}

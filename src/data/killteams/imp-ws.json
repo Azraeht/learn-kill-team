@@ -1,0 +1,270 @@
+{
+  "id": "IMP-WS",
+  "name": "Wolf Scouts",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "IMP-WS-LDR",
+      "name": "Pack Leader",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 13,
+      "weapons": [
+        {
+          "id": "IMP-WS-LDR-PP-1",
+          "name": "Plasma Pistol (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-WS-LDR-PP-2",
+          "name": "Plasma Pistol (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-WS-FB",
+      "name": "Fangbearer",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 13,
+      "weapons": [
+        {
+          "id": "IMP-WS-FB-ABP-1",
+          "name": "Absolver Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing Crits 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-WS-FE",
+      "name": "Frosteye",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 13,
+      "weapons": [
+        {
+          "id": "IMP-WS-FE-IBC-2",
+          "name": "Instigator Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing Crits 1",
+            "Silent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-WS-GNR",
+      "name": "Gunner",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 13,
+      "weapons": [
+        {
+          "id": "IMP-WS-GNR-PG-1",
+          "name": "Plasma Gun (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-WS-GNR-PG-2",
+          "name": "Plasma Gun (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-WS-HNT",
+      "name": "Hunter",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 13,
+      "weapons": [
+        {
+          "id": "IMP-WS-HNT-PP-1",
+          "name": "Plasma Pistol (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-WS-HNT-PP-2",
+          "name": "Plasma Pistol (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-WS-RP",
+      "name": "Rune Priest Skjald",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 13,
+      "weapons": [
+        {
+          "id": "IMP-WS-RP-BP-1",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "IMP-WS-RP-JOTWW-1",
+          "name": "Jaws of the World Wolf",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Psychic",
+            "Blast 2\"",
+            "Severe"
+          ]
+        },
+        {
+          "id": "IMP-WS-RP-TC-1",
+          "name": "Thunderclap",
+          "atk": 5,
+          "hit": 2,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": [
+            "Psychic",
+            "Range 6\"",
+            "Saturate",
+            "Seek Light",
+            "Stun",
+            "Torrent 2\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-WS-TM",
+      "name": "Trapmaster",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 13,
+      "weapons": [
+        {
+          "id": "IMP-WS-TM-PP-1",
+          "name": "Plasma Pistol (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-WS-TM-PP-2",
+          "name": "Plasma Pistol (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    }
+  ]
+}

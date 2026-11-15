@@ -54,6 +54,8 @@ export interface ShotSummary {
   };
   after: string[];
   rules: RuleLine[];
+  /** Team-specific rules (marked * on the datacard). */
+  special: { name: string; text?: string }[];
   unknownRules: string[];
 }
 
@@ -192,6 +194,7 @@ export function computeShot(weapon: RangedWeapon, c: ShotConditions): ShotSummar
     damage: { normal, crit: critDmg, steps: damageSteps },
     after,
     rules,
+    special: weapon.special ?? [],
     unknownRules,
   };
 }

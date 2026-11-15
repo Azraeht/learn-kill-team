@@ -1,0 +1,223 @@
+{
+  "id": "TAU-VESP",
+  "name": "Vespid Stingwings",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "TAU-VESP-VSL",
+      "name": "Vespid Strain Leader",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 10,
+      "weapons": [
+        {
+          "id": "TAU-VESP-VSL-NB-0",
+          "name": "Neutron Blaster",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-VESP-VLS",
+      "name": "Vespid Longsting",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "TAU-VESP-VLS-NRR-0",
+          "name": "Neutron Rail Rifle (Standard)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Devastating 2"
+          ],
+          "special": [
+            {
+              "name": "Neutron Fragment",
+              "text": "If the target is not incapacitated but you resolve any Attack Dice, the target gains one of your Neutron Fragment tokens. Whenever an operative that has one of your Neutron Fragment tokens is activated, inflict D3 damage on it for each Neutron Fragment token it has (roll separately for each)."
+            }
+          ]
+        },
+        {
+          "id": "TAU-VESP-VLS-NRR-1",
+          "name": "Neutron Rail Rifle (Aimed)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Devastating 2",
+            "Heavy (Dash only)",
+            "Lethal 5+"
+          ],
+          "special": [
+            {
+              "name": "Neutron Fragment",
+              "text": "If the target is not incapacitated but you resolve any Attack Dice, the target gains one of your Neutron Fragment tokens. Whenever an operative that has one of your Neutron Fragment tokens is activated, inflict D3 damage on it for each Neutron Fragment token it has (roll separately for each)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-VESP-VSS",
+      "name": "Vespid Shadestrain",
+      "apl": 2,
+      "move": 6,
+      "save": 3,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "TAU-VESP-VSS-NS-0",
+          "name": "Neutron Sting",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Devastating 2"
+          ]
+        },
+        {
+          "id": "TAU-VESP-VSS-NG-0",
+          "name": "Neutron Grenade",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Blast 2\"",
+            "Devastating 2",
+            "Limited 1",
+            "Saturate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-VESP-VSB",
+      "name": "Vespid Skyblast",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "TAU-VESP-VSB-NGL-0",
+          "name": "Neutron Grenade Launcher",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Blast 2\"",
+            "Devastating 2"
+          ],
+          "special": [
+            {
+              "name": "Neutron Bombardment",
+              "text": "Place one of your Neutron Fallout markers within the primary target's control range."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-VESP-VSG",
+      "name": "Vespid Swarmguard",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "TAU-VESP-VSG-FL-0",
+          "name": "Flamer (Standard)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Saturate",
+            "Torrent 2\""
+          ]
+        },
+        {
+          "id": "TAU-VESP-VSG-FL-1",
+          "name": "Flamer (Skytorch)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Saturate"
+          ],
+          "special": [
+            {
+              "name": "Skytorch",
+              "text": "An operative can only use this weapon during the Skytorch Assault action.\r If it does, do not select a valid target. Instead, shoot against each operative within its Torch Zone (excluding operatives wholly underneath Vantage terrain), they are not in Cover or Obscured.\r Roll each sequence separately in order of furthest operative to closest. The Torch Zone is the area between the operative's current and previous locations.\r A 28mm round Skytorch marker can be temporarily placed underneath this operative before it moves to help determine this."
+            },
+            {
+              "name": "Torrent 0\"",
+              "text": "Torrent 0\" means you cannot select secondary targets outside its torch zone, but this weapon still has the Torrent weapon rule for all other rules purposes, e.g. the Condensed Stronghold rules (see Killzone: Volkus)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-VESP-WAR",
+      "name": "Vespid Warrior",
+      "apl": 2,
+      "move": 6,
+      "save": 5,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "TAU-VESP-WAR-NB-0",
+          "name": "Neutron Blaster",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 2"
+          ]
+        }
+      ]
+    }
+  ]
+}

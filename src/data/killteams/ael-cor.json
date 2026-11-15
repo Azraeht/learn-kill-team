@@ -1,0 +1,485 @@
+{
+  "id": "AEL-COR",
+  "name": "Corsair Voidscarred",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "AEL-COR-FEL",
+      "name": "Voidscarred Felarch",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "AEL-COR-FEL-ND-0",
+          "name": "Neuro Disruptor",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1",
+            "Stun"
+          ]
+        },
+        {
+          "id": "AEL-COR-FEL-SP-0",
+          "name": "Shuriken Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Rending"
+          ]
+        },
+        {
+          "id": "AEL-COR-FEL-SR-0",
+          "name": "Shuriken Rifle",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Rending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AEL-COR-GNR",
+      "name": "Voidscarred Gunner",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "AEL-COR-GNR-BL-0",
+          "name": "Blaster",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "AEL-COR-GNR-SH-0",
+          "name": "Shredder",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Rending",
+            "Torrent 2\""
+          ]
+        },
+        {
+          "id": "AEL-COR-GNR-SP-0",
+          "name": "Shuriken Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Rending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AEL-COR-HGNR",
+      "name": "Voidscarred Heavy Gunner",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "AEL-COR-HGNR-SCP-0",
+          "name": "Shuriken Cannon (Focused)",
+          "atk": 5,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Rending"
+          ]
+        },
+        {
+          "id": "AEL-COR-HGNR-SCP-1",
+          "name": "Shuriken Cannon (Sweeping)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Rending",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "AEL-COR-HGNR-WC-0",
+          "name": "Wraithcannon",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Devastating 4",
+            "Heavy (Dash only)",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "AEL-COR-HGNR-SP-0",
+          "name": "Shuriken Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Rending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AEL-COR-FD",
+      "name": "Voidscarred Fate Dealer",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "AEL-COR-FD-RLR-0",
+          "name": "Ranger Long Rifle (Mobile)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "AEL-COR-FD-RLR-1",
+          "name": "Ranger Long Rifle (Stationary)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy",
+            "Silent"
+          ]
+        },
+        {
+          "id": "AEL-COR-FD-SP-0",
+          "name": "Shuriken Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Rending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AEL-COR-KUR",
+      "name": "Voidscarred Kurnathi",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "AEL-COR-KUR-SP-0",
+          "name": "Shuriken Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Rending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AEL-COR-HNT",
+      "name": "Voidscarred Kurnite Hunter",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "AEL-COR-HNT-FAO-0",
+          "name": "Faolchu",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            1,
+            2
+          ],
+          "rules": [
+            "Rending",
+            "Saturate",
+            "Seek Light",
+            "Silent"
+          ]
+        },
+        {
+          "id": "AEL-COR-HNT-SP-0",
+          "name": "Shuriken Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Rending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AEL-COR-SW",
+      "name": "Voidscarred Soul Weaver",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "AEL-COR-SW-SP-0",
+          "name": "Shuriken Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Rending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AEL-COR-SR",
+      "name": "Voidscarred Shade Runner",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "AEL-COR-SR-SP-0",
+          "name": "Shuriken Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Rending"
+          ]
+        },
+        {
+          "id": "AEL-COR-SR-TB-0",
+          "name": "Throwing Blades",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Range 6\"",
+            "Silent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AEL-COR-SD",
+      "name": "Voidscarred Starstorm Duellist",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "AEL-COR-SD-FP-0",
+          "name": "Fusion Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            5,
+            3
+          ],
+          "rules": [
+            "Range 3\"",
+            "Devastating 3",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "AEL-COR-SD-SP-0",
+          "name": "Shuriken Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Rending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AEL-COR-WS",
+      "name": "Voidscarred Way Seeker",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "AEL-COR-WS-FG-0",
+          "name": "Freezing Grasp",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            1,
+            2
+          ],
+          "rules": [
+            "Psychic",
+            "Severe",
+            "Silent",
+            "Stun"
+          ]
+        },
+        {
+          "id": "AEL-COR-WS-LS-0",
+          "name": "Lightning Strike",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            3
+          ],
+          "rules": [
+            "Psychic",
+            "2\" Devastating 2"
+          ]
+        },
+        {
+          "id": "AEL-COR-WS-SP-0",
+          "name": "Shuriken Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Rending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AEL-COR-WAR",
+      "name": "Voidscarred Warrior",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "AEL-COR-WAR-SP-0",
+          "name": "Shuriken Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Rending"
+          ]
+        },
+        {
+          "id": "AEL-COR-WAR-SR-0",
+          "name": "Shuriken Rifle",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Rending"
+          ]
+        }
+      ]
+    }
+  ]
+}

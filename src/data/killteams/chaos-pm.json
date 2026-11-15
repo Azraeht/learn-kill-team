@@ -1,0 +1,282 @@
+{
+  "id": "CHAOS-PM",
+  "name": "Plague Marines",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "CHAOS-PM-CHAMP",
+      "name": "Plague Marine Champion",
+      "apl": 3,
+      "move": 5,
+      "save": 3,
+      "wounds": 15,
+      "weapons": [
+        {
+          "id": "CHAOS-PM-CHAMP-PP-0",
+          "name": "Plasma Pistol (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "CHAOS-PM-CHAMP-PP-1",
+          "name": "Plasma Pistol (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-PM-MAL",
+      "name": "Malignant Plaguecaster",
+      "apl": 3,
+      "move": 5,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-PM-MAL-ENT-0",
+          "name": "Entropy",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            7
+          ],
+          "rules": [
+            "Psychic",
+            "Range 7\"",
+            "Saturate",
+            "Severe"
+          ],
+          "special": [
+            {
+              "name": "Poison",
+              "text": "In the Resolve Attack Dice step, if you inflict damage with any successes, the operative this weapon is being used against (excluding friendly PLAGUE MARINE operatives) gains one of your Poison tokens (if it does not already have one).\r Whenever an operative that has one of your Poison tokens is activated, inflict 1 damage on it."
+            }
+          ]
+        },
+        {
+          "id": "CHAOS-PM-MAL-PW-0",
+          "name": "Plague Wind",
+          "atk": 6,
+          "hit": 3,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Psychic",
+            "Saturate",
+            "Severe",
+            "Torrent 1\""
+          ],
+          "special": [
+            {
+              "name": "Poison",
+              "text": "In the Resolve Attack Dice step, if you inflict damage with any successes, the operative this weapon is being used against (excluding friendly PLAGUE MARINE operatives) gains one of your Poison tokens (if it does not already have one).\r Whenever an operative that has one of your Poison tokens is activated, inflict 1 damage on it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-PM-BOMB",
+      "name": "Plague Marine Bombardier",
+      "apl": 3,
+      "move": 5,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-PM-BOMB-BG-0",
+          "name": "Boltgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "CHAOS-PM-BOMB-BGR-0",
+          "name": "Blight Grenade",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Range 6\"",
+            "Blast 2\"",
+            "Saturate",
+            "Severe"
+          ],
+          "special": [
+            {
+              "name": "Poison",
+              "text": "In the Resolve Attack Dice step, if you inflict damage with any successes, the operative this weapon is being used against (excluding friendly PLAGUE MARINE operatives) gains one of your Poison tokens (if it does not already have one).\r  Whenever an operative that has one of your Poison tokens is activated, inflict 1 damage on it."
+            },
+            {
+              "name": "Toxic",
+              "text": "Whenever this operative is using this weapon against an enemy operative that had one of your Poison tokens at the start of that action, add 1 to both Dmg stats of this weapon."
+            }
+          ]
+        },
+        {
+          "id": "CHAOS-PM-BOMB-KG-0",
+          "name": "Krak Grenade",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 6\"",
+            "Piercing 1",
+            "Saturate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-PM-FTR",
+      "name": "Plague Marine Fighter",
+      "apl": 3,
+      "move": 5,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-PM-FTR-BP-0",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-PM-HGNR",
+      "name": "Plague Marine Heavy Gunner",
+      "apl": 3,
+      "move": 5,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-PM-HGNR-BP-0",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "CHAOS-PM-HGNR-PS-0",
+          "name": "Plague Spewer",
+          "atk": 5,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 7\"",
+            "Saturate",
+            "Severe",
+            "Torrent 2\""
+          ],
+          "special": [
+            {
+              "name": "Poison",
+              "text": "In the Resolve Attack Dice step, if you inflict damage with any successes, the operative this weapon is being used against (excluding friendly PLAGUE MARINE operatives) gains one of your Poison tokens (if it does not already have one).\r Whenever an operative that has one of your Poison tokens is activated, inflict 1 damage on it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-PM-IB",
+      "name": "Plague Marine Icon Bearer",
+      "apl": 3,
+      "move": 5,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-PM-IB-BP-0",
+          "name": "Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CHAOS-PM-WAR",
+      "name": "Plague Marine Warrior",
+      "apl": 3,
+      "move": 5,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "CHAOS-PM-WAR-BG-0",
+          "name": "Boltgun",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [],
+          "special": [
+            {
+              "name": "Toxic",
+              "text": "Whenever this operative is using this weapon against an enemy operative that had one of your Poison tokens at the start of that action, add 1 to both Dmg stats of this weapon."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

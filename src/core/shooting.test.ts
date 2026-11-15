@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { computeShot, type ShotConditions } from "./shooting.ts";
 import { parseRule, isKnownRule } from "./weaponRules.ts";
 import type { RangedWeapon } from "./killTeamTypes.ts";
-import { killTeams } from "../data/killteams/index.ts";
+import { killTeams } from "../data/killTeams.ts";
 
 const open: ShotConditions = {
   inCover: false,
@@ -93,6 +93,11 @@ describe("computeShot", () => {
 });
 
 describe("kill team data", () => {
+  it("ships every kill team, each with shooting operatives", () => {
+    expect(killTeams.length).toBeGreaterThanOrEqual(40);
+    for (const team of killTeams) expect(team.operatives.length, team.id).toBeGreaterThan(0);
+  });
+
   it("uses only weapon rules the helper understands, with unique ids", () => {
     for (const team of killTeams) {
       const opIds = new Set<string>();

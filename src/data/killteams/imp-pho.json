@@ -1,0 +1,362 @@
+{
+  "id": "IMP-PHO",
+  "name": "Phobos Strike Team",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "IMP-PHO-INFSGT",
+      "name": "Infiltrator Sergeant",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 13,
+      "weapons": [
+        {
+          "id": "IMP-PHO-INFSGT-MBC-0",
+          "name": "Marksman Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-PHO-INFCOM",
+      "name": "Infiltrator Commsman",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "IMP-PHO-INFCOM-MBC-0",
+          "name": "Marksman Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-PHO-INFHEL",
+      "name": "Infiltrator Helix Adept",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "IMP-PHO-INFHEL-MBC-0",
+          "name": "Marksman Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-PHO-INFSAB",
+      "name": "Infiltrator Saboteur",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "IMP-PHO-INFSAB-MBC-0",
+          "name": "Marksman Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Lethal 5+"
+          ]
+        },
+        {
+          "id": "IMP-PHO-INFSAB-RD-0",
+          "name": "Remote Detonator",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Heavy (Dash only)",
+            "Limited 1",
+            "Piercing 1",
+            "Silent"
+          ],
+          "special": [
+            {
+              "name": "Detonate",
+              "text": "Don’t select a valid target. Instead, shoot against each operative within 2\" of your Explosives marker, unless Heavy terrain is wholly intervening between that operative and that marker.\r Each of those operatives cannot be in cover or obscured.\r Roll each sequence separately in an order of your choice.\r This weapon cannot be selected if your Explosives marker is not in the killzone.\r At the end of the action, remove your Explosives marker from the killzone. In a killzone that uses the close quarters rule, this weapon has the Lethal 5+ weapon rule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-PHO-INFVET",
+      "name": "Infiltrator Veteran",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "IMP-PHO-INFVET-CBC-0",
+          "name": "Custom Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [],
+          "special": [
+            {
+              "name": "Custom",
+              "text": "At the end of the Select Operatives step, if this operative is selected for deployment, select up to two of the following weapon rules for this weapon to have for the battle:\n\n- Balanced\n- Lethal 5+\n- Piercing Crits 1\n- Rending\n- Saturate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-PHO-INFVOX",
+      "name": "Infiltrator Voxbreaker",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "IMP-PHO-INFVOX-MBC-0",
+          "name": "Marksman Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-PHO-INFWAR",
+      "name": "Infiltrator Warrior",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "IMP-PHO-INFWAR-MBC-0",
+          "name": "Marksman Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-PHO-INCSGT",
+      "name": "Incursor Sergeant",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 13,
+      "weapons": [
+        {
+          "id": "IMP-PHO-INCSGT-OBC-0",
+          "name": "Occulus Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Saturate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-PHO-INCMARK",
+      "name": "Incursor Marksman",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "IMP-PHO-INCMARK-SMBC-0",
+          "name": "Stalker Marksman Bolt Carbine",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-PHO-INCML",
+      "name": "Incursor Minelayer",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "IMP-PHO-INCML-OBC-0",
+          "name": "Occulus Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Saturate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-PHO-INCWAR",
+      "name": "Incursor Warrior",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "IMP-PHO-INCWAR-OBC-0",
+          "name": "Occulus Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Saturate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-PHO-RVRSGT",
+      "name": "Reiver Sergeant",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 13,
+      "weapons": [
+        {
+          "id": "IMP-PHO-RVRSGT-BC-0",
+          "name": "Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Accurate 1"
+          ]
+        },
+        {
+          "id": "IMP-PHO-RVRSGT-SIBP-0",
+          "name": "Special Issue Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-PHO-RVRWAR",
+      "name": "Reiver Warrior",
+      "apl": 3,
+      "move": 7,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "IMP-PHO-RVRWAR-BC-0",
+          "name": "Bolt Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Accurate 1"
+          ]
+        },
+        {
+          "id": "IMP-PHO-RVRWAR-SIBP-0",
+          "name": "Special Issue Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Piercing 1"
+          ]
+        }
+      ]
+    }
+  ]
+}
