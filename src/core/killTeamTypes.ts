@@ -1,7 +1,15 @@
 // Data model for kill team rosters used by the shooting helper.
 // Rosters live in src/data/killteams/*.json — see KILLTEAMS.md.
 
-export type DataStatus = "draft" | "verified";
+/** draft: typed by hand, unchecked; imported: generated from KTDash; verified: checked against official cards. */
+export type DataStatus = "draft" | "imported" | "verified";
+
+export interface SpecialRule {
+  /** Name as printed on the datacard, without the leading asterisk. */
+  name: string;
+  /** Rule text from the operative's abilities, when known. */
+  text?: string;
+}
 
 export interface RangedWeapon {
   id: string;
@@ -16,6 +24,8 @@ export interface RangedWeapon {
   dmg: [number, number];
   /** Weapon rules as printed on the datacard, in English: "Piercing 1", "Lethal 5+", "Heavy (Dash only)"... */
   rules: string[];
+  /** Team-specific weapon rules (marked * on the datacard). */
+  special?: SpecialRule[];
 }
 
 export interface Operative {

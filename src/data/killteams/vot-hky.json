@@ -1,0 +1,347 @@
+{
+  "id": "VOT-HKY",
+  "name": "Yaegirs Hernkogs",
+  "nameEn": "Hernkyn Yaegirs",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "VOT-HKY-THEYN",
+      "name": "Yeagir Theyn",
+      "apl": 2,
+      "move": 5,
+      "save": 4,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "VOT-HKY-THEYN-BR-0",
+          "name": "Bolt Revolver",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "VOT-HKY-THEYN-BS-0",
+          "name": "Bolt Shotgun (Short Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "VOT-HKY-THEYN-BS-1",
+          "name": "Bolt Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        }
+      ]
+    },
+    {
+      "id": "VOT-HKY-BLD",
+      "name": "Yaegir Bladekyn",
+      "apl": 2,
+      "move": 5,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "VOT-HKY-BLD-TPK-0",
+          "name": "Throwing Plasma Knife",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 6\"",
+            "Lethal 5+",
+            "Limited 1",
+            "Silent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VOT-HKY-BOMB",
+      "name": "Yaegir Bombast",
+      "apl": 2,
+      "move": 5,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "VOT-HKY-BOMB-WLR-0",
+          "name": "Wroughtlock Revolvers",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 9\"",
+            "Ceaseless",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VOT-HKY-GNR",
+      "name": "Yaegir Gunner",
+      "apl": 2,
+      "move": 5,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "VOT-HKY-GNR-APM-0",
+          "name": "APM Launcher (Armour Piercing)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Piercing 1"
+          ],
+          "special": [
+            {
+              "name": "Bipod",
+              "text": "Whenever this operative is shooting with this weapon, if it has not moved during the activation, or if it is a counteraction, this weapon has the Ceaseless weapon rule. Note this operative is not restricted from moving after shooting."
+            }
+          ]
+        },
+        {
+          "id": "VOT-HKY-GNR-APM-1",
+          "name": "APM Launcher (Breaching)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Blast 2\""
+          ],
+          "special": [
+            {
+              "name": "Bipod",
+              "text": "Whenever this operative is shooting with this weapon, if it has not moved during the activation, or if it is a counteraction, this weapon has the Ceaseless weapon rule. Note this operative is not restricted from moving after shooting."
+            }
+          ]
+        },
+        {
+          "id": "VOT-HKY-GNR-APM-2",
+          "name": "APM Launcher (High Explosive)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Blast 3\""
+          ],
+          "special": [
+            {
+              "name": "Bipod",
+              "text": "Whenever this operative is shooting with this weapon, if it has not moved during the activation, or if it is a counteraction, this weapon has the Ceaseless weapon rule. Note this operative is not restricted from moving after shooting."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VOT-HKY-IRN",
+      "name": "Yaegir Ironbraek",
+      "apl": 2,
+      "move": 5,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "VOT-HKY-IRN-BR-0",
+          "name": "Bolt Revolver",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VOT-HKY-RFL",
+      "name": "Yeaegir Riflekyn",
+      "apl": 2,
+      "move": 5,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "VOT-HKY-RFL-MCR-0",
+          "name": "Magna-Coil Rifle (Concealed)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy",
+            "Piercing 1",
+            "Silent"
+          ],
+          "special": [
+            {
+              "name": "Concealed Position",
+              "text": "This operative can only use this weapon the first time it is performing the Shoot action during the battle."
+            }
+          ]
+        },
+        {
+          "id": "VOT-HKY-RFL-MCR-1",
+          "name": "Magna-Coil Rifle (Mobile)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Heavy (Reposition only)",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "VOT-HKY-RFL-MCR-2",
+          "name": "Magna-Coil Rifle (Stationary)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VOT-HKY-TRK",
+      "name": "Yaegir Tracker",
+      "apl": 2,
+      "move": 5,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "VOT-HKY-TRK-SINR-0",
+          "name": "SiNR Handbow",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Silent"
+          ]
+        },
+        {
+          "id": "VOT-HKY-TRK-TH-0",
+          "name": "Throwing Hatchet",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 6\"",
+            "Limited 1",
+            "Rending",
+            "Silent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VOT-HKY-WAR",
+      "name": "Yaegir Warrior",
+      "apl": 2,
+      "move": 5,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "VOT-HKY-WAR-BR-0",
+          "name": "Bolt Revolver",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "VOT-HKY-WAR-BS-0",
+          "name": "Bolt Shotgun (Short Range)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            4
+          ],
+          "rules": [
+            "Range 6\""
+          ]
+        },
+        {
+          "id": "VOT-HKY-WAR-BS-1",
+          "name": "Bolt Shotgun (Long Range)",
+          "atk": 4,
+          "hit": 5,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        }
+      ]
+    }
+  ]
+}

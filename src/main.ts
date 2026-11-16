@@ -2,7 +2,7 @@ import "./style/base.css";
 import "./style/layout.css";
 import "./style/cards.css";
 import "./style/shoot.css";
-import { onRouteChange, navigate, type Route } from "./router.ts";
+import { onRouteChange, navigate, getCurrentRoute, type Route } from "./router.ts";
 import { renderHome } from "./screens/home.ts";
 import { renderQuizSession } from "./screens/quizSession.ts";
 import { renderResults } from "./screens/results.ts";
@@ -17,7 +17,6 @@ import { renderMatchTracker } from "./screens/matchTracker.ts";
 import { renderGlossary } from "./screens/glossary.ts";
 import { renderShootingDiagram } from "./screens/shootingDiagram.ts";
 import { renderRulebook } from "./screens/rulebook.ts";
-import { renderShoot } from "./screens/shoot.ts";
 import { registerServiceWorker } from "./registerServiceWorker.ts";
 
 registerServiceWorker();
@@ -80,7 +79,10 @@ function render(route: Route): void {
       renderRulebook(main!, route.chapter);
       break;
     case "shoot":
-      renderShoot(main!);
+      // Loaded on demand: the kill team datacards are a large chunk of data.
+      void import("./screens/shoot.ts").then(({ renderShoot }) => {
+        if (getCurrentRoute().name === "shoot") renderShoot(main!);
+      });
       break;
     case "home":
     default:

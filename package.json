@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "validate-content": "tsx scripts/validate-content.ts"
+    "validate-content": "tsx scripts/validate-content.ts",
+    "import-killteams": "tsx scripts/import-ktdash.ts"
   },
   "devDependencies": {
     "ajv": "^8.20.0",

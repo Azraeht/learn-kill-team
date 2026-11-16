@@ -1,0 +1,199 @@
+{
+  "id": "NEC-CAN",
+  "name": "Cercle Canoptek",
+  "nameEn": "Canoptek Circle",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "NEC-CAN-GEO",
+      "name": "Geomancer",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 14,
+      "weapons": [
+        {
+          "id": "NEC-CAN-GEO-TGR-01",
+          "name": "Tremorglaive (Part Matter)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1",
+            "Piercing Crits 2"
+          ]
+        },
+        {
+          "id": "NEC-CAN-GEO-TGR-02",
+          "name": "Tremorglaive (Quake)",
+          "atk": 5,
+          "hit": 3,
+          "dmg": [
+            1,
+            2
+          ],
+          "rules": [
+            "Blast 2\"",
+            "Seek Light",
+            "Stun"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NEC-CAN-ACC",
+      "name": "Canoptek Macrocyte Accelerator",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "NEC-CAN-ACC-SP-01",
+          "name": "Spark",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Range 4\"",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NEC-CAN-REA",
+      "name": "Canoptek Macrocyte Reanimator",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "NEC-CAN-REA-AB-01",
+          "name": "Atomiser Beam",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 6\"",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NEC-CAN-WAR",
+      "name": "Canoptek Macrocyte Warrior",
+      "apl": 2,
+      "move": 7,
+      "save": 4,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "NEC-CAN-WAR-GS-01",
+          "name": "Gauss Scalpel",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "NEC-CAN-WAR-TC-01",
+          "name": "Tesla Caster (Focused)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": []
+        },
+        {
+          "id": "NEC-CAN-WAR-TC-02",
+          "name": "Tesla Caster (Living Lightning)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            3
+          ],
+          "rules": [
+            "Blast 2\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NEC-CAN-TC",
+      "name": "Canoptek Tomb Crawler",
+      "apl": 2,
+      "move": 5,
+      "save": 3,
+      "wounds": 18,
+      "weapons": [
+        {
+          "id": "NEC-CAN-TC-TDI-01",
+          "name": "Transdimensional Isolator",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [],
+          "special": [
+            {
+              "name": "Dimensional Banishment",
+              "text": "After this operative uses this weapon, if you inflicted damage or retained any critical successes, if the target wasn’t incapacitated, roll 2D6: if the result is higher than the target’s remaining wounds, the target is incapacitated (taking precedence over rules that prevent incapacitation, e.g. Medic!, FELLGOR RAVAGER Frenzy) and your opponent cannot place a Reanimation marker (HIEROTEK CIRCLE ) for that operative, if relevant. This rule has no effect if the target is a NEMESIS operative or Red Terror NPO."
+            }
+          ]
+        },
+        {
+          "id": "NEC-CAN-TC-TGR-01",
+          "name": "Twin Gauss Reapers (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1",
+            "Severe"
+          ]
+        },
+        {
+          "id": "NEC-CAN-TC-TGR-02",
+          "name": "Twin Gauss Reapers (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1",
+            "Severe",
+            "Torrent 1\""
+          ]
+        }
+      ]
+    }
+  ]
+}

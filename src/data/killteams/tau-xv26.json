@@ -1,0 +1,490 @@
+{
+  "id": "TAU-XV26",
+  "name": "Exo-Armures XV26 Stealth",
+  "nameEn": "XV26 Stealth Battlesuits",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "TAU-XV26-SV",
+      "name": "Shas'Vre",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 13,
+      "weapons": [
+        {
+          "id": "TAU-XV26-SV-BC-1",
+          "name": "Burst Cannon (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless"
+          ]
+        },
+        {
+          "id": "TAU-XV26-SV-BC-2",
+          "name": "Burst Cannon (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "TAU-XV26-SV-FB-1",
+          "name": "Fusion Blaster (Short Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "TAU-XV26-SV-FB-2",
+          "name": "Fusion Blaster (Long Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 12\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "TAU-XV26-SV-PP-1",
+          "name": "Pulse Pistol",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-XV26-DES",
+      "name": "Designator",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "TAU-XV26-DES-BC-1",
+          "name": "Burst Cannon (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless"
+          ]
+        },
+        {
+          "id": "TAU-XV26-DES-BC-2",
+          "name": "Burst Cannon (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "TAU-XV26-DES-FB-1",
+          "name": "Fusion Blaster (Short Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "TAU-XV26-DES-FB-2",
+          "name": "Fusion Blaster (Long Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 12\"",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-XV26-INF",
+      "name": "Infiltrator",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "TAU-XV26-INF-BC-1",
+          "name": "Burst Cannon (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless"
+          ]
+        },
+        {
+          "id": "TAU-XV26-INF-BC-2",
+          "name": "Burst Cannon (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "TAU-XV26-INF-FB-1",
+          "name": "Fusion Blaster (Short Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "TAU-XV26-INF-FB-2",
+          "name": "Fusion Blaster (Long Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 12\"",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-XV26-LIB",
+      "name": "Liberator",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "TAU-XV26-LIB-BC-1",
+          "name": "Burst Cannon (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless"
+          ]
+        },
+        {
+          "id": "TAU-XV26-LIB-BC-2",
+          "name": "Burst Cannon (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "TAU-XV26-LIB-EMP-1",
+          "name": "EMP Bomb",
+          "atk": 5,
+          "hit": 3,
+          "dmg": [
+            2,
+            2
+          ],
+          "rules": [
+            "Range 4\"",
+            "Blast 2\"",
+            "Devastating 1",
+            "Heavy (Reposition only)",
+            "Lethal 4+",
+            "Limited 1",
+            "Saturate"
+          ]
+        },
+        {
+          "id": "TAU-XV26-LIB-FB-1",
+          "name": "Fusion Blaster (Short Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "TAU-XV26-LIB-FB-2",
+          "name": "Fusion Blaster (Long Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 12\"",
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "TAU-XV26-LIB-FG-0",
+          "name": "Frag Grenade",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Range 6\"",
+            "Blast 2\"",
+            "Saturate"
+          ]
+        },
+        {
+          "id": "TAU-XV26-LIB-KG-0",
+          "name": "Krak Grenade",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 6\"",
+            "Piercing 1",
+            "Saturate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-XV26-LS",
+      "name": "Lodestar",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "TAU-XV26-LS-BC-1",
+          "name": "Burst Cannon (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless"
+          ]
+        },
+        {
+          "id": "TAU-XV26-LS-BC-2",
+          "name": "Burst Cannon (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "TAU-XV26-LS-FB-1",
+          "name": "Fusion Blaster (Short Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "TAU-XV26-LS-FB-2",
+          "name": "Fusion Blaster (Long Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 12\"",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-XV26-NEU",
+      "name": "Neutraliser",
+      "apl": 3,
+      "move": 6,
+      "save": 3,
+      "wounds": 12,
+      "weapons": [
+        {
+          "id": "TAU-XV26-NEU-BC-1",
+          "name": "Burst Cannon (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless"
+          ]
+        },
+        {
+          "id": "TAU-XV26-NEU-BC-2",
+          "name": "Burst Cannon (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Ceaseless",
+            "Torrent 1\""
+          ]
+        },
+        {
+          "id": "TAU-XV26-NEU-FB-1",
+          "name": "Fusion Blaster (Short Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "TAU-XV26-NEU-FB-2",
+          "name": "Fusion Blaster (Long Range)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Range 12\"",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TAU-XV26-MV15",
+      "name": "MV15 Gun Drone",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 7,
+      "weapons": [
+        {
+          "id": "TAU-XV26-MV15-TPC-1",
+          "name": "Twin Pulse Carbine",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Ceaseless"
+          ]
+        }
+      ]
+    }
+  ]
+}

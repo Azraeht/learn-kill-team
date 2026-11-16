@@ -1,0 +1,372 @@
+{
+  "id": "IMP-TEMPAQ",
+  "name": "Aquilon du Tempestus",
+  "nameEn": "Tempestus Aquilon",
+  "status": "imported",
+  "sourceRef": "KTDash (ktdash.app), import du 2026-11-15",
+  "operatives": [
+    {
+      "id": "IMP-TEMPAQ-TEMP",
+      "name": "Aquilon Tempestor",
+      "apl": 3,
+      "move": 6,
+      "save": 4,
+      "wounds": 9,
+      "weapons": [
+        {
+          "id": "IMP-TEMPAQ-TEMP-HSLC-0",
+          "name": "Hot-Shot Lascarbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-TEMPAQ-TEMP-HSLP-0",
+          "name": "Hot-Shot Laspistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "IMP-TEMPAQ-TEMP-RBP-0",
+          "name": "Relic Bolt Pistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            5
+          ],
+          "rules": [
+            "Range 8\"",
+            "Lethal 5+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-TEMPAQ-GRN",
+      "name": "Aquilon Grenadier",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-TEMPAQ-GRN-HSLP-0",
+          "name": "Hot-Shot Laspistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        },
+        {
+          "id": "IMP-TEMPAQ-GRN-MB-0",
+          "name": "Melta Bomb",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            5,
+            3
+          ],
+          "rules": [
+            "Range 3\"",
+            "Devastating 3",
+            "Heavy (Reposition only)",
+            "Limited 1",
+            "Piercing 2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-TEMPAQ-GF",
+      "name": "Aquilon Gunfighter",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-TEMPAQ-GF-HSLP-0",
+          "name": "Hot-Shot Laspistol (Focused)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\"",
+            "Ceaseless",
+            "Rending"
+          ]
+        },
+        {
+          "id": "IMP-TEMPAQ-GF-HSLP-1",
+          "name": "Hot-Shot Laspistol (Salvo)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ],
+          "special": [
+            {
+              "name": "Salvo",
+              "text": "Select up to two valid targets. Shoot this weapon against both of them in an order of your choice (roll each sequence separately)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-TEMPAQ-GNR",
+      "name": "Aquilon Gunner",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-TEMPAQ-GNR-MC-0",
+          "name": "Melta Carbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            6,
+            3
+          ],
+          "rules": [
+            "Range 6\"",
+            "Devastating 4",
+            "Piercing 2"
+          ]
+        },
+        {
+          "id": "IMP-TEMPAQ-GNR-PC-0",
+          "name": "Plasma Carbine (Standard)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            4,
+            6
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-TEMPAQ-GNR-PC-1",
+          "name": "Plasma Carbine (Supercharge)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            5,
+            6
+          ],
+          "rules": [
+            "Hot",
+            "Lethal 5+",
+            "Piercing 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-TEMPAQ-MRK",
+      "name": "Aquilon Marksman",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-TEMPAQ-MRK-HSLL-0",
+          "name": "Hot-Shot Longlas (Concealed)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy",
+            "Silent"
+          ],
+          "special": [
+            {
+              "name": "Concealed Position",
+              "text": "This operative can only use this weapon the first time it is performing the Shoot action during the battle."
+            }
+          ]
+        },
+        {
+          "id": "IMP-TEMPAQ-MRK-HSLL-1",
+          "name": "Hot-Shot Longlas (Mobile)",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        },
+        {
+          "id": "IMP-TEMPAQ-MRK-HSLL-2",
+          "name": "Hot-Shot Longlas (Stationary)",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Devastating 3",
+            "Heavy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-TEMPAQ-PRE",
+      "name": "Aquilon Precursor",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-TEMPAQ-PRE-HSLP-0",
+          "name": "Hot-Shot Laspistol",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Range 8\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-TEMPAQ-SS",
+      "name": "Aquilon Servo-Sentry",
+      "apl": 2,
+      "move": 4,
+      "save": 3,
+      "wounds": 10,
+      "weapons": [
+        {
+          "id": "IMP-TEMPAQ-SS-FL-0",
+          "name": "Flamer",
+          "atk": 4,
+          "hit": 2,
+          "dmg": [
+            3,
+            3
+          ],
+          "rules": [
+            "Range 8\"",
+            "Saturate",
+            "Torrent 2\""
+          ]
+        },
+        {
+          "id": "IMP-TEMPAQ-SS-GL-0",
+          "name": "Grenade Launcher (Frag)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            2,
+            4
+          ],
+          "rules": [
+            "Blast 2\""
+          ]
+        },
+        {
+          "id": "IMP-TEMPAQ-SS-GL-1",
+          "name": "Grenade Launcher (Krak)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            4,
+            5
+          ],
+          "rules": [
+            "Piercing 1"
+          ]
+        },
+        {
+          "id": "IMP-TEMPAQ-SS-HSVG-0",
+          "name": "Hot-Shot Volley Gun (Focused)",
+          "atk": 5,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing Crits 1"
+          ]
+        },
+        {
+          "id": "IMP-TEMPAQ-SS-HSVG-1",
+          "name": "Hot-Shot Volley Gun (Sweeping)",
+          "atk": 4,
+          "hit": 4,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": [
+            "Piercing Crits 1",
+            "Torrent 1\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IMP-TEMPAQ-TRP",
+      "name": "Aquilon Trooper",
+      "apl": 2,
+      "move": 6,
+      "save": 4,
+      "wounds": 8,
+      "weapons": [
+        {
+          "id": "IMP-TEMPAQ-TRP-HSLC-0",
+          "name": "Hot-Shot Lascarbine",
+          "atk": 4,
+          "hit": 3,
+          "dmg": [
+            3,
+            4
+          ],
+          "rules": []
+        }
+      ]
+    }
+  ]
+}

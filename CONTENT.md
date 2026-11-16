@@ -211,15 +211,29 @@ build before it ever reaches the deployed site.
 # Kill teams for the shooting helper (Assistant de tir)
 
 The shooting helper (`#/shoot`) reads rosters from `src/data/killteams/`,
-one JSON file per kill team, registered in `src/data/killteams/index.ts`.
-Only ranged weapons are listed. Each weapon has `atk`, `hit` (3 = 3+),
-`dmg` (`[normal, crit]`), and `rules`. Write the rules in English, exactly
-as printed on the datacard: `"Piercing 1"`, `"Lethal 5+"`, `"Torrent 1\""`,
-`"Heavy (Dash only)"`, `"1\" Devastating 2"`. The tool parses these names
-and shows them in French. A weapon with two profiles (plasma
-standard/supercharge, sniper ammunition) gets one entry per profile.
+one JSON file per kill team. Any JSON file in that folder is picked up
+automatically and listed in the team dropdown.
 
-`npm test` fails if a rule name isn't recognised (see
-`src/core/weaponRules.ts`) or if an id is duplicated. Leave `"status": "draft"`
-until every profile has been checked against the official datacards. The
-screen shows a "Profils à vérifier" badge while it is draft.
+These files are generated from [KTDash](https://ktdash.app):
+
+```bash
+npm run import-killteams                 # fetch the kill teams listed in TEAMS from the KTDash API
+npm run import-killteams -- --from DIR   # or convert already-downloaded <killteamId>.json files
+```
+
+Only the kill teams that have a question category in the app are imported.
+They are listed, with their French name, in `TEAMS` at the top of
+`scripts/import-ktdash.ts`: add a line there to import another one.
+
+The importer **replaces the whole folder**. It
+keeps ranged weapons only, expands KTDash abbreviations into the official
+English wording (`Prc1` → `Piercing 1`, `Hvy(Dash)` → `Heavy (Dash only)`), and
+stores team-specific rules (marked `*` on the datacard) under `special`, with
+their text taken from the operative's abilities. Imported teams have
+`"status": "imported"`, and the screen shows a "Source : KTDash" badge for them.
+
+Hand-written files use the same format: `atk`, `hit` (3 = 3+), `dmg`
+(`[normal, crit]`), and `rules` written in English as printed on the card
+(`"Lethal 5+"`, `"Torrent 1\""`, `"1\" Devastating 2"`). `npm test` fails if a
+rule name isn't recognised (see `src/core/weaponRules.ts`) or if an id is
+duplicated.
